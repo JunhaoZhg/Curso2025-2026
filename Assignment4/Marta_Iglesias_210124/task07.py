@@ -127,11 +127,11 @@ PREFIX ppl:  <http://oeg.fi.upm.es/def/people#>
 PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
-SELECT DISTINCT ?name ?type
+SELECT ?name ?type
 WHERE {
-  ?ind ppl:knows ppl:Rocky ;
-       rdf:type ?type .
-  OPTIONAL { ?ind rdfs:label ?name }
+  ?person ns:knows ns:Rocky .
+  ?person rdfs:label ?name .
+  ?person rdf:type ?type .
 }
 
 """
