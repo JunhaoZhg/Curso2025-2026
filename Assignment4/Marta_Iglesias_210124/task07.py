@@ -123,14 +123,15 @@ report.validate_07_02b(g, query)
 """**TASK 7.3:  List the name and type of those who know Rocky (in SPARQL only). Use name and type as variables in the query**"""
 
 query = """
-PREFIX ns:   <http://oeg.fi.upm.es/def/people#>
+PREFIX ppl:  <http://oeg.fi.upm.es/def/people#>
 PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
-SELECT DISTINCT ?ind
+SELECT DISTINCT ?name ?type
 WHERE {
-  ?ind rdf:type ?cls .
-  ?cls rdfs:subClassOf* ns:Person .
+  ?ind ppl:knows ppl:Rocky ;
+       rdf:type ?type .
+  OPTIONAL { ?ind rdfs:label ?name }
 }
 
 """
