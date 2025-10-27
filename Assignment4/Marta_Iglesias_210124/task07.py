@@ -127,18 +127,10 @@ PREFIX ns:   <http://oeg.fi.upm.es/def/people#>
 PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
-SELECT ?name ?type
+SELECT DISTINCT ?ind
 WHERE {
-  SELECT ?s
-         (COALESCE(SAMPLE(?n1), SAMPLE(?n2)) AS ?name)
-         (SAMPLE(?t) AS ?type)
-  WHERE {
-    ?s ns:knows ns:Rocky .
-    OPTIONAL { ?s rdf:type ?t . }
-    OPTIONAL { ?s ns:name    ?n1 . }
-    OPTIONAL { ?s rdfs:label ?n2 . }
-  }
-  GROUP BY ?s
+  ?ind rdf:type ?cls .
+  ?cls rdfs:subClassOf* ns:Person .
 }
 """
 
