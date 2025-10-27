@@ -132,6 +132,7 @@ WHERE {
   ?ind rdf:type ?cls .
   ?cls rdfs:subClassOf* ns:Person .
 }
+
 """
 
 for r in g.query(query):
