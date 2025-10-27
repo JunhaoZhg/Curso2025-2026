@@ -9,7 +9,7 @@ Original file is located at
 **Task 07: Querying RDF(s)**
 """
 
-#!pip install rdflib
+!pip install rdflib
 import urllib.request
 url = 'https://raw.githubusercontent.com/FacultadInformatica-LinkedData/Curso2025-2026/refs/heads/master/Assignment4/course_materials/python/validation.py'
 urllib.request.urlretrieve(url, 'validation.py')
@@ -32,7 +32,6 @@ report = Report()
 """
 
 # TO DO
-# Visualize the results
 # Recojo todas las clases declaradas
 classes = set(s for s in g.subjects(RDF.type, RDFS.Class))
 
@@ -45,8 +44,9 @@ for c in classes:
     else:
         result.append((c, None))
 
+# Visualización
 for r in result:
-  print(r)
+    print(r)
 
 ## Validation: Do not remove
 report.validate_07_1a(result)
@@ -91,9 +91,10 @@ for cls in classes:
 
 # variable a devolver
 individuals = list(seen)
-# visualize results
+
+# visualizar (opcional)
 for i in individuals:
-  print(i)
+    print(i)
 
 # validation. Do not remove
 report.validate_07_02a(individuals)
@@ -112,10 +113,8 @@ WHERE {
 }
 """
 
-
 for r in g.query(query):
-  print(r.ind)
-# Visualize the results
+    print(r.ind)
 
 ## Validation: Do not remove
 report.validate_07_02b(g, query)
@@ -123,7 +122,7 @@ report.validate_07_02b(g, query)
 """**TASK 7.3:  List the name and type of those who know Rocky (in SPARQL only). Use name and type as variables in the query**"""
 
 query = """
-PREFIX ppl:  <http://oeg.fi.upm.es/def/people#>
+PREFIX ns:   <http://oeg.fi.upm.es/def/people#>
 PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
@@ -135,9 +134,8 @@ WHERE {
 }
 
 """
-
 for r in g.query(query):
-  print(r.name, r.type)
+    print(r.name, r.type)
 
 ## Validation: Do not remove
 report.validate_07_03(g, query)
@@ -157,9 +155,8 @@ WHERE {
 }
 ORDER BY ?name
 """
-
 for r in g.query(query):
-  print(r.name)
+    print(r.name)
 
 ## Validation: Do not remove
 report.validate_07_04(g,query)
