@@ -1,63 +1,71 @@
-# Group 08 - Hands-On 4
-# SPARQL queries
+@prefix ns: <http://bcn-mobility-air.org/ontology/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX : <http://www.semanticweb.org/group08/ontology#>
-PREFIX geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>
+# --------------------------------------------------------------------------
+# Q1: Count resources with ns:name (Equivalent to rdfs:label)
+# Objetivo: Contar cuántas entidades principales tienen asignada la propiedad ns:name.
+# --------------------------------------------------------------------------
+SELECT (COUNT(DISTINCT ?s) AS ?withName)
+WHERE { 
+    ?s ns:name ?name . 
+}
 
-# 1. Count total triples
-SELECT (COUNT(*) AS ?totalTriples)
-WHERE { ?s ?p ?o }
+;
 
-# 2. Count instances per class
-SELECT ?class (COUNT(?s) AS ?count)
-WHERE { ?s a ?class }
+# --------------------------------------------------------------------------
+# Q2: Sample names by class (Checking ns:name assignment)
+# Objetivo: Muestra 10 ejemplos de nombres y la clase a la que pertenecen, verificando la tipificación.
+# --------------------------------------------------------------------------
+SELECT ?class ?name
+WHERE {
+    ?s a ?class ;
+       ns:name ?name .
+}
+LIMIT 10
+
+;
+
+# --------------------------------------------------------------------------
+# Q3: Count individuals without ns:name (Excluding Measurements and Locations)
+# Objetivo: Contar recursos que NO tienen nombre, excluyendo intencionadamente las clases que no lo requieren (Mediciones, Puntos Geográficos y RoadSegments).
+# --------------------------------------------------------------------------
+SELECT (COUNT(DISTINCT ?s) AS ?withoutName)
+WHERE {
+    ?s a ?class .
+    FILTER NOT EXISTS { ?s ns:name ?name }
+    
+    # Excluimos recursos sin la propiedad ns:name por diseño de la ontología.
+    FILTER (?class != geo:Point)
+    FILTER (?class != ns:Measurement)
+    FILTER (?class != ns:RoadSegment)
+}
+
+;
+
+# --------------------------------------------------------------------------
+# Q4: Name distribution by class (Count of named entities)
+# Objetivo: Obtener el conteo total de instancias de cada clase que tiene la propiedad ns:name.
+# --------------------------------------------------------------------------
+SELECT ?class (COUNT(DISTINCT ?s) AS ?count)
+WHERE {
+    ?s a ?class ;
+       ns:name ?name .
+}
 GROUP BY ?class
 ORDER BY DESC(?count)
 
-# 3. Earliest and latest traffic observation dates
-SELECT (MIN(?date) AS ?earliest) (MAX(?date) AS ?latest)
-WHERE {
-  ?s a :TrafficSection ;
-     :hasObservationDateTime ?date .
-}
+;
 
-# 4. Number of bike parkings per district
-SELECT ?district (COUNT(?s) AS ?numParkings)
+# --------------------------------------------------------------------------
+# Q5: Check name readability (using CONTAINS to search for 'sant')
+# Objetivo: Verificar que los literales de nombre son legibles y que la función de búsqueda de texto funciona correctamente.
+# --------------------------------------------------------------------------
+SELECT ?s ?name
 WHERE {
-  ?s a :BikeParking ;
-     :hasDistrict ?district .
-}
-GROUP BY ?district
-ORDER BY DESC(?numParkings)
-
-# 5. Average pollutant values per station
-SELECT ?station (AVG(?value) AS ?avgValue)
-WHERE {
-  ?obs a :AirQualityObservation ;
-       :hasContaminantValue ?value ;
-       :locatedIn ?station .
-}
-GROUP BY ?station
-ORDER BY DESC(?avgValue)
-LIMIT 10
-
-# 6. Check resources with rdfs:label
-SELECT (COUNT(DISTINCT ?s) AS ?withLabel)
-WHERE { ?s rdfs:label ?label }
-
-# 7. Sample of labels per class
-SELECT ?class ?label
-WHERE {
-  ?s a ?class ;
-     rdfs:label ?label .
-}
-LIMIT 10
-
-# 8. Find labels containing the word "traffic"
-SELECT ?s ?label
-WHERE {
-  ?s rdfs:label ?label .
-  FILTER(CONTAINS(LCASE(STR(?label)), "traffic"))
+    ?s ns:name ?name .
+    FILTER(CONTAINS(LCASE(STR(?name)), "sant"))
 }
 LIMIT 5
