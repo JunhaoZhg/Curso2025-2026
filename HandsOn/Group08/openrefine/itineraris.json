@@ -346,5 +346,171 @@
     "repeat": false,
     "repeatCount": 0,
     "description": "Text transform on cells in column tendencia using expression value.trim()"
+  },
+  {
+    "op": "core/column-reorder",
+    "columnNames": [
+      "idTram",
+      "data",
+      "tempsActual",
+      "congestionIndex",
+      "congestion"
+    ],
+    "description": "Reorder columns"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "idTram",
+    "expression": "grel:cell.cross(\"transit relacio trams format long csv\", \"Tram\")[0].cells[\"Latitud\"].value",
+    "onError": "set-to-blank",
+    "newColumnName": "Latitud",
+    "columnInsertIndex": 1,
+    "description": "Create column Latitud at index 1 based on column idTram using expression grel:cell.cross(\"transit relacio trams format long csv\", \"Tram\")[0].cells[\"Latitud\"].value"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "idTram",
+    "expression": "grel:cell.cross(\"transit relacio trams format long csv\", \"Tram\")[0].cells[\"Longitud\"].value",
+    "onError": "set-to-blank",
+    "newColumnName": "Longitud",
+    "columnInsertIndex": 1,
+    "description": "Create column Longitud at index 1 based on column idTram using expression grel:cell.cross(\"transit relacio trams format long csv\", \"Tram\")[0].cells[\"Longitud\"].value"
+  },
+  {
+    "op": "core/column-reorder",
+    "columnNames": [
+      "idTram",
+      "Longitud",
+      "Latitud",
+      "data",
+      "congestion"
+    ],
+    "description": "Reorder columns"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "idTram",
+    "newColumnName": "Tram_id",
+    "description": "Rename column idTram to Tram_id"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "congestion",
+    "newColumnName": "Congestion",
+    "description": "Rename column congestion to Congestion"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "data",
+    "newColumnName": "DATETIME",
+    "description": "Rename column data to DATETIME"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Tram_id",
+    "expression": "grel:cell.cross(\"transit relacio trams format long csv\", \"Tram\")[0].cells[\"Descripció\"].value",
+    "onError": "set-to-blank",
+    "newColumnName": "Descripció",
+    "columnInsertIndex": 1,
+    "description": "Create column Descripció at index 1 based on column Tram_id using expression grel:cell.cross(\"transit relacio trams format long csv\", \"Tram\")[0].cells[\"Descripció\"].value"
+  },
+  {
+    "op": "core/row-removal",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Congestion",
+          "expression": "value",
+          "columnName": "Congestion",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Sin datos",
+                "l": "Sin datos"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "description": "Remove rows"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Descripció",
+    "expression": "grel:value.split(\"(\")[0].trim()",
+    "onError": "set-to-blank",
+    "newColumnName": "Street_name",
+    "columnInsertIndex": 2,
+    "description": "Create column Street_name at index 2 based on column Descripció using expression grel:value.split(\"(\")[0].trim()"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Descripció",
+    "expression": "grel:value.split(\"(\")[1].replace(\")\", \"\").trim().split(\" a \")[0].trim()",
+    "onError": "set-to-blank",
+    "newColumnName": "Start_point",
+    "columnInsertIndex": 2,
+    "description": "Create column Start_point at index 2 based on column Descripció using expression grel:value.split(\"(\")[1].replace(\")\", \"\").trim().split(\" a \")[0].trim()"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Descripció",
+    "expression": "grel:value.split(\"(\")[1].replace(\")\", \"\").trim().split(\" a \")[1].trim()",
+    "onError": "set-to-blank",
+    "newColumnName": "End_point",
+    "columnInsertIndex": 2,
+    "description": "Create column End_point at index 2 based on column Descripció using expression grel:value.split(\"(\")[1].replace(\")\", \"\").trim().split(\" a \")[1].trim()"
+  },
+  {
+    "op": "core/column-reorder",
+    "columnNames": [
+      "Tram_id",
+      "Descripció",
+      "Street_name",
+      "Start_point",
+      "End_point",
+      "Longitud",
+      "Latitud",
+      "DATETIME",
+      "Congestion"
+    ],
+    "description": "Reorder columns"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Descripció",
+    "description": "Remove column Descripció"
   }
 ]
