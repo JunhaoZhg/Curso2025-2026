@@ -9,9 +9,9 @@
 
 @base <https://www.roadsafetydata.com/mappings#> .
 
-#########
-# 1) ACCIDENTALIDAD (data/2025-Accidentalidad.csv)
-#########
+
+# 1. ACCIDENTALIDAD (data/2025-Accidentalidad.csv)
+
 <#AccidentTM>
   rml:logicalSource [
     rml:source "data/2025-Accidentalidad-update.csv" ;
@@ -28,11 +28,11 @@
   # fecha y hora
   rr:predicateObjectMap [
     rr:predicate schema:startDate ;
-    rr:objectMap [ rml:reference "fecha" ; rr:datatype xsd:dateTime ]
+    rr:objectMap [ rml:reference "fecha" ; rr:datatype xsd:date ]
   ] ;
   rr:predicateObjectMap [
     rr:predicate schema:startTime ;
-    rr:objectMap [ rml:reference "hora" ; rr:datatype xsd:string ]
+    rr:objectMap [ rml:reference "hora" ; rr:datatype xsd:time ]
   ] ;
 
   # tipo de accidente y meteo
@@ -41,41 +41,22 @@
     rr:objectMap [ rml:reference "tipo_accidente" ; rr:datatype xsd:string ]
   ] ;
   rr:predicateObjectMap [
-    rr:predicate schema:weather ;
+    rr:predicate ex:weather ;
     rr:objectMap [ rml:reference "estado_meteorológico" ; rr:datatype xsd:string ]
   ] ;
 
-  # relaciones
-  rr:predicateObjectMap [
-    rr:predicate schema:participant ;
-    rr:objectMap [
-      rr:parentTriplesMap <#AccidentParticipantTM> ;
-      rr:joinCondition [ rr:child "num_expediente" ; rr:parent "num_expediente" ]
-    ]
-  ] ;
   rr:predicateObjectMap [
     rr:predicate schema:location ;
-    rr:objectMap [
-      rr:parentTriplesMap <#AccidentPlaceTM> ;
-      rr:joinCondition [ rr:child "num_expediente" ; rr:parent "num_expediente" ]
-    ]
-  ] ;
+    rr:objectMap [ rr:template "https://www.roadsafetydata.com/resource/Accident/{num_expediente}/place" ]
+  ] ; 
   rr:predicateObjectMap [
     rr:predicate schema:areaServed ;
-    rr:objectMap [
-      rr:parentTriplesMap <#DistrictTM> ;
-      rr:joinCondition [ rr:child "cod_distrito" ; rr:parent "cod_distrito" ]
-    ]
+    rr:objectMap [ rr:template "https://www.roadsafetydata.com/resource/District/{cod_distrito}" ]
   ] ;
   rr:predicateObjectMap [
-    rr:predicate ex:positiveAlcohol ;
-    rr:objectMap [ rml:reference "positiva_alcohol" ; rr:datatype xsd:string ]
-  ] ;
-  rr:predicateObjectMap [
-    rr:predicate ex:positiveDrug ;
-    rr:objectMap [ rml:reference "positiva_droga" ; rr:datatype xsd:string ]
-  ] ; 
-  .
+    rr:predicate schema:participant ;  
+    rr:objectMap [ rr:template "https://www.roadsafetydata.com/resource/Accident/{num_expediente}/participant" ]
+  ] .
 
 <#AccidentParticipantTM>
   rml:logicalSource [
@@ -114,7 +95,16 @@
   rr:predicateObjectMap [
     rr:predicate ex:injuryLevel ;
     rr:objectMap [ rml:reference "lesividad" ; rr:datatype xsd:string ]
+  ] ; 
+    rr:predicateObjectMap [
+    rr:predicate ex:positiveAlcohol ;
+    rr:objectMap [ rml:reference "positiva_alcohol" ; rr:datatype xsd:string ]
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate ex:positiveDrug ;
+    rr:objectMap [ rml:reference "positiva_droga" ; rr:datatype xsd:string ]
   ] .
+
 
 <#AccidentPlaceTM>
   rml:logicalSource [
@@ -129,14 +119,12 @@
     rr:predicate rdfs:label ;
     rr:objectMap [ rml:reference "localizacion" ; rr:datatype xsd:string ]
   ] ;
-
-
   rr:predicateObjectMap [
     rr:predicate schema:streetAddress ;
     rr:objectMap [ rml:reference "localizacion" ; rr:datatype xsd:string ]
   ] ;
   rr:predicateObjectMap [
-    rr:predicate schema:streetNumber ;
+    rr:predicate ex:streetNumber ;
     rr:objectMap [ rml:reference "numero" ; rr:datatype xsd:string ]
   ] ;
   rr:predicateObjectMap [
@@ -157,7 +145,7 @@
     rr:predicate rdfs:label ;
     rr:objectMap [ rml:reference "distrito" ; rr:datatype xsd:string ]
   ] ;
-;
+
   rr:subjectMap [
     rr:template "https://www.roadsafetydata.com/resource/District/{cod_distrito}" ;
     rr:class schema:AdministrativeArea
@@ -167,10 +155,9 @@
     rr:predicate schema:name ;
     rr:objectMap [ rml:reference "distrito" ; rr:datatype xsd:string ]
   ] .
+  
 
-#########
-# 2) POBLACIÓN (data/poblacion-1-enero-update.csv)
-#########
+# 2. POBLACIÓN (data/poblacion-1-enero-update.csv)
 
 <#PopulationObsTM>
   rml:logicalSource [
@@ -185,14 +172,10 @@
     rr:predicate rdfs:label ;
     rr:objectMap [ rr:template "{fecha} {cod_distrito}-{cod_barrio}" ; rr:datatype xsd:string ]
   ] ;
-
-
   rr:predicateObjectMap [
     rr:predicate dct:date ;
-    rr:objectMap [ rml:reference "fecha" ; rr:datatype xsd:dateTime ]
+    rr:objectMap [ rml:reference "fecha" ; rr:datatype xsd:date ]
   ] ;
-
-  # Si tus números tienen punto de miles (145.411), usa xsd:decimal o limpia a enteros
   rr:predicateObjectMap [
     rr:predicate ex:peopleTotal ;
     rr:objectMap [ rml:reference "num_personas" ; rr:datatype xsd:string ]
@@ -204,21 +187,21 @@
   rr:predicateObjectMap [
     rr:predicate ex:peopleFemale ;
     rr:objectMap [ rml:reference "num_personas_mujeres" ; rr:datatype xsd:string ]
-  ] ;
-
+  ] ; 
+  # Population -> District
   rr:predicateObjectMap [
     rr:predicate ex:forDistrict ;
-    rr:objectMap [
-      rr:parentTriplesMap <#DistrictFromPopTM> ;
-      rr:joinCondition [ rr:child "cod_distrito" ; rr:parent "cod_distrito" ]
-    ]
+    rr:objectMap [ rr:template "https://www.roadsafetydata.com/resource/District/{cod_distrito}" ]
   ] ;
+  # Population -> Neighbourhood
   rr:predicateObjectMap [
     rr:predicate ex:forNeighbourhood ;
-    rr:objectMap [
-      rr:parentTriplesMap <#NeighbourhoodTM> ;
-      rr:joinCondition [ rr:child "cod_barrio" ; rr:parent "cod_barrio" ]
-    ]
+    rr:objectMap [ rr:template "https://www.roadsafetydata.com/resource/Neighbourhood/{cod_barrio}" ]
+  ] ; 
+  # Population -> Municipality
+  rr:predicateObjectMap [
+    rr:predicate ex:forMunicipality ;
+    rr:objectMap [ rr:template "https://www.roadsafetydata.com/resource/Municipality/{cod_municipio}" ]
   ] .
 
 <#DistrictFromPopTM>
@@ -234,12 +217,15 @@
   rr:predicate rdfs:label ;
   rr:objectMap [ rml:reference "distrito" ; rr:datatype xsd:string ]
 ] ;
-
-
   rr:predicateObjectMap [
     rr:predicate schema:name ;
     rr:objectMap [ rml:reference "distrito" ; rr:datatype xsd:string ]
+  ];
+  rr:predicateObjectMap [
+    rr:predicate schema:containedInPlace ;
+    rr:objectMap [ rr:template "https://www.roadsafetydata.com/resource/Municipality/{cod_municipio}" ]
   ] .
+ 
 
 <#NeighbourhoodTM>
   rml:logicalSource [
@@ -251,26 +237,39 @@
     rr:class schema:AdministrativeArea
   ] ;
   rr:predicateObjectMap [
-  rr:predicate rdfs:label ;
-  rr:objectMap [ rml:reference "barrio" ; rr:datatype xsd:string ]
-] ;
-
-
-  rr:predicateObjectMap [
-    rr:predicate schema:name ;
+    rr:predicate rdfs:label ;
     rr:objectMap [ rml:reference "barrio" ; rr:datatype xsd:string ]
   ] ;
   rr:predicateObjectMap [
-    rr:predicate schema:containedInPlace ;
-    rr:objectMap [
-      rr:parentTriplesMap <#DistrictFromPopTM> ;
-      rr:joinCondition [ rr:child "cod_distrito" ; rr:parent "cod_distrito" ]
-    ]
+    rr:predicate schema:name ;
+    rr:objectMap [ rml:reference "barrio" ; rr:datatype xsd:string ]
+  ] ; 
+  rr:predicateObjectMap [
+  rr:predicate schema:containedInPlace ;
+  rr:objectMap [ rr:template "https://www.roadsafetydata.com/resource/District/{cod_distrito}" ]
+] .
+
+<#MunicipalityTM>
+  rml:logicalSource [
+    rml:source "data/poblacion-1-enero-update.csv" ;
+    rml:referenceFormulation ql:CSV
+  ] ;
+  rr:subjectMap [
+    rr:template "https://www.roadsafetydata.com/resource/Municipality/{cod_municipio}" ;
+    rr:class schema:AdministrativeArea
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate rdfs:label ;
+    rr:objectMap [ rml:reference "municipio" ; rr:datatype xsd:string ]
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate schema:name ;
+    rr:objectMap [ rml:reference "municipio" ; rr:datatype xsd:string ]
   ] .
 
-#########
-# 3) RADARES (data/RADARES-FIJOS-vDTT.csv)
-#########
+  
+# 3.RADARES (data/RADARES-FIJOS-vDTT.csv)
+
 
 <#RadarTM>
   rml:logicalSource [
@@ -291,9 +290,25 @@
     rr:predicate ex:road ;
     rr:objectMap [ rml:reference "Carretara o vial" ; rr:datatype xsd:string ]
   ] ;
+    rr:predicateObjectMap [
+    rr:predicate ex:pk ;
+    rr:objectMap [ rml:reference "PK" ; rr:datatype xsd:string ]
+  ] ;
   rr:predicateObjectMap [
     rr:predicate ex:direction ;
     rr:objectMap [ rml:reference "Sentido" ; rr:datatype xsd:string ]
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate ex:cameraType ;
+    rr:objectMap [ rml:reference "Tipo" ; rr:datatype xsd:string ]
+  ] ;
+   rr:predicateObjectMap [
+    rr:predicate ex:startLongitude ;
+    rr:objectMap [ rml:reference "Longitud inicio tramo" ; rr:datatype xsd:double ]
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate ex:startLatitude ;
+    rr:objectMap [ rml:reference "Latitud inicio tramo" ; rr:datatype xsd:double ]
   ] ;
   rr:predicateObjectMap [
     rr:predicate ex:speedLimit ;
@@ -306,6 +321,10 @@
   rr:predicateObjectMap [
     rr:predicate schema:longitude ;
     rr:objectMap [ rml:reference "Longitud" ; rr:datatype xsd:double ]
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate ex:lane ;
+    rr:objectMap [ rml:reference "Carril" ; rr:datatype xsd:string ]
   ] ;
   rr:predicateObjectMap [
     rr:predicate ex:utmX ;
