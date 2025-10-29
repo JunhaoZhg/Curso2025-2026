@@ -5,7 +5,7 @@
 @prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix owl:     <http://www.w3.org/2002/07/owl#> .
 @prefix schema:  <https://schema.org/> .
-@prefix ex:      <https://www.roadsafetydata.com/def/> .
+@prefix ex: <https://www.roadsafetydata.com/ontology#> .
 
 @base <https://www.roadsafetydata.com/> .
 
@@ -46,7 +46,7 @@
     rr:objectMap [ rml:reference "same_as_wikidata_tipo_vehiculo" ; rr:termType rr:IRI ]
   ] .
 
-<#TM_Sex>
+<#TM_Gender>
   a rr:TriplesMap ;
   rml:logicalSource <#SrcAcc> ;
   rr:subjectMap [
@@ -62,16 +62,25 @@
     rr:objectMap [ rml:reference "same_as_wikidata_sexo" ; rr:termType rr:IRI ]
   ] .
 
-<#TM_Person>
+
+<#AccidentParticipantTM>
   a rr:TriplesMap ;
   rml:logicalSource <#SrcAcc> ;
   rr:subjectMap [
     rr:template "https://www.roadsafetydata.com/resource/person/{num_expediente}-{tipo_persona}-{sexo}-{rango_edad}" ;
     rr:class schema:Person
   ] ;
+    rr:predicateObjectMap [
+    rr:predicate rdfs:label ;
+    rr:objectMap [ rr:template "{tipo_persona} {sexo} {rango_edad} {tipo_vehiculo}" ; rr:datatype xsd:string ]
+  ] ;
   rr:predicateObjectMap [
-    rr:predicate ex:sex ;
-    rr:objectMap [ rr:parentTriplesMap <#TM_Sex> ]
+    rr:predicate schema:gender ;
+    rr:objectMap [ rr:parentTriplesMap <#TM_Gender> ]
+  ] ;
+    rr:predicateObjectMap [
+    rr:predicate ex:ageRange ;
+    rr:objectMap [ rml:reference "rango_edad" ; rr:datatype xsd:string ]
   ] ;
   rr:predicateObjectMap [
     rr:predicate schema:roleName ;
@@ -88,10 +97,18 @@
   rr:predicateObjectMap [
     rr:predicate ex:injuryLabel ;
     rr:objectMap [ rml:reference "lesividad" ; rr:datatype xsd:string ]
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate ex:positiveAlcohol ;
+    rr:objectMap [ rml:reference "positiva_alcohol" ; rr:datatype xsd:string ]
+] ;
+  rr:predicateObjectMap [
+    rr:predicate ex:positiveDrug ;
+    rr:objectMap [ rml:reference "positiva_droga" ; rr:datatype xsd:string ]
   ] .
 
 
-<#TM_Accident>
+<#AccidentTM>
   a rr:TriplesMap ;
   rml:logicalSource <#SrcAcc> ;
   rr:subjectMap [
@@ -106,11 +123,11 @@
   ] ;
   rr:predicateObjectMap [
     rr:predicate schema:startDate ;
-    rr:objectMap [ rml:reference "fecha" ; rr:datatype xsd:dateTime ]
+    rr:objectMap [ rml:reference "fecha" ; rr:datatype xsd:date ]
   ] ;
   rr:predicateObjectMap [
     rr:predicate schema:startTime ;
-    rr:objectMap [ rml:reference "hora" ; rr:datatype xsd:string ]
+    rr:objectMap [ rml:reference "hora" ; rr:datatype xsd:time ]
   ] ;
   rr:predicateObjectMap [
     rr:predicate schema:weather ;
@@ -125,7 +142,7 @@
     rr:objectMap [ rml:reference "localizacion" ; rr:datatype xsd:string ]
   ] ;
   rr:predicateObjectMap [
-    rr:predicate schema:streetNumber ;
+    rr:predicate ex:streetNumber ;
     rr:objectMap [ rml:reference "numero" ; rr:datatype xsd:string ]
   ] ;
   rr:predicateObjectMap [
@@ -147,7 +164,7 @@
   ] ;
   rr:predicateObjectMap [
     rr:predicate ex:involvesPerson ;
-    rr:objectMap [ rr:parentTriplesMap <#TM_Person> ]
+    rr:objectMap [ rr:parentTriplesMap <#AccidentParticipantTM> ]
   ] .
 ############################################################
 # 2) POBLACIÓN  (data/poblacion-1-enero-update.csv)
@@ -206,8 +223,9 @@
   ] ;
   rr:predicateObjectMap [
     rr:predicate schema:startDate ;
-    rr:objectMap [ rml:reference "fecha" ; rr:datatype xsd:dateTime ]
+    rr:objectMap [ rml:reference "fecha" ; rr:datatype xsd:date ]
   ] ;
+  
   rr:predicateObjectMap [
     rr:predicate ex:peopleTotal ;
     rr:objectMap [ rml:reference "num_personas" ; rr:datatype xsd:string ]
@@ -280,10 +298,14 @@
     rr:predicate rdfs:label ;
     rr:objectMap [ rml:reference "ubicacion" ; rr:datatype xsd:string ]
   ] ;
+
+  ################################
   rr:predicateObjectMap [
     rr:predicate schema:location ;
     rr:objectMap [ rml:reference "ubicacion" ; rr:datatype xsd:string ]
   ] ;
+  #########################################
+  
   rr:predicateObjectMap [
     rr:predicate ex:calle30Code ;
     rr:objectMap [ rml:reference "ubicacion calle 30" ; rr:datatype xsd:string ]
