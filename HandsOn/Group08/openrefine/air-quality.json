@@ -2310,5 +2310,341 @@
       "mode": "row-based"
     },
     "description": "Remove rows"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "ESTACIO",
+    "expression": "grel:cell.cross(\"2025 qualitat aire estacions csv\", \"Estacio\")[0].cells[\"nom_cabina\"].value",
+    "onError": "set-to-blank",
+    "newColumnName": "nom_estacio",
+    "columnInsertIndex": 5,
+    "description": "Create column nom_estacio at index 5 based on column ESTACIO using expression grel:cell.cross(\"2025 qualitat aire estacions csv\", \"Estacio\")[0].cells[\"nom_cabina\"].value"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "ESTACIO",
+    "expression": "grel:cell.cross(\"2025 qualitat aire estacions csv\", \"Estacio\")[0].cells[\"Latitud\"].value",
+    "onError": "set-to-blank",
+    "newColumnName": "Latitud",
+    "columnInsertIndex": 5,
+    "description": "Create column Latitud at index 5 based on column ESTACIO using expression grel:cell.cross(\"2025 qualitat aire estacions csv\", \"Estacio\")[0].cells[\"Latitud\"].value"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "ESTACIO",
+    "expression": "grel:cell.cross(\"2025 qualitat aire estacions csv\", \"Estacio\")[0].cells[\"Longitud\"].value",
+    "onError": "set-to-blank",
+    "newColumnName": "Longitud",
+    "columnInsertIndex": 5,
+    "description": "Create column Longitud at index 5 based on column ESTACIO using expression grel:cell.cross(\"2025 qualitat aire estacions csv\", \"Estacio\")[0].cells[\"Longitud\"].value"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "ESTACIO",
+    "expression": "grel:cell.cross(\"2025 qualitat aire estacions csv\", \"Estacio\")[0].cells[\"Nom_districte\"].value",
+    "onError": "set-to-blank",
+    "newColumnName": "Nom_districte_estacio",
+    "columnInsertIndex": 5,
+    "description": "Create column Nom_districte_estacio at index 5 based on column ESTACIO using expression grel:cell.cross(\"2025 qualitat aire estacions csv\", \"Estacio\")[0].cells[\"Nom_districte\"].value"
+  },
+  {
+    "op": "core/column-reorder",
+    "columnNames": [
+      "CODI_PROVINCIA",
+      "PROVINCIA",
+      "CODI_MUNICIPI",
+      "MUNICIPI",
+      "ESTACIO",
+      "nom_estacio",
+      "Nom_districte_estacio",
+      "Latitud",
+      "Longitud",
+      "CODI_CONTAMINANT",
+      "ANY",
+      "MES",
+      "DIA",
+      "DATE",
+      "DATETIME",
+      "HOUR",
+      "VALUE",
+      "HOUR2D",
+      "VALIDATION"
+    ],
+    "description": "Reorder columns"
+  },
+  {
+    "op": "core/column-reorder",
+    "columnNames": [
+      "CODI_PROVINCIA",
+      "PROVINCIA",
+      "CODI_MUNICIPI",
+      "MUNICIPI",
+      "ESTACIO",
+      "nom_estacio",
+      "Nom_districte_estacio",
+      "Latitud",
+      "Longitud",
+      "CODI_CONTAMINANT",
+      "DATETIME",
+      "VALUE"
+    ],
+    "description": "Reorder columns"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "CODI_CONTAMINANT",
+    "expression": "grel:cell.cross(\"qualitat aire contaminants csv\", \"Codi_Contaminant\")[0].cells[\"Desc_Contaminant\"].value",
+    "onError": "set-to-blank",
+    "newColumnName": "Desc_Contaminant",
+    "columnInsertIndex": 10,
+    "description": "Create column Desc_Contaminant at index 10 based on column CODI_CONTAMINANT using expression grel:cell.cross(\"qualitat aire contaminants csv\", \"Codi_Contaminant\")[0].cells[\"Desc_Contaminant\"].value"
+  },
+  {
+    "op": "core/row-removal",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Desc_Contaminant",
+          "expression": "value",
+          "columnName": "Desc_Contaminant",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "description": "Remove rows"
+  },
+  {
+    "op": "core/row-removal",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Desc_Contaminant: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "Desc_Contaminant",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "Desc_Contaminant",
+          "expression": "value",
+          "columnName": "Desc_Contaminant",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Flow 2 (Mesura interna equip)",
+                "l": "Flow 2 (Mesura interna equip)"
+              }
+            },
+            {
+              "v": {
+                "v": "Flow 1 (Mesura interna equip)",
+                "l": "Flow 1 (Mesura interna equip)"
+              }
+            },
+            {
+              "v": {
+                "v": "Flow C (Mesura interna equip) ",
+                "l": "Flow C (Mesura interna equip) "
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "description": "Remove rows"
+  },
+  {
+    "op": "core/row-removal",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Desc_Contaminant: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "Desc_Contaminant",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "Desc_Contaminant",
+          "expression": "value",
+          "columnName": "Desc_Contaminant",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "PM10*",
+                "l": "PM10*"
+              }
+            },
+            {
+              "v": {
+                "v": "PM2.5*",
+                "l": "PM2.5*"
+              }
+            },
+            {
+              "v": {
+                "v": "Nox*",
+                "l": "Nox*"
+              }
+            },
+            {
+              "v": {
+                "v": "NO*",
+                "l": "NO*"
+              }
+            },
+            {
+              "v": {
+                "v": "Biomassa Black Carbon",
+                "l": "Biomassa Black Carbon"
+              }
+            },
+            {
+              "v": {
+                "v": "NO2*",
+                "l": "NO2*"
+              }
+            },
+            {
+              "v": {
+                "v": "CO*",
+                "l": "CO*"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "description": "Remove rows"
+  },
+  {
+    "op": "core/column-reorder",
+    "columnNames": [
+      "ESTACIO",
+      "nom_estacio",
+      "Nom_districte_estacio",
+      "Latitud",
+      "Longitud",
+      "CODI_CONTAMINANT",
+      "Desc_Contaminant",
+      "DATETIME",
+      "VALUE"
+    ],
+    "description": "Reorder columns"
+  },
+  {
+    "op": "core/column-reorder",
+    "columnNames": [
+      "ESTACIO",
+      "nom_estacio",
+      "Nom_districte_estacio",
+      "Latitud",
+      "Longitud",
+      "Desc_Contaminant",
+      "DATETIME",
+      "VALUE"
+    ],
+    "description": "Reorder columns"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Desc_Contaminant",
+    "newColumnName": "Contaminant",
+    "description": "Rename column Desc_Contaminant to Contaminant"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Nom_districte_estacio",
+    "newColumnName": "District_name",
+    "description": "Rename column Nom_districte_estacio to District_name"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "nom_estacio",
+    "newColumnName": "Estation_name",
+    "description": "Rename column nom_estacio to Estation_name"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "ESTACIO",
+    "newColumnName": "Estation_id",
+    "description": "Rename column ESTACIO to Estation_id"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Estation_id",
+    "newColumnName": "Station_id",
+    "description": "Rename column Estation_id to Station_id"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Estation_name",
+    "newColumnName": "Station_name",
+    "description": "Rename column Estation_name to Station_name"
   }
 ]

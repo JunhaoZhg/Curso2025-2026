@@ -19,6 +19,9 @@ data:Neighborhood/69 a ns:Neighborhood ;
 #
 
 data:RoadSegment/4 a ns:RoadSegment ;
+    ns:name "Diagonal"^^xsd:string ;
+    ns:startPoint "Pl. Pius XII"^^xsd:string ;
+    ns:endPoint "Doctor Marañón"^^xsd:string ;
     ns:hasLocation data:Location/RoadSegment/4 ;
     ns:hasCongestionMeasurement data:CongestionMeasurement/4/20250801T001053Z .
 

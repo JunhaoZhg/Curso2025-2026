@@ -13,12 +13,30 @@
 # tram_id - location - congestion
 <#RoadSegmentMap> a rr:TriplesMap;
   rml:logicalSource [
-    rml:source "itineraris-updated.csv" ;
+    rml:source "../csv/itineraris-updated.csv" ;
     rml:referenceFormulation ql:CSV
   ];
   rr:subjectMap [
     rr:template "http://bcn-mobility-air.org/data/RoadSegment/{Tram_id}";
     rr:class ns:RoadSegment
+  ];
+
+# Mapeo del nombre de la calle (Street_name)
+  rr:predicateObjectMap [
+    rr:predicate ns:name;
+    rr:objectMap [ rml:reference "Street_name"; rr:datatype xsd:string ] 
+  ];
+  
+  # Mapeo de la descripción del punto de inicio (Start_point)
+  rr:predicateObjectMap [
+    rr:predicate ns:startPoint;
+    rr:objectMap [ rml:reference "Start_point"; rr:datatype xsd:string ] 
+  ];
+
+  # Mapeo de la descripción del punto final (End_point)
+  rr:predicateObjectMap [
+    rr:predicate ns:endPoint;
+    rr:objectMap [ rml:reference "End_point"; rr:datatype xsd:string ] 
   ];
 
   # Link RoadSegment to its location
@@ -45,7 +63,7 @@
 # tram_id - long - lat
 <#RoadSegmentLocationMap> a rr:TriplesMap;
   rml:logicalSource [
-    rml:source "itineraris-updated.csv" ;
+    rml:source "../csv/itineraris-updated.csv" ;
     rml:referenceFormulation ql:CSV
   ];
   rr:subjectMap [
@@ -67,7 +85,7 @@
 # tra_id - datetime - congestion
 <#CongestionMeasurementMap> a rr:TriplesMap;
   rml:logicalSource [
-    rml:source "itineraris-updated.csv" ;
+    rml:source "../csv/itineraris-updated.csv" ;
     rml:referenceFormulation ql:CSV
   ];
   rr:subjectMap [
@@ -95,7 +113,7 @@
 # station_id - station_name - location
 <#AirQualityStationMap> a rr:TriplesMap;
   rml:logicalSource [
-    rml:source "air-quality-updated.csv" ;
+    rml:source "../csv/air-quality-updated.csv" ;
     rml:referenceFormulation ql:CSV
   ];
   rr:subjectMap [
@@ -144,7 +162,7 @@
 # Station_id - lat - long
 <#AirStationLocationMap> a rr:TriplesMap;
   rml:logicalSource [
-    rml:source "air-quality-updated.csv" ;
+    rml:source "../csv/air-quality-updated.csv" ;
     rml:referenceFormulation ql:CSV
   ];
   rr:subjectMap [
@@ -166,7 +184,7 @@
 # measurement - datetime - value
 <#AirReadingMap> a rr:TriplesMap;
   rml:logicalSource [
-    rml:source "air-quality-updated.csv" ;
+    rml:source "../csv/air-quality-updated.csv" ;
     rml:referenceFormulation ql:CSV
   ];
   rr:subjectMap [
@@ -199,7 +217,7 @@
 # contaminant - name
 <#PollutantMap> a rr:TriplesMap;
   rml:logicalSource [
-    rml:source "air-quality-updated.csv" ;
+    rml:source "../csv/air-quality-updated.csv" ;
     rml:referenceFormulation ql:CSV
   ];
   rr:subjectMap [
@@ -216,7 +234,7 @@
 # District map for Air Quality file (Shared with Bicis, defined by District name)
 <#DistrictMap_Air> a rr:TriplesMap;
   rml:logicalSource [
-    rml:source "air-quality-updated.csv" ;
+    rml:source "../csv/air-quality-updated.csv" ;
     rml:referenceFormulation ql:CSV
   ];
   rr:subjectMap [
@@ -237,7 +255,7 @@
 # name_park: location - district - neighborhood
 <#BicycleParkingMap> a rr:TriplesMap;
   rml:logicalSource [
-    rml:source "bicis-updated.csv" ;
+    rml:source "../csv/bicis-updated.csv" ;
     rml:referenceFormulation ql:CSV
   ];
   rr:subjectMap [
@@ -286,7 +304,7 @@
 # name_parking - long - lat
 <#BicycleParkingLocationMap> a rr:TriplesMap;
   rml:logicalSource [
-    rml:source "bicis-updated.csv" ;
+    rml:source "../csv/bicis-updated.csv" ;
     rml:referenceFormulation ql:CSV
   ];
   rr:subjectMap [
@@ -309,7 +327,7 @@
 # District map for Bicycle file (Shared with Air Quality)
 <#DistrictMap_Bicis> a rr:TriplesMap;
   rml:logicalSource [
-    rml:source "bicis-updated.csv" ;
+    rml:source "../csv/bicis-updated.csv" ;
     rml:referenceFormulation ql:CSV
   ];
   rr:subjectMap [
@@ -325,7 +343,7 @@
 # neighborhood
 <#NeighborhoodMap_Bicis> a rr:TriplesMap;
   rml:logicalSource [
-    rml:source "bicis-updated.csv" ;
+    rml:source "../csv/bicis-updated.csv" ;
     rml:referenceFormulation ql:CSV
   ];
   rr:subjectMap [

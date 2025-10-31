@@ -88,9 +88,19 @@ ns:congestionLevel a owl:DatatypeProperty ;
   rdfs:comment "Level of traffic congestion ('Normal', 'Congestion', 'Optimum')."@en .
 
 ns:name a owl:DatatypeProperty ;
-  rdfs:domain ns:AirQualityStation, ns:BicycleParking, ns:District, ns:Neighborhood, ns:Pollutant ;
+  rdfs:domain ns:AirQualityStation, ns:BicycleParking, ns:District, ns:Neighborhood, ns:Pollutant, ns:RoadSegment ;
   rdfs:range xsd:string ;
   rdfs:comment "Name of the entity (e.g., station name, district name)."@en .
+
+ns:startPoint a owl:DatatypeProperty ;
+  rdfs:domain ns:RoadSegment ;
+  rdfs:range xsd:string ;
+  rdfs:comment "Description of the start point of the road segment (e.g., 'Ronda de Dalt').".
+
+ns:endPoint a owl:DatatypeProperty ;
+  rdfs:domain ns:RoadSegment ;
+  rdfs:range xsd:string ;
+  rdfs:comment "Description of the end point of the road segment (e.g., 'Doctor Marañón').".
 
 geo:lat a owl:DatatypeProperty ;
   rdfs:domain geo:Point ;

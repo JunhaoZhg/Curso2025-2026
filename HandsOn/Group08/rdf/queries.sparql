@@ -5,67 +5,100 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 # --------------------------------------------------------------------------
-# Q1: Count resources with ns:name (Equivalent to rdfs:label)
-# Objetivo: Contar cuántas entidades principales tienen asignada la propiedad ns:name.
+# CONSULTAS DE VALIDACIÓN: Enfocadas en el enriquecimiento de ns:RoadSegment
 # --------------------------------------------------------------------------
-SELECT (COUNT(DISTINCT ?s) AS ?withName)
+
+# 1. Contar RoadSegments que SI tienen nombre
+SELECT (COUNT(DISTINCT ?s) AS ?count)
 WHERE { 
-    ?s ns:name ?name . 
+    ?s a ns:RoadSegment ;
+       ns:name ?name . 
 }
 
 ;
 
-# --------------------------------------------------------------------------
-# Q2: Sample names by class (Checking ns:name assignment)
-# Objetivo: Muestra 10 ejemplos de nombres y la clase a la que pertenecen, verificando la tipificación.
-# --------------------------------------------------------------------------
-SELECT ?class ?name
+# 2. Contar RoadSegments que NO tienen nombre (Debe ser 0)
+SELECT (COUNT(DISTINCT ?s) AS ?count)
 WHERE {
-    ?s a ?class ;
-       ns:name ?name .
+    ?s a ns:RoadSegment .
+    FILTER NOT EXISTS { ?s ns:name ?name . }
 }
-LIMIT 10
 
 ;
 
-# --------------------------------------------------------------------------
-# Q3: Count individuals without ns:name (Excluding Measurements and Locations)
-# Objetivo: Contar recursos que NO tienen nombre, excluyendo intencionadamente las clases que no lo requieren (Mediciones, Puntos Geográficos y RoadSegments).
-# --------------------------------------------------------------------------
-SELECT (COUNT(DISTINCT ?s) AS ?withoutName)
+# 3. Muestra de RoadSegments con todos sus atributos (Nombre, Inicio, Fin)
+SELECT ?segment ?name ?start ?end
 WHERE {
-    ?s a ?class .
-    FILTER NOT EXISTS { ?s ns:name ?name }
-    
-    # Excluimos recursos sin la propiedad ns:name por diseño de la ontología.
-    FILTER (?class != geo:Point)
-    FILTER (?class != ns:Measurement)
-    FILTER (?class != ns:RoadSegment)
+  ?segment a ns:RoadSegment ;
+           ns:name ?name ;
+           ns:startPoint ?start ;
+           ns:endPoint ?end .
 }
+LIMIT 5
 
 ;
 
-# --------------------------------------------------------------------------
-# Q4: Name distribution by class (Count of named entities)
-# Objetivo: Obtener el conteo total de instancias de cada clase que tiene la propiedad ns:name.
-# --------------------------------------------------------------------------
+# 4. Distribución de nombres (Confirmar que ns:RoadSegment aparece)
 SELECT ?class (COUNT(DISTINCT ?s) AS ?count)
 WHERE {
-    ?s a ?class ;
-       ns:name ?name .
+  ?s a ?class ;
+     ns:name ?name .
 }
 GROUP BY ?class
 ORDER BY DESC(?count)
 
 ;
 
-# --------------------------------------------------------------------------
-# Q5: Check name readability (using CONTAINS to search for 'sant')
-# Objetivo: Verificar que los literales de nombre son legibles y que la función de búsqueda de texto funciona correctamente.
-# --------------------------------------------------------------------------
-SELECT ?s ?name
+# 5. Comprobar legibilidad del nombre (Buscando "Diagonal")
+SELECT ?s ?name ?start
 WHERE {
-    ?s ns:name ?name .
-    FILTER(CONTAINS(LCASE(STR(?name)), "sant"))
+  ?s a ns:RoadSegment ;
+     ns:name ?name ;
+     ns:startPoint ?start .
+  FILTER(CONTAINS(LCASE(STR(?name)), "diagonal"))
 }
 LIMIT 5
+
+;
+
+# --------------------------------------------------------------------------
+# CONSULTAS DE APLICACIÓN
+# --------------------------------------------------------------------------
+
+# Q1: ¿Cuáles son los tramos en "Diagonal" con la MEJOR CONGESTION?
+SELECT DISTINCT ?segment ?name ?start ?end ?congestion 
+WHERE { 
+    ?segment a ns:RoadSegment ;
+             ns:name ?name ;
+             ns:startPoint ?start ;
+             ns:endPoint ?end ;
+             ns:hasCongestionMeasurement/ns:congestionLevel ?congestion .
+    
+    FILTER(CONTAINS(LCASE(STR(?name)), "diagonal"))
+    FILTER(?congestion = "Optimum"^^xsd:string)
+    
+}
+LIMIT 10
+
+;
+
+# Q2: ¿Cuál es la MEJOR CALIDAD DE AIRE en un tramo de "Diagonal"?
+SELECT DISTINCT ?streetName ?startPoint ?stationName ?aqValue
+WHERE {
+    ?segment a ns:RoadSegment ;
+             ns:name ?streetName ;
+             ns:startPoint ?startPoint ;
+             ns:hasLocation ?roadLocation .
+    FILTER(CONTAINS(LCASE(STR(?streetName)), "diagonal"))
+
+    ?station a ns:AirQualityStation ;
+             ns:name ?stationName ;
+             ns:hasLocation ?stationLocation .
+    
+    ?station ns:hasAirQualityReading ?reading .
+    
+    ?reading ns:measuresPollutant [ns:name "nitric oxide"] ; # Sin ^^xsd:string
+             ns:value ?aqValue .
+}
+ORDER BY ASC(?aqValue) 
+LIMIT 10
