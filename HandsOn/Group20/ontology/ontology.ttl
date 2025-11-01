@@ -53,9 +53,6 @@ schema1:addressRegion a owl:ObjectProperty ;
     rdfs:domain schema1:PostalAddress ;
     rdfs:range my:AutonomousCommunity .
 
-schema1:containedInPlace a owl:Class ;
-    rdfs:label "contained In Place" .
-
 schema1:name a owl:DatatypeProperty ;
     rdfs:label "name" ;
     rdfs:domain schema1:ParkingFacility ;
@@ -71,8 +68,10 @@ schema1:streetAddress a owl:DatatypeProperty ;
     rdfs:domain schema1:PostalAddress ;
     rdfs:range xsd:string .
 
-geo:asWKT a owl:Class ;
-    rdfs:label "as W K T" .
+geo:asWKT a owl:DatatypeProperty ;
+    rdfs:label "as w k t" ;
+    rdfs:domain geo:Point ;
+    rdfs:range geo:wktLiteral .
 
 geo:hasGeometry a owl:ObjectProperty ;
     rdfs:label "has geometry" ;
@@ -98,40 +97,29 @@ vcard:email a owl:DatatypeProperty ;
     rdfs:domain schema1:ParkingFacility ;
     rdfs:range xsd:string .
 
-my:asWKT a owl:Class,
-        owl:ObjectProperty ;
-    rdfs:label "as W K T",
-        "as w k t" ;
-    rdfs:domain geo:Point ;
-    rdfs:range geo:wktLiteral .
-
-my:containedInCity a owl:Class,
-        owl:ObjectProperty ;
-    rdfs:label "contained In City",
-        "contained in city" ;
+my:containedInCity a owl:ObjectProperty ;
+    rdfs:label "contained in city" ;
     rdfs:domain schema1:ParkingFacility ;
-    rdfs:range schema1:City .
+    rdfs:range schema1:City ;
+    rdfs:subPropertyOf schema1:containedInPlace .
 
-my:containedInCountry a owl:Class,
-        owl:ObjectProperty ;
-    rdfs:label "contained In Country",
-        "contained in country" ;
+my:containedInCountry a owl:ObjectProperty ;
+    rdfs:label "contained in country" ;
     rdfs:domain my:AutonomousCommunity ;
-    rdfs:range schema1:Country .
+    rdfs:range schema1:Country ;
+    rdfs:subPropertyOf schema1:containedInPlace .
 
-my:containedInNation a owl:Class,
-        owl:ObjectProperty ;
-    rdfs:label "contained In Nation",
-        "contained in nation" ;
+my:containedInNation a owl:ObjectProperty ;
+    rdfs:label "contained in nation" ;
     rdfs:domain schema1:City ;
-    rdfs:range schema1:Country .
+    rdfs:range schema1:Country ;
+    rdfs:subPropertyOf schema1:containedInPlace .
 
-my:containedInRegion a owl:Class,
-        owl:ObjectProperty ;
-    rdfs:label "contained In Region",
-        "contained in region" ;
+my:containedInRegion a owl:ObjectProperty ;
+    rdfs:label "contained in region" ;
     rdfs:domain schema1:City ;
-    rdfs:range my:AutonomousCommunity .
+    rdfs:range my:AutonomousCommunity ;
+    rdfs:subPropertyOf schema1:containedInPlace .
 
 my:hasCategory a owl:DatatypeProperty ;
     rdfs:label "has category" ;
@@ -170,12 +158,6 @@ schema1:CivicStructure a owl:Class ;
     rdfs:label "Civic Structure" ;
     rdfs:subClassOf schema1:Place .
 
-schema1:Place a owl:Class ;
-    rdfs:label "Place" .
-
-geo:wktLiteral a owl:Class ;
-    rdfs:label "wkt Literal" .
-
 my: a owl:Ontology ;
     dcterms:contributor <https://example.org/people#ContributorURI> ;
     dcterms:created "2025-10-07"^^xsd:date ;
@@ -190,8 +172,16 @@ my: a owl:Ontology ;
     owl:versionInfo "1.0.0" ;
     mod:createdWith <https://chowlk.linkeddata.es/> .
 
+schema1:Place a owl:Class ;
+    rdfs:label "Place" .
+
 schema1:Country a owl:Class ;
     rdfs:label "Country" .
+
+schema1:containedInPlace a owl:ObjectProperty ;
+    rdfs:label "contained in place" ;
+    rdfs:domain schema1:Place ;
+    rdfs:range schema1:Place .
 
 geo:Point a owl:Class ;
     rdfs:label "Point" .
