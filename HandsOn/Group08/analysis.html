@@ -18,8 +18,8 @@
   <h3>Selected datasets</h3>
   <ul>
     <li><strong>Air Quality in Barcelona</strong> – measurements of pollutants (NO₂, PM₁₀, etc.) from city monitoring stations.</li>
-    <li><strong>Traffic Street Sections with Weather Forecast</strong> – information about traffic intensity, occupation, and weather conditions with a 15-minute prediction.</li>
-    <li><strong>Bike Parking Service in Barcelona</strong> – locations, types, and capacities of public bike parking points.</li>
+    <li><strong>Traffic Street Sections Congestion</strong> – information about traffic intensity.</li>
+    <li><strong>Bike Parking Service in Barcelona</strong> – locations of public bike parking points.</li>
   </ul>
 
   <h3>Data structure and types</h3>
@@ -27,27 +27,21 @@
     <tr><th>Dataset</th><th>Main columns</th><th>Notes</th></tr>
     <tr>
       <td>Air quality</td>
-      <td>station_id, station_name, pollutant, value, unit, timestamp, district</td>
+      <td>station_id, station_name, district, long/lat, pollutant, value, datetime </td>
       <td>Numeric values for pollutant concentration; time-series data.</td>
     </tr>
     <tr>
-      <td>Traffic + weather</td>
-      <td>section_id, street, district, intensity, occupation, speed, weather, forecast, temperature, humidity</td>
-      <td>Combines mobility and meteorological values, updated frequently.</td>
+      <td>Traffic</td>
+      <td>section_id, street, start and end points, district, intensity</td>
+      <td>Mobility congestion with its start and end points.</td>
     </tr>
     <tr>
       <td>Bike parking</td>
-      <td>id, address, district, lat, lon, type, capacity</td>
+      <td>id, address, district, lat, lon, type</td>
       <td>Static dataset with spatial coordinates.</td>
     </tr>
   </table>
 
-  <h3>Value ranges</h3>
-  <ul>
-    <li>Pollution values usually between 0–200 µg/m³.</li>
-    <li>Traffic intensity 0–100, occupation 0–1, average speed 0–60 km/h.</li>
-    <li>Temperature between 0–35 °C, humidity 0–100 %.</li>
-  </ul>
 
   <h2>2. Licensing Analysis</h2>
   <ul>
@@ -65,19 +59,19 @@
     <tr><th>Type</th><th>Base URI pattern</th><th>Example</th></tr>
     <tr>
       <td>Ontology</td>
-      <td><code>http://group08.linkeddata.es/ontology/BCNData#</code></td>
-      <td><code>http://group08.linkeddata.es/ontology/BCNData#Station</code></td>
+      <td><code>http://bcn-mobility-air.org/ontology/</code></td>
+      <td><code>http://bcn-mobility-air.org/ontology/</code></td>
     </tr>
     <tr>
       <td>Resources</td>
-      <td><code>http://group08.linkeddata.es/resource/{class}/{identifier}</code></td>
-      <td><code>http://group08.linkeddata.es/resource/station/08019004</code></td>
+      <td><code>http://bcn-mobility-air.org/data/{class}/{identifier}</code></td>
+      <td><code>http://bcn-mobility-air.org/resource/Station/1</code></td>
     </tr>
   </table>
 
   <ul>
-    <li><strong>Domain:</strong> group08.linkeddata.es</li>
-    <li><strong>Ontology pattern:</strong> hash URIs (<code>#</code>)</li>
+    <li><strong>Domain:</strong> bcn-mobility-air.org</li>
+    <li><strong>Ontology pattern:</strong> slash URIs (<code>/</code>)</li>
     <li><strong>Data pattern:</strong> slash URIs (<code>/</code>)</li>
     <li><strong>Content negotiation:</strong> 
       <code>.html</code> for human view, <code>.ttl</code> for RDF data.</li>
