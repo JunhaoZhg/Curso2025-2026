@@ -1,4 +1,4 @@
-@prefix sch: <http://schema.org/> .
+@prefix schema: <http://schema.org/> .
 @prefix ns: <http://example.org/ns#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -8,27 +8,27 @@
 # Query 1: Total number of museums
 SELECT (COUNT(?museum) AS ?totalMuseums)
 WHERE {
-    ?museum rdf:type sch:Museum .
+    ?museum rdf:type shema:Museum .
 }
 
 
 # Query 2: All museums with name, address (full), and postal code
 SELECT ?museum ?name ?fullAddress ?postalCode
 WHERE {
-    ?museum rdf:type sch:Museum ;
-            sch:name ?name ;
-            sch:address ?addr .
-    ?addr sch:streetAddress ?fullAddress ;
-          sch:postalCode ?postalCode .
+    ?museum rdf:type shema:Museum ;
+            shema:name ?name ;
+            shema:address ?addr .
+    ?addr shema:streetAddress ?fullAddress ;
+          shema:postalCode ?postalCode .
 }
 ORDER BY ?name
 
 # Query 3: Museums without email
 SELECT ?museum ?name
 WHERE {
-    ?museum rdf:type sch:Museum ;
-            sch:name ?name .
-    FILTER NOT EXISTS { ?museum sch:email ?email }
+    ?museum rdf:type shema:Museum ;
+            shema:name ?name .
+    FILTER NOT EXISTS { ?museum shema:email ?email }
 }
 ORDER BY ?name
 
@@ -36,8 +36,8 @@ ORDER BY ?name
 # Query 4: Verify ALL museums have location (city) via hasLocation
 SELECT ?museum ?name
 WHERE {
-    ?museum rdf:type sch:Museum ;
-            sch:name ?name .
+    ?museum rdf:type shema:Museum ;
+            shema:name ?name .
     FILTER NOT EXISTS { ?museum ns:hasLocation ?location }
 }
 
@@ -45,11 +45,11 @@ WHERE {
 # Query 5: Count museums per district (with district name and code)
 SELECT ?districtCode ?districtName (COUNT(?museum) AS ?count)
 WHERE {
-    ?museum rdf:type sch:Museum ;
+    ?museum rdf:type shema:Museum ;
             ns:hasNeighbourhood ?neigh .
     ?neigh ns:hasDistrict ?district .
-    ?district sch:name ?districtName ;
-              sch:identifier ?districtCode .
+    ?district shema:name ?districtName ;
+              shema:identifier ?districtCode .
 }
 GROUP BY ?districtCode ?districtName
 ORDER BY DESC(?count)
@@ -57,16 +57,16 @@ ORDER BY DESC(?count)
 # Query 6: List museums with full administrative hierarchy
 SELECT ?museum ?name ?neighName ?districtName ?cityName ?provinceName
 WHERE {
-    ?museum rdf:type sch:Museum ;
-            sch:name ?name ;
+    ?museum rdf:type shema:Museum ;
+            shema:name ?name ;
             ns:hasNeighbourhood ?neigh .
-    ?neigh sch:name ?neighName ;
+    ?neigh shema:name ?neighName ;
            ns:hasDistrict ?district .
-    ?district sch:name ?districtName ;
+    ?district shema:name ?districtName ;
               ns:hasLocation ?city .
-    ?city sch:name ?cityName ;
+    ?city shema:name ?cityName ;
           ns:hasProvince ?province .
-    ?province sch:name ?provinceName .
+    ?province shema:name ?provinceName .
 }
 ORDER BY ?districtName ?neighName
 
@@ -74,11 +74,11 @@ ORDER BY ?districtName ?neighName
 # Query 7: Museums with Wikidata + address + neighbourhood
 SELECT ?museum ?name ?wikidata ?address ?neighName
 WHERE {
-    ?museum rdf:type sch:Museum ;
-            sch:name ?name ;
+    ?museum rdf:type shema:Museum ;
+            shema:name ?name ;
             owl:sameAs ?wikidata ;
-            sch:address/sch:streetAddress ?address ;
-            ns:hasNeighbourhood/sch:name ?neighName .
+            shema:address/shema:streetAddress ?address ;
+            ns:hasNeighbourhood/shema:name ?neighName .
     FILTER(STRSTARTS(STR(?wikidata), "https://www.wikidata.org/wiki/"))
 }
 ORDER BY ?name
@@ -89,9 +89,9 @@ ORDER BY ?name
 
 SELECT ?address ?street ?postalCode ?neigh ?district ?city ?province
 WHERE {
-    ?address a sch:PostalAddress ;
-             sch:streetAddress ?street ;
-             sch:postalCode ?postalCode ;
+    ?address a shema:PostalAddress ;
+             shema:streetAddress ?street ;
+             shema:postalCode ?postalCode ;
              ns:inNeighbourhood ?neigh ;
              ns:inDistrict ?district ;
              ns:inLocation ?city ;
@@ -104,9 +104,9 @@ ORDER BY ?postalCode ?street
 # Query 9: Find museums in the same neighbourhood (group by neighbourhood)
 SELECT ?neighName (GROUP_CONCAT(?name; separator=" | ") AS ?museumsInNeighbourhood) (COUNT(?museum) AS ?count)
 WHERE {
-    ?museum rdf:type sch:Museum ;
-            sch:name ?name ;
-            ns:hasNeighbourhood/sch:name ?neighName .
+    ?museum rdf:type shema:Museum ;
+            shema:name ?name ;
+            ns:hasNeighbourhood/shema:name ?neighName .
 }
 GROUP BY ?neighName
 HAVING (COUNT(?museum) > 1)
@@ -116,8 +116,8 @@ ORDER BY DESC(?count)
 
 SELECT ?museum ?name ?lat ?lon
 WHERE {
-    ?museum rdf:type sch:Museum ;
-            sch:name ?name ;
-            sch:latitude ?lat ;
-            sch:longitude ?lon .
+    ?museum rdf:type shema:Museum ;
+            shema:name ?name ;
+            shema:latitude ?lat ;
+            shema:longitude ?lon .
 }
