@@ -148,5 +148,18 @@
     "newColumnName": "wikidataCity",
     "columnInsertIndex": 16,
     "description": "Create the 'wikidataCity' column in index 16 based on the 'city' column using the expression 'grel:\"https://wikidata.org/entity/\"+cell.recon.match.id'"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "lat",
+    "expression": "if(isNonBlank(value), if(isNonBlank(cells['long'].value), 'https://www.openstreetmap.org/?mlat=' + value + '&mlon=' + cells['long'].value + '#map=18/' + value + '/' + cells['long'].value, ''), '')",
+    "onError": "set-to-blank",
+    "newColumnName": "openStreetMapCoordinates",
+    "columnInsertIndex": 15,
+    "description": "Create the 'openStreetMapCoordinates' column in index 15 based on the 'lat' column using the expression 'if(isNonBlank(value), if(isNonBlank(cells['long'].value), 'https://www.openstreetmap.org/?mlat=' + value + '&mlon=' + cells['long'].value + '#map=18/' + value + '/' + cells['long'].value, ''), '')'"
   }
 ]
