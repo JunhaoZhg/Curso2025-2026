@@ -129,7 +129,7 @@ my:hasCategory a owl:DatatypeProperty ;
 my:hasCategoryCode a owl:DatatypeProperty ;
     rdfs:label "has category code" ;
     rdfs:domain schema1:ParkingFacility ;
-    rdfs:range xsd:string .
+    rdfs:range xsd:int .
 
 my:hasFamily a owl:DatatypeProperty ;
     rdfs:label "has family" ;
@@ -144,7 +144,7 @@ my:hasType a owl:DatatypeProperty ;
 my:hasURLIcon a owl:DatatypeProperty ;
     rdfs:label "has u r l icon" ;
     rdfs:domain schema1:ParkingFacility ;
-    rdfs:range xsd:anyURI .
+    rdfs:range xsd:string .
 
 my:isEMTParking a owl:DatatypeProperty ;
     rdfs:label "is e m t parking" ;
@@ -159,12 +159,16 @@ schema1:CivicStructure a owl:Class ;
     rdfs:subClassOf schema1:Place .
 
 my: a owl:Ontology ;
-    dcterms:contributor <https://example.org/people#ContributorURI> ;
+    dcterms:contributor "Laura Gilgado Romero"@es,
+        "María Jiménez Álvarez"@es,
+        "Nerea Tanarro Ferrero"@es,
+        "Sergio Caro Rodríguez"@es,
+        "Sergio Zaballos Herrera"@es ;
     dcterms:created "2025-10-07"^^xsd:date ;
-    dcterms:creator <https://example.org/people#AuthorURI> ;
-    dcterms:description "Ontology that describes parkings and their locations."@en ;
+    dcterms:creator "Group 20 in Web Semantics, Linked Data and Knowledge Graphs, UPM."@en ;
+    dcterms:description "Ontology that describes parking facilities managed by EMT Madrid, including their locations and attributes."@en ;
     dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
-    dcterms:modified "2025-10-30"^^xsd:date ;
+    dcterms:modified "2025-11-07"^^xsd:date ;
     dcterms:title "Parking ontology"@en ;
     vann:preferredNamespacePrefix "my" ;
     vann:preferredNamespaceUri my: ;
