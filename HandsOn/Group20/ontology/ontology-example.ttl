@@ -232,10 +232,10 @@ dcat:Distribution rdf:type owl:Class .
                                                dcat:inDataset <https://data.smartcitymadrid.es/dataset/parking-emt> ;
                                                my:containedInCity <https://data.smartcitymadrid.es/id/city/madrid> ;
                                                my:hasCategory "Rotational" ;
-                                               my:hasCategoryCode "R" ;
+                                               my:hasCategoryCode 1 ;
                                                my:hasFamily 1 ;
                                                my:hasType "Public" ;
-                                               my:hasURLIcon <https://emtmadrid.es/icons/parking.png> ;
+                                               my:hasURLIcon "https://emtmadrid.es/icons/parking.png" ;
                                                my:isEMTParking "true"^^xsd:boolean .
 
 
