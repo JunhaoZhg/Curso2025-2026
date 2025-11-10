@@ -10,10 +10,6 @@
 
 @base <https://www.roadsafetydata.com/> .
 
-
-##nuevo
-
-
 <#SrcAcc>
   a rml:LogicalSource ;
   rml:source "data/2025-Accidentalidad-with-links.csv" ;
