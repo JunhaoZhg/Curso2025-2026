@@ -1,0 +1,61 @@
+# Road Safety Ontology — Consultas SPARQL
+
+PREFIX schema: <https://schema.org/>
+PREFIX rdfs:   <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:    <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl:    <http://www.w3.org/2002/07/owl#>
+PREFIX ex:     <https://www.roadsafetydata.com/ontology#>
+
+# === O1 — Clases declaradas ===
+SELECT DISTINCT ?class ?label
+WHERE {
+  ?class a owl:Class .
+  OPTIONAL { ?class rdfs:label ?label }
+}
+ORDER BY ?class
+LIMIT 200
+
+# === O2 — Propiedades con dominio y rango ===
+SELECT ?prop ?type ?domain ?range
+WHERE {
+  ?prop a ?type .
+  FILTER(?type IN (owl:ObjectProperty, owl:DatatypeProperty))
+  OPTIONAL { ?prop rdfs:domain ?domain }
+  OPTIONAL { ?prop rdfs:range  ?range }
+}
+ORDER BY ?prop
+LIMIT 500
+
+# === O3 — Jerarquía de clases (ampliada) ===
+SELECT DISTINCT ?class ?super
+WHERE {
+  { ?class rdfs:subClassOf ?super }
+  UNION
+  { ?class rdfs:subClassOf [ owl:onProperty ?p ; owl:someValuesFrom ?super ] }
+}
+ORDER BY ?class ?super
+LIMIT 300
+
+# === O4 — Equivalencias y sameAs (si existen) ===
+SELECT ?s ?p ?o
+WHERE {
+  VALUES ?p { owl:equivalentClass owl:equivalentProperty owl:sameAs }
+  ?s ?p ?o .
+}
+LIMIT 200
+
+# === O5 — Labels y comentarios ===
+SELECT ?s ?label ?comment
+WHERE {
+  ?s rdfs:label ?label .
+  OPTIONAL { ?s rdfs:comment ?comment }
+}
+LIMIT 200
+
+# === O6 — Propiedades por dominio ===
+SELECT DISTINCT ?class ?prop
+WHERE {
+  ?prop rdfs:domain ?class .
+}
+ORDER BY ?class ?prop
+LIMIT 300

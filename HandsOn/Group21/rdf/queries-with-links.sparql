@@ -1,0 +1,92 @@
+PREFIX schema: <https://schema.org/>
+PREFIX ns:     <https://www.roadsafetydata.com/ontology#>
+PREFIX owl:    <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs:   <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT ?event ?district ?districtLink
+WHERE {
+  ?event a schema:Event ;
+         schema:areaServed ?district .
+  OPTIONAL { ?district owl:sameAs ?districtLink . }
+}
+LIMIT 100
+
+---
+
+PREFIX schema: <https://schema.org/>
+PREFIX ns:     <https://www.roadsafetydata.com/ontology#>
+PREFIX owl:    <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs:   <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT ?event ?vehRes ?vehLink
+WHERE {
+  ?event a schema:Event ;
+         ns:involvesPerson ?p .
+  ?p ns:usesVehicleType ?vehRes .
+  OPTIONAL { ?vehRes owl:sameAs ?vehLink . }
+}
+LIMIT 100
+
+---
+
+PREFIX schema: <https://schema.org/>
+PREFIX ns:     <https://www.roadsafetydata.com/ontology#>
+PREFIX owl:    <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs:   <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT ?event ?p ?personLink
+WHERE {
+  ?event a schema:Event ;
+         ns:involvesPerson ?p .
+  OPTIONAL { ?p owl:sameAs ?personLink . }
+}
+LIMIT 100
+
+---
+
+PREFIX schema: <https://schema.org/>
+PREFIX ns:     <https://www.roadsafetydata.com/ontology#>
+PREFIX owl:    <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs:   <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT ?radar ?roadRes ?roadLink
+WHERE {
+  ?radar a ns:SpeedCamera ;
+         ns:road ?roadRes .
+  OPTIONAL { ?roadRes owl:sameAs ?roadLink . }
+}
+LIMIT 200
+
+---
+
+PREFIX schema: <https://schema.org/>
+PREFIX ns:     <https://www.roadsafetydata.com/ontology#>
+PREFIX owl:    <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs:   <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT ?radar ?orgRes ?orgLink
+WHERE {
+  ?radar a ns:SpeedCamera ;
+         ns:responsible ?orgRes .
+  OPTIONAL { ?orgRes owl:sameAs ?orgLink . }
+}
+LIMIT 200
+
+---
+
+PREFIX schema: <https://schema.org/>
+PREFIX ns:     <https://www.roadsafetydata.com/ontology#>
+PREFIX owl:    <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs:   <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT ?event ?district ?districtLink ?p ?personLink ?vehRes ?vehLink
+WHERE {
+  ?event a schema:Event ;
+         schema:areaServed ?district ;
+         ns:involvesPerson ?p .
+  OPTIONAL { ?district owl:sameAs ?districtLink . }
+  OPTIONAL { ?p owl:sameAs ?personLink . }
+  OPTIONAL { ?p ns:usesVehicleType ?vehRes .
+             OPTIONAL { ?vehRes owl:sameAs ?vehLink . } }
+}
+LIMIT 200
