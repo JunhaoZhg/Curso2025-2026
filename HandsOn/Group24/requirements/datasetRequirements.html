@@ -8,67 +8,70 @@
     h1, h2, h3 { margin-top: 1.2rem; }
     ul { margin-bottom: 0.8rem; }
     hr { margin: 1.2rem 0; }
+    code { background:#f6f6f6; padding:2px 4px; }
   </style>
 </head>
 <body>
   <h1>Evaluación de requisitos (R1–R6) de los datasets seleccionados</h1>
-  <p>Este documento evalúa, para cada dataset, el cumplimiento de los requisitos obligatorios (R1–R4) y la situación respecto a los opcionales (R5–R6). 
-  Las verificaciones de licencia y documentación deben confirmarse en el portal de origen.</p>
+  <p>Este documento evalúa, para cada dataset, el cumplimiento de los requisitos obligatorios (R1–R4) y la situación respecto a los opcionales (R5–R6). Se incluyen los nombres de fichero tal y como están en el repositorio.</p>
 
+  <!-- 1) ARBOLADO -->
   <h2>Arbolado en zonas verdes — Distritos de Madrid</h2>
   <ul>
-    <li><b>Archivo:</b> arbolado-zonas-verdes-madrid.csv</li>
+    <li><b>Archivo:</b> <code>01_ArboladoEspeciesZonasVerdesDistritosCalles_2024.csv</code></li>
     <li><b>Columnas (muestra):</b> Nº_Distrito, Nombre_distrito, NOMBRE_ESPECIE, Nº_Unidades 2024</li>
-    <li><b>Columnas geográficas/enlazables detectadas:</b> Distrito</li>
-    <li><b>Columnas temporales detectadas:</b> Año (2024)</li>
+    <li><b>Columnas geográficas/enlazables:</b> Nº_Distrito, Nombre_distrito</li>
+    <li><b>Cobertura temporal:</b> 2024</li>
   </ul>
   <h3>Evaluación de requisitos</h3>
   <ul>
-    <li><b>R1:</b> Dominio Smart City (medio ambiente / planificación urbana, infraestructura verde).</li>
-    <li><b>R2:</b> CSV disponible.</li>
-    <li><b>R3:</b> Verificar licencia (datos abiertos Ayuntamiento de Madrid, probablemente CC-BY 4.0).</li>
-    <li><b>R4:</b> Enlazable con entidades geográficas (distritos, zonas verdes).</li>
-    <li><b>R5:</b> Revisar documentación en el portal de datos abiertos de Madrid.</li>
-    <li><b>R6:</b> Puede complementarse con otras fuentes de arbolado o parques urbanos.</li>
+    <li><b>R1:</b> Cumple (dominio Smart City: medio ambiente/infraestructura verde).</li>
+    <li><b>R2:</b> Cumple (CSV disponible).</li>
+    <li><b>R3:</b> Cumple si se mantiene la licencia abierta publicada en el portal de origen. Anotar en el análisis la URL exacta de la licencia y texto de atribución.</li>
+    <li><b>R4:</b> Cumple (enlazable con entidades geográficas: distritos; enlazable también a Wikidata/GeoNames para los distritos).</li>
+    <li><b>R5:</b> Documentación disponible en el portal del publicador.</li>
+    <li><b>R6:</b> Puede complementarse con datasets municipales de zonas verdes o inventarios botánicos.</li>
   </ul>
   <hr/>
 
+  <!-- 2) GASTO PROTECCIÓN AMBIENTAL -->
   <h2>Gasto de las empresas en protección ambiental — Total industria (España)</h2>
   <ul>
-    <li><b>Archivo:</b> gasto-de-las-empresas-en-proteccion-ambiental-total-industria.csv</li>
+    <li><b>Archivo:</b> <code>gasto-de-las-empresas-en-proteccion-ambiental-total-industria.csv</code></li>
     <li><b>Columnas (muestra):</b> Año, Concepto, Tipo territorio, Código territorio, Territorio, Valor, Estado dato</li>
-    <li><b>Columnas geográficas/enlazables detectadas:</b> No detectadas automáticamente (dataset de ámbito nacional).</li>
-    <li><b>Columnas temporales detectadas:</b> Año.</li>
+    <li><b>Columnas geográficas/enlazables:</b> No aplicable en esta exportación (serie <i>agregada nacional</i>, <code>Territorio</code> vacío).</li>
+    <li><b>Cobertura temporal:</b> 2008–2023</li>
   </ul>
   <h3>Evaluación de requisitos</h3>
   <ul>
-    <li><b>R1:</b> Dominio Smart City (economía circular / sostenibilidad).</li>
-    <li><b>R2:</b> CSV disponible.</li>
-    <li><b>R3:</b> Verificar licencia (probablemente datos abiertos INE).</li>
-    <li><b>R4:</b> Enlazable solo con entidades temporales (años); no incluye georreferencias.</li>
-    <li><b>R5:</b> Revisar documentación en el portal del INE/datos.gob.es.</li>
-    <li><b>R6:</b> Puede complementarse con otras fuentes económicas.</li>
+    <li><b>R1:</b> Cumple (dominio Smart City: sostenibilidad/economía ambiental).</li>
+    <li><b>R2:</b> Cumple (CSV disponible).</li>
+    <li><b>R3:</b> Cumple si se cita la licencia exacta del publicador oficial. Añadir URL de licencia y política de reutilización en el análisis.</li>
+    <li><b>R4:</b> <b>Parcial</b> (enlazable con entidades temporales —años—; sin granularidad territorial en este fichero).</li>
+    <li><b>R5:</b> Documentación disponible en el portal estadístico correspondiente.</li>
+    <li><b>R6:</b> Puede complementarse con series por CCAA o CNAE si se requieren enlaces espaciales.</li>
   </ul>
   <hr/>
 
-  <h2>Valor medio de contaminación atmosférica — NO₂</h2>
+  <!-- 3) NO2 -->
+  <h2>Valor medio de contaminación atmosférica — NO₂ (serie agregada)</h2>
   <ul>
-    <li><b>Archivo:</b> valor-medio-de-contaminacion-atmosferica-dioxido-de-nitrogeno-no2.csv</li>
+    <li><b>Archivo:</b> <code>valor-medio-de-contaminacion-atmosferica-dioxido-de-nitrogeno-no2.csv</code></li>
     <li><b>Columnas (muestra):</b> Año, Concepto, Tipo territorio, Código territorio, Territorio, Valor, Estado dato</li>
-    <li><b>Columnas geográficas/enlazables detectadas:</b> Estación, municipio, provincia</li>
-    <li><b>Columnas temporales detectadas:</b> Fecha, año, mes</li>
+    <li><b>Columnas geográficas/enlazables:</b> No aplicable en esta exportación (registro <i>Otros</i> con <code>Territorio</code> vacío). No incluye estación/municipio.</li>
+    <li><b>Cobertura temporal:</b> 1985–2024</li>
   </ul>
   <h3>Evaluación de requisitos</h3>
   <ul>
-    <li><b>R1:</b> Dominio Smart City (calidad del aire / medio ambiente).</li>
-    <li><b>R2:</b> CSV disponible.</li>
-    <li><b>R3:</b> Verificar licencia (ej. CC-BY 4.0).</li>
-    <li><b>R4:</b> Fácilmente enlazable con entidades geográficas.</li>
-    <li><b>R5:</b> Revisar documentación en el portal.</li>
-    <li><b>R6:</b> Puede complementarse con otras fuentes (ej. OpenAQ).</li>
+    <li><b>R1:</b> Cumple (calidad del aire/medio ambiente).</li>
+    <li><b>R2:</b> Cumple (CSV disponible).</li>
+    <li><b>R3:</b> Cumple si se indica licencia y atribución exacta del publicador. Incluir ambos en el análisis.</li>
+    <li><b>R4:</b> <b>Parcial</b> (enlazable temporalmente —años—; no enlazable geográficamente en este fichero. Para enlaces espaciales usar versión con estación/municipio si está disponible).</li>
+    <li><b>R5:</b> Documentación en el portal del publicador.</li>
+    <li><b>R6:</b> Puede complementarse con OpenAQ o redes autonómicas si se necesita granularidad local.</li>
   </ul>
-  <hr/>
 
-  <p><i>Nota:</i> La detección de columnas geográficas y temporales se ha hecho automáticamente; conviene revisar manualmente en caso de duda.</p>
+  <hr/>
+  <p><i>Nota:</i> Se ha alineado la descripción de columnas con los ficheros reales del repositorio y se ha distinguido entre series agregadas y datasets con potencial espacial. Esto evita evaluar erróneamente R4 cuando no hay identificadores espaciales en la exportación usada.</p>
 </body>
 </html>
