@@ -438,5 +438,67 @@
     "op": "core/column-removal",
     "columnName": "NOMBRE-VIA-ULR",
     "description": "Eliminar columna NOMBRE-VIA-ULR"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "LATITUD",
+    "expression": "grel:value.replace(\".\", \"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna LATITUD usando la expresión grel:value.replace(\".\", \"\")"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "COORDENADA-Y",
+    "description": "Eliminar columna COORDENADA-Y"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "COORDENADA-X",
+    "description": "Eliminar columna COORDENADA-X"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "LATITUD",
+    "expression": "grel:value.toString().replace(/^(\\d{2})(\\d+)/, \"$1.$2\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna LATITUD usando la expresión grel:value.toString().replace(/^(\\d{2})(\\d+)/, \"$1.$2\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "LONGITUD",
+    "expression": "grel:value.replace(\".\", \"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna LONGITUD usando la expresión grel:value.replace(\".\", \"\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "LONGITUD",
+    "expression": "grel:value.toString().replace(/^(-\\d{1})(\\d+)/, \"$1.$2\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna LONGITUD usando la expresión grel:value.toString().replace(/^(-\\d{1})(\\d+)/, \"$1.$2\")"
   }
 ]
