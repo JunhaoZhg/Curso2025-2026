@@ -178,11 +178,6 @@ ns:startLatitude a owl:DatatypeProperty ;
   rdfs:label  "start latitude"@en ;
   rdfs:comment "Section-control start latitude (WGS84 decimal degrees)."@en .
 
-ns:calle30Code a owl:DatatypeProperty ;
-  rdfs:domain ns:SpeedCamera ;
-  rdfs:range  xsd:string ;
-  rdfs:label  "calle30 code"@en ;
-  rdfs:comment "Internal code for M-30 (Calle 30) location when applicable."@en .
 
 ########## Population observation numbers
 ns:peopleTotal a owl:DatatypeProperty ;
