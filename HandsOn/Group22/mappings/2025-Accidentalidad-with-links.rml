@@ -24,70 +24,70 @@
 
   rr:predicateObjectMap [
     rr:predicate ex:hora ;
-    rr:objectMap [ rml:reference "hora" ]
+    rr:objectMap [ rml:reference "hora" ; rr:datatype xsd:time ]
   ] ;
 
   rr:predicateObjectMap [
     rr:predicate ex:localizacion ;
-    rr:objectMap [ rml:reference "localizacion" ]
+    rr:objectMap [ rml:reference "localizacion" ; rr:datatype xsd:string ]
   ] ;
 
   rr:predicateObjectMap [
     rr:predicate ex:distrito ;
-    rr:objectMap [ rml:reference "distrito" ]
+    rr:objectMap [ rml:reference "distrito" ; rr:datatype xsd:string ]
   ] ;
 
-  # Link district to DBpedia (if reconciled URI is in column distrito_link)
+  # Link district to DBpedia (if reconciled URI is in column same_as_wikidata_district)
   rr:predicateObjectMap [
     rr:predicate owl:sameAs ;
-    rr:objectMap [ rml:reference "distrito_link" ]
+    rr:objectMap [ rml:reference "same_as_wikidata_district" ; rr:termType rr:IRI ]
   ] ;
 
   rr:predicateObjectMap [
     rr:predicate ex:tipoAccidente ;
-    rr:objectMap [ rml:reference "tipo_accidente" ]
-  ] ;
-
-  # Link accident type to Wikidata (if reconciled URI is in column tipo_accidente_link)
-  rr:predicateObjectMap [
-    rr:predicate owl:sameAs ;
-    rr:objectMap [ rml:reference "tipo_accidente_link" ]
+    rr:objectMap [ rml:reference "tipo_accidente" ; rr:datatype xsd:string ]
   ] ;
 
   rr:predicateObjectMap [
     rr:predicate ex:estadoMeteorologico ;
-    rr:objectMap [ rml:reference "estado_meteorologico" ]
+    rr:objectMap [ rml:reference "estado_meteorologico" ; rr:datatype xsd:string ]
   ] ;
 
   rr:predicateObjectMap [
     rr:predicate ex:tipoVehiculo ;
-    rr:objectMap [ rml:reference "tipo_vehiculo" ]
+    rr:objectMap [ rml:reference "tipo_vehiculo" ; rr:datatype xsd:string ]
   ] ;
 
-  # Link vehicle type to Wikidata (if reconciled URI is in column tipo_vehiculo_link)
+  # Link vehicle type to Wikidata (if reconciled URI is in column same_as_wikidata_tipo_vehiculo)
   rr:predicateObjectMap [
     rr:predicate owl:sameAs ;
-    rr:objectMap [ rml:reference "tipo_vehiculo_link" ]
+    rr:objectMap [ rml:reference "same_as_wikidata_tipo_vehiculo" ; rr:termType rr:IRI ]
   ] ;
 
   rr:predicateObjectMap [
     rr:predicate ex:tipoPersona ;
-    rr:objectMap [ rml:reference "tipo_persona" ]
+    rr:objectMap [ rml:reference "tipo_persona" ; rr:datatype xsd:string ]
   ] ;
 
   rr:predicateObjectMap [
     rr:predicate ex:rangoEdad ;
-    rr:objectMap [ rml:reference "rango_edad" ]
+    rr:objectMap [ rml:reference "rango_edad" ; rr:datatype xsd:string ]
   ] ;
 
   rr:predicateObjectMap [
     rr:predicate ex:sexo ;
-    rr:objectMap [ rml:reference "sexo" ]
+    rr:objectMap [ rml:reference "sexo" ; rr:datatype xsd:string ]
+  ] ;
+
+  # Link accident type to Wikidata (if reconciled URI is in column same_as_wikidata_sexo)
+  rr:predicateObjectMap [
+    rr:predicate owl:sameAs ;
+    rr:objectMap [ rml:reference "same_as_wikidata_sexo" ; rr:termType rr:IRI ]
   ] ;
 
   rr:predicateObjectMap [
     rr:predicate ex:lesividad ;
-    rr:objectMap [ rml:reference "lesividad" ]
+    rr:objectMap [ rml:reference "lesividad" ; rr:datatype xsd:string ]
   ] ;
 
   rr:predicateObjectMap [
