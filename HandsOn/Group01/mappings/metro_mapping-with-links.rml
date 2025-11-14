@@ -235,7 +235,7 @@ map:om_034 rdf:type rr:ObjectMap ;
 	rr:termType rr:IRI .
 
 map:om_035 rdf:type rr:ObjectMap ;
-	rr:template "https://data.example.org/transport/bcn/metro/resource/serviceType/{ID_TIPUS_SERVEI}" ;
+	rr:template "https://data.example.org/transport/bcn/metro/resource/serviceType/{DESC_SERVEI}" ;
 	rr:termType rr:IRI .
 
 map:om_036 rdf:type rr:ObjectMap ;
@@ -704,7 +704,7 @@ map:s_004 rdf:type rr:SubjectMap ;
 	rr:template "https://data.example.org/transport/bcn/metro/resource/transportFamily/{NOM_FAMILIA}" .
 
 map:s_005 rdf:type rr:SubjectMap ;
-	rr:template "https://data.example.org/transport/bcn/metro/resource/serviceType/{ID_TIPUS_SERVEI}" .
+	rr:template "https://data.example.org/transport/bcn/metro/resource/serviceType/{DESC_SERVEI}" .
 
 map:s_006 rdf:type rr:SubjectMap ;
 	rr:template "https://data.example.org/transport/bcn/metro/resource/accessibilityType/{NOM_TIPUS_ACCESSIBILITAT}" .

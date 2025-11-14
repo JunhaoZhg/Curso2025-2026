@@ -3,1035 +3,918 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+<https://data.example.org/transport/bcn/metro/resource/serviceType/Aeroport%20T1%20-%20Zona%20Universitaria> a ns1:ServiceType ;
+    rdfs:label "Aeroport T1 - Zona Universitaria" ;
+    ns1:serviceDestination "Zona Universitaria" ;
+    ns1:serviceOrigin "Aeroport T1" .
+
+<https://data.example.org/transport/bcn/metro/resource/serviceType/Cornell%C3%A0%20Centre%20-%20Vall%20d%27Hebron> a ns1:ServiceType ;
+    rdfs:label "Cornellà Centre - Vall d'Hebron" ;
+    ns1:serviceDestination "Vall d'Hebron" ;
+    ns1:serviceOrigin "Cornellà Centre" .
+
+<https://data.example.org/transport/bcn/metro/resource/serviceType/Hospital%20de%20Bellvitge%20-%20Fondo> a ns1:ServiceType ;
+    rdfs:label "Hospital de Bellvitge - Fondo" ;
+    ns1:serviceDestination "Fondo" ;
+    ns1:serviceOrigin "Hospital de Bellvitge" .
+
+<https://data.example.org/transport/bcn/metro/resource/serviceType/La%20Pau%20-%20Trinitat%20Nova> a ns1:ServiceType ;
+    rdfs:label "La Pau - Trinitat Nova" ;
+    ns1:serviceDestination "Trinitat Nova" ;
+    ns1:serviceOrigin "La Pau" .
+
+<https://data.example.org/transport/bcn/metro/resource/serviceType/La%20Sagrera%20-%20Can%20Zam> a ns1:ServiceType ;
+    rdfs:label "La Sagrera - Can Zam" ;
+    ns1:serviceDestination "Can Zam" ;
+    ns1:serviceOrigin "La Sagrera-Meridiana station" .
+
+<https://data.example.org/transport/bcn/metro/resource/serviceType/La%20Sagrera%20-%20Gorg> a ns1:ServiceType ;
+    rdfs:label "La Sagrera - Gorg" ;
+    ns1:serviceDestination "Gorg" ;
+    ns1:serviceOrigin "La Sagrera-Meridiana station" .
+
+<https://data.example.org/transport/bcn/metro/resource/serviceType/Paral%C2%B7lel%20-%20Badalona%20Pompeu%20Fabra> a ns1:ServiceType ;
+    rdfs:label "Paral·lel - Badalona Pompeu Fabra" ;
+    ns1:serviceDestination "Badalona Pompeu Fabra" ;
+    ns1:serviceOrigin "Paral·lel" .
+
+<https://data.example.org/transport/bcn/metro/resource/serviceType/Paral%C2%B7lel%20-%20Parc%20de%20Montju%C3%AFc> a ns1:ServiceType ;
+    rdfs:label "Paral·lel - Parc de Montjuïc" ;
+    ns1:serviceDestination "Parc de Montjuïc" ;
+    ns1:serviceOrigin "Paral·lel" .
+
+<https://data.example.org/transport/bcn/metro/resource/serviceType/Trinitat%20Nova%20-%20Can%20Cui%C3%A0s> a ns1:ServiceType ;
+    rdfs:label "Trinitat Nova - Can Cuiàs" ;
+    ns1:serviceDestination "Can Cuiàs" ;
+    ns1:serviceOrigin "Trinitat Nova" .
+
+<https://data.example.org/transport/bcn/metro/resource/serviceType/ZAL%20%7C%20Riu%20Vell%20-%20Collblanc> a ns1:ServiceType ;
+    rdfs:label "ZAL | Riu Vell - Collblanc" ;
+    ns1:serviceDestination "Collblanc" ;
+    ns1:serviceOrigin "ZAL – Riu Vell (Barcelona Metro)" .
+
+<https://data.example.org/transport/bcn/metro/resource/serviceType/Zona%20Universit%C3%A0ria%20-%20Trinitat%20Nova> a ns1:ServiceType ;
+    rdfs:label "Zona Universitària - Trinitat Nova" ;
+    ns1:serviceDestination "Trinitat Nova" ;
+    ns1:serviceOrigin "Zona Universitària" .
+
 <https://data.example.org/transport/bcn/metro/resource/stationLine/111_L1> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L1> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/111> ;
     ns1:stationOrder 1 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/112_L1> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L1> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/112> ;
     ns1:stationOrder 2 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/1136_L11> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L11> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/1136> ;
     ns1:stationOrder 1 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/1137_L11> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L11> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/1137> ;
     ns1:stationOrder 2 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/1138_L11> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L11> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/1138> ;
     ns1:stationOrder 3 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/1139_L11> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L11> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/1139> ;
     ns1:stationOrder 4 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/113_L1> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L1> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/113> ;
     ns1:stationOrder 3 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/1140_L11> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L11> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/1140> ;
     ns1:stationOrder 5 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/114_L1> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L1> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/114> ;
     ns1:stationOrder 4 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/115_L1> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L1> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/115> ;
     ns1:stationOrder 5 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/116_L1> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L1> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/116> ;
     ns1:stationOrder 6 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/117_L1> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L1> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/117> ;
     ns1:stationOrder 7 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/118_L1> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L1> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/118> ;
     ns1:stationOrder 8 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/119_L1> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L1> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/119> ;
     ns1:stationOrder 9 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/120_L1> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L1> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/120> ;
     ns1:stationOrder 10 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/121_L1> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L1> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/121> ;
     ns1:stationOrder 11 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/122_L1> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L1> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/122> ;
     ns1:stationOrder 12 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/123_L1> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L1> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/123> ;
     ns1:stationOrder 13 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/124_L1> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L1> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/124> ;
     ns1:stationOrder 14 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/125_L1> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L1> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/125> ;
     ns1:stationOrder 15 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/126_L1> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L1> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/126> ;
     ns1:stationOrder 16 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/127_L1> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L1> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/127> ;
     ns1:stationOrder 17 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/128_L1> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L1> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/128> ;
     ns1:stationOrder 18 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/129_L1> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L1> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/129> ;
     ns1:stationOrder 19 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/130_L1> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L1> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/130> ;
     ns1:stationOrder 20 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/131_L1> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L1> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/131> ;
     ns1:stationOrder 21 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/132_L1> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L1> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/132> ;
     ns1:stationOrder 22 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/133_L1> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L1> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/133> ;
     ns1:stationOrder 23 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/134_L1> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L1> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/134> ;
     ns1:stationOrder 24 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/135_L1> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L1> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/135> ;
     ns1:stationOrder 25 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/136_L1> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L1> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/136> ;
     ns1:stationOrder 26 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/137_L1> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L1> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/137> ;
     ns1:stationOrder 27 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/138_L1> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L1> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/138> ;
     ns1:stationOrder 28 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/139_L1> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L1> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/139> ;
     ns1:stationOrder 29 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/140_L1> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L1> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/140> ;
     ns1:stationOrder 30 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/210_L2> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L2> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/210> ;
     ns1:stationOrder 1 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/211_L2> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L2> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/211> ;
     ns1:stationOrder 2 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/212_L2> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L2> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/212> ;
     ns1:stationOrder 3 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/213_L2> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L2> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/213> ;
     ns1:stationOrder 4 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/214_L2> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L2> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/214> ;
     ns1:stationOrder 5 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/215_L2> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L2> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/215> ;
     ns1:stationOrder 6 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/216_L2> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L2> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/216> ;
     ns1:stationOrder 7 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/217_L2> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L2> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/217> ;
     ns1:stationOrder 8 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/218_L2> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L2> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/218> ;
     ns1:stationOrder 9 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/219_L2> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L2> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/219> ;
     ns1:stationOrder 10 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/220_L2> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L2> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/220> ;
     ns1:stationOrder 11 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/221_L2> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L2> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/221> ;
     ns1:stationOrder 12 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/222_L2> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L2> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/222> ;
     ns1:stationOrder 13 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/223_L2> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L2> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/223> ;
     ns1:stationOrder 14 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/224_L2> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L2> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/224> ;
     ns1:stationOrder 15 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/225_L2> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L2> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/225> ;
     ns1:stationOrder 16 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/226_L2> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L2> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/226> ;
     ns1:stationOrder 17 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/227_L2> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L2> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/227> ;
     ns1:stationOrder 18 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/314_L3> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L3> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/314> ;
     ns1:stationOrder 1 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/315_L3> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L3> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/315> ;
     ns1:stationOrder 2 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/316_L3> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L3> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/316> ;
     ns1:stationOrder 3 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/317_L3> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L3> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/317> ;
     ns1:stationOrder 4 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/318_L3> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L3> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/318> ;
     ns1:stationOrder 5 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/319_L3> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L3> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/319> ;
     ns1:stationOrder 6 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/320_L3> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L3> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/320> ;
     ns1:stationOrder 7 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/321_L3> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L3> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/321> ;
     ns1:stationOrder 8 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/322_L3> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L3> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/322> ;
     ns1:stationOrder 9 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/323_L3> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L3> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/323> ;
     ns1:stationOrder 10 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/324_L3> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L3> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/324> ;
     ns1:stationOrder 11 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/325_L3> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L3> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/325> ;
     ns1:stationOrder 12 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/326_L3> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L3> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/326> ;
     ns1:stationOrder 13 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/327_L3> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L3> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/327> ;
     ns1:stationOrder 14 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/328_L3> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L3> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/328> ;
     ns1:stationOrder 15 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/329_L3> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L3> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/329> ;
     ns1:stationOrder 16 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/330_L3> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L3> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/330> ;
     ns1:stationOrder 17 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/331_L3> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L3> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/331> ;
     ns1:stationOrder 18 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/332_L3> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L3> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/332> ;
     ns1:stationOrder 19 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/333_L3> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L3> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/333> ;
     ns1:stationOrder 20 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/334_L3> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L3> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/334> ;
     ns1:stationOrder 21 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/335_L3> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L3> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/335> ;
     ns1:stationOrder 22 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/336_L3> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L3> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/336> ;
     ns1:stationOrder 23 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/337_L3> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L3> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/337> ;
     ns1:stationOrder 24 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/338_L3> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L3> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/338> ;
     ns1:stationOrder 25 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/339_L3> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L3> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/339> ;
     ns1:stationOrder 26 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/413_L4> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L4> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/413> ;
     ns1:stationOrder 1 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/414_L4> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L4> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/414> ;
     ns1:stationOrder 2 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/415_L4> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L4> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/415> ;
     ns1:stationOrder 3 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/416_L4> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L4> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/416> ;
     ns1:stationOrder 4 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/417_L4> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L4> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/417> ;
     ns1:stationOrder 5 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/418_L4> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L4> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/418> ;
     ns1:stationOrder 6 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/419_L4> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L4> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/419> ;
     ns1:stationOrder 7 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/420_L4> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L4> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/420> ;
     ns1:stationOrder 8 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/421_L4> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L4> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/421> ;
     ns1:stationOrder 9 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/422_L4> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L4> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/422> ;
     ns1:stationOrder 10 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/423_L4> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L4> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/423> ;
     ns1:stationOrder 11 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/424_L4> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L4> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/424> ;
     ns1:stationOrder 12 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/425_L4> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L4> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/425> ;
     ns1:stationOrder 13 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/426_L4> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L4> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/426> ;
     ns1:stationOrder 14 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/427_L4> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L4> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/427> ;
     ns1:stationOrder 15 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/428_L4> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L4> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/428> ;
     ns1:stationOrder 16 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/429_L4> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L4> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/429> ;
     ns1:stationOrder 17 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/430_L4> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L4> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/430> ;
     ns1:stationOrder 18 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/431_L4> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L4> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/431> ;
     ns1:stationOrder 19 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/432_L4> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L4> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/432> ;
     ns1:stationOrder 20 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/433_L4> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L4> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/433> ;
     ns1:stationOrder 21 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/434_L4> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L4> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/434> ;
     ns1:stationOrder 22 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/509_L5> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L5> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/509> ;
     ns1:stationOrder 1 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/510_L5> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L5> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/510> ;
     ns1:stationOrder 2 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/511_L5> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L5> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/511> ;
     ns1:stationOrder 3 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/512_L5> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L5> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/512> ;
     ns1:stationOrder 4 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/513_L5> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L5> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/513> ;
     ns1:stationOrder 5 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/514_L5> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L5> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/514> ;
     ns1:stationOrder 6 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/515_L5> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L5> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/515> ;
     ns1:stationOrder 8 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/516_L5> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L5> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/516> ;
     ns1:stationOrder 9 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/517_L5> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L5> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/517> ;
     ns1:stationOrder 10 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/518_L5> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L5> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/518> ;
     ns1:stationOrder 11 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/519_L5> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L5> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/519> ;
     ns1:stationOrder 12 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/520_L5> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L5> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/520> ;
     ns1:stationOrder 13 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/521_L5> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L5> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/521> ;
     ns1:stationOrder 14 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/522_L5> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L5> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/522> ;
     ns1:stationOrder 15 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/523_L5> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L5> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/523> ;
     ns1:stationOrder 16 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/524_L5> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L5> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/524> ;
     ns1:stationOrder 17 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/525_L5> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L5> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/525> ;
     ns1:stationOrder 18 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/526_L5> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L5> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/526> ;
     ns1:stationOrder 19 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/527_L5> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L5> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/527> ;
     ns1:stationOrder 20 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/528_L5> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L5> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/528> ;
     ns1:stationOrder 21 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/529_L5> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L5> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/529> ;
     ns1:stationOrder 22 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/530_L5> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L5> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/530> ;
     ns1:stationOrder 23 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/531_L5> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L5> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/531> ;
     ns1:stationOrder 24 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/532_L5> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L5> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/532> ;
     ns1:stationOrder 25 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/533_L5> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L5> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/533> ;
     ns1:stationOrder 26 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/534_L5> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L5> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/534> ;
     ns1:stationOrder 27 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/555_L5> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L5> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/555> ;
     ns1:stationOrder 7 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/901_L91> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L91> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/901> ;
     ns1:stationOrder 1 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/903_L91> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L91> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/903> ;
     ns1:stationOrder 2 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/904_L91> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L91> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/904> ;
     ns1:stationOrder 3 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/905_L91> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L91> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/905> ;
     ns1:stationOrder 4 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/906_L91> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L91> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/906> ;
     ns1:stationOrder 5 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/907_L91> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L91> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/907> ;
     ns1:stationOrder 6 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/909_L91> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L91> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/909> ;
     ns1:stationOrder 7 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/910_L91> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L91> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/910> ;
     ns1:stationOrder 8 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/911_L91> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L91> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/911> ;
     ns1:stationOrder 9 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/912_L91> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L91> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/912> ;
     ns1:stationOrder 10 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/913_L91> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L91> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/913> ;
     ns1:stationOrder 11 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/914_L101> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L101> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/914> ;
     ns1:stationOrder 9 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/914_L91> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L91> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/914> ;
     ns1:stationOrder 12 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/915_L101> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L101> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/915> ;
     ns1:stationOrder 10 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/915_L91> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L91> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/915> ;
     ns1:stationOrder 13 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/916_L101> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L101> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/916> ;
     ns1:stationOrder 11 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/916_L91> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L91> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/916> ;
     ns1:stationOrder 14 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/918_L91> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L91> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/918> ;
     ns1:stationOrder 15 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/930_L104> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L104> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/930> ;
     ns1:stationOrder 1 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/930_L94> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L94> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/930> ;
     ns1:stationOrder 1 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/932_L104> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L104> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/932> ;
     ns1:stationOrder 2 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/932_L94> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L94> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/932> ;
     ns1:stationOrder 2 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/933_L104> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L104> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/933> ;
     ns1:stationOrder 3 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/933_L94> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L94> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/933> ;
     ns1:stationOrder 3 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/934_L104> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L104> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/934> ;
     ns1:stationOrder 4 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/935_L104> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L104> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/935> ;
     ns1:stationOrder 5 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/936_L104> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L104> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/936> ;
     ns1:stationOrder 6 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/940_L94> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L94> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/940> ;
     ns1:stationOrder 4 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/941_L94> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L94> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/941> ;
     ns1:stationOrder 5 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/942_L94> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L94> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/942> ;
     ns1:stationOrder 6 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/943_L94> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L94> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/943> ;
     ns1:stationOrder 7 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/944_L94> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L94> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/944> ;
     ns1:stationOrder 8 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/945_L94> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L94> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/945> ;
     ns1:stationOrder 9 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/951_L101> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L101> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/951> ;
     ns1:stationOrder 1 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/952_L101> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L101> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/952> ;
     ns1:stationOrder 2 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/953_L101> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L101> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/953> ;
     ns1:stationOrder 3 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/954_L101> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L101> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/954> ;
     ns1:stationOrder 4 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/956_L101> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L101> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/956> ;
     ns1:stationOrder 5 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/957_L101> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L101> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/957> ;
     ns1:stationOrder 6 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/958_L101> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L101> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/958> ;
     ns1:stationOrder 7 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/959_L101> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L101> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/959> ;
     ns1:stationOrder 8 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/9901_L99> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L99> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/9901> ;
     ns1:stationOrder 1 .
 
 <https://data.example.org/transport/bcn/metro/resource/stationLine/9902_L99> a ns1:StationLine ;
-    ns1:hasServiceType <https://data.example.org/transport/bcn/metro/resource/serviceType/1> ;
     ns1:onLine <https://data.example.org/transport/bcn/metro/resource/metroLine/L99> ;
     ns1:relatesTo <https://data.example.org/transport/bcn/metro/resource/station/9902> ;
     ns1:stationOrder 2 .
 
 <https://data.example.org/transport/bcn/metro/resource/transportFamily/Metro-Funicular> a ns1:TransportFamily ;
-    rdfs:label "Metro-Funicular" ;
-    ns1:familyOrder 2 .
+    rdfs:label "Metro-Funicular" .
 
 <https://data.example.org/transport/bcn/metro/resource/metroLine/L99> a ns1:MetroLine ;
     rdfs:label "FM" ;
@@ -3132,11 +3015,9 @@
     ns1:textColor "FFFFFF" .
 
 <https://data.example.org/transport/bcn/metro/resource/transportFamily/Metro> a ns1:TransportFamily ;
-    rdfs:label "Metro" ;
-    ns1:familyOrder 1 .
+    rdfs:label "Metro" .
 
-<https://data.example.org/transport/bcn/metro/resource/accessibilityType/No%20accessible> a ns1:AccessibilityType ;
-    rdfs:label "No accessible" .
+<https://data.example.org/transport/bcn/metro/resource/accessibilityType/No%20accessible> rdfs:label "No accessible" .
 
 <https://data.example.org/transport/bcn/metro/resource/metroLine/L101> a ns1:MetroLine ;
     rdfs:label "L10S" ;
@@ -3558,22 +3439,8 @@
     ns1:originStation "Hospital de Bellvitge" ;
     ns1:textColor "FFFFFF" .
 
-<https://data.example.org/transport/bcn/metro/resource/accessibilityType/Accessible> a ns1:AccessibilityType ;
-    rdfs:label "Accessible" .
+<https://data.example.org/transport/bcn/metro/resource/accessibilityType/Accessible> rdfs:label "Accessible" .
 
 <https://data.example.org/transport/bcn/metro/resource/stationStatus/Operatiu> a ns1:StationStatus ;
     rdfs:label "Operatiu" .
-
-<https://data.example.org/transport/bcn/metro/resource/serviceType/1> a ns1:ServiceType ;
-    rdfs:label "Aeroport T1 - Zona Universitaria",
-        "Cornellà Centre - Vall d'Hebron",
-        "Hospital de Bellvitge - Fondo",
-        "La Pau - Trinitat Nova",
-        "La Sagrera - Can Zam",
-        "La Sagrera - Gorg",
-        "Paral·lel - Badalona Pompeu Fabra",
-        "Paral·lel - Parc de Montjuïc",
-        "Trinitat Nova - Can Cuiàs",
-        "ZAL | Riu Vell - Collblanc",
-        "Zona Universitària - Trinitat Nova" .
 
