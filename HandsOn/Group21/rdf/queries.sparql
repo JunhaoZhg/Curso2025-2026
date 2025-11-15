@@ -1,61 +1,118 @@
-# Road Safety Ontology — Consultas SPARQL
+############################################################
+# Roadsafety – Consultas SPARQL de validacion
+# Dataset: roadsafety.ttl
+############################################################
 
+############################################################
+# Q1 – Numero de instancias por clase
+############################################################
+PREFIX rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX schema: <https://schema.org/>
-PREFIX rdfs:   <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX xsd:    <http://www.w3.org/2001/XMLSchema#>
-PREFIX owl:    <http://www.w3.org/2002/07/owl#>
 PREFIX ex:     <https://www.roadsafetydata.com/ontology#>
 
-# === O1 — Clases declaradas ===
-SELECT DISTINCT ?class ?label
+SELECT ?class (COUNT(*) AS ?n)
 WHERE {
-  ?class a owl:Class .
-  OPTIONAL { ?class rdfs:label ?label }
+  ?s rdf:type ?class .
 }
-ORDER BY ?class
-LIMIT 200
+GROUP BY ?class
+ORDER BY DESC(?n)
 
-# === O2 — Propiedades con dominio y rango ===
-SELECT ?prop ?type ?domain ?range
-WHERE {
-  ?prop a ?type .
-  FILTER(?type IN (owl:ObjectProperty, owl:DatatypeProperty))
-  OPTIONAL { ?prop rdfs:domain ?domain }
-  OPTIONAL { ?prop rdfs:range  ?range }
-}
-ORDER BY ?prop
-LIMIT 500
 
-# === O3 — Jerarquía de clases (ampliada) ===
-SELECT DISTINCT ?class ?super
-WHERE {
-  { ?class rdfs:subClassOf ?super }
-  UNION
-  { ?class rdfs:subClassOf [ owl:onProperty ?p ; owl:someValuesFrom ?super ] }
-}
-ORDER BY ?class ?super
-LIMIT 300
+############################################################
+# Q2 – Accidentes y numero de personas implicadas
+############################################################
+PREFIX rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX schema: <https://schema.org/>
+PREFIX ex:     <https://www.roadsafetydata.com/ontology#>
 
-# === O4 — Equivalencias y sameAs (si existen) ===
-SELECT ?s ?p ?o
+SELECT ?accident (COUNT(DISTINCT ?person) AS ?numPersons)
 WHERE {
-  VALUES ?p { owl:equivalentClass owl:equivalentProperty owl:sameAs }
-  ?s ?p ?o .
+  ?accident rdf:type schema:Event ;
+            ex:involvesPerson ?person .
 }
-LIMIT 200
+GROUP BY ?accident
+ORDER BY DESC(?numPersons)
 
-# === O5 — Labels y comentarios ===
-SELECT ?s ?label ?comment
-WHERE {
-  ?s rdfs:label ?label .
-  OPTIONAL { ?s rdfs:comment ?comment }
-}
-LIMIT 200
 
-# === O6 — Propiedades por dominio ===
-SELECT DISTINCT ?class ?prop
+############################################################
+# Q3 – Detalle de personas implicadas en accidentes
+############################################################
+PREFIX rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX schema: <https://schema.org/>
+PREFIX ex:     <https://www.roadsafetydata.com/ontology#>
+
+SELECT ?accident ?person ?ageRange ?injuryLevel ?vehicleType ?posAlcohol ?posDrug
 WHERE {
-  ?prop rdfs:domain ?class .
+  ?accident rdf:type schema:Event ;
+            ex:involvesPerson ?person .
+
+  OPTIONAL { ?person ex:ageRange        ?ageRange . }
+  OPTIONAL { ?person ex:injuryLevel     ?injuryLevel . }
+  OPTIONAL { ?person ex:usesVehicleType ?vehicleType . }
+  OPTIONAL { ?person ex:positiveAlcohol ?posAlcohol . }
+  OPTIONAL { ?person ex:positiveDrug    ?posDrug . }
 }
-ORDER BY ?class ?prop
-LIMIT 300
+LIMIT 20
+
+
+############################################################
+# Q4 – Radares: carretera, PK, velocidad, coords
+############################################################
+PREFIX rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX schema: <https://schema.org/>
+PREFIX ex:     <https://www.roadsafetydata.com/ontology#>
+
+SELECT ?radar ?road ?pk ?speed ?utmX ?utmY ?lon ?lat
+WHERE {
+  ?radar rdf:type ex:SpeedCamera ;
+         ex:road ?road ;
+         ex:pk ?pk ;
+         ex:speedLimit ?speed .
+
+  OPTIONAL { ?radar ex:utmX ?utmX . }
+  OPTIONAL { ?radar ex:utmY ?utmY . }
+  OPTIONAL { ?radar schema:longitude ?lon . }
+  OPTIONAL { ?radar schema:latitude  ?lat . }
+}
+LIMIT 20
+
+
+############################################################
+# Q5 – Observaciones de poblacion distrito/barrio
+############################################################
+PREFIX rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:   <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ex:     <https://www.roadsafetydata.com/ontology#>
+
+SELECT ?obs ?district ?neighbourhood ?labelDistrict ?labelNeighbourhood
+       ?people ?male ?female
+WHERE {
+  ?obs rdf:type ex:PopulationObservation ;
+       ex:forDistrict      ?district ;
+       ex:forNeighbourhood ?neighbourhood ;
+       ex:peopleTotal      ?people .
+
+  OPTIONAL { ?district      rdfs:label ?labelDistrict . }
+  OPTIONAL { ?neighbourhood rdfs:label ?labelNeighbourhood . }
+  OPTIONAL { ?obs ex:peopleMale   ?male . }
+  OPTIONAL { ?obs ex:peopleFemale ?female . }
+}
+LIMIT 20
+
+
+############################################################
+# Q6 – Nº accidentes por distrito (areaServed)
+############################################################
+PREFIX rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:   <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX schema: <https://schema.org/>
+
+SELECT ?district ?label (COUNT(DISTINCT ?accident) AS ?numAccidents)
+WHERE {
+  ?accident rdf:type schema:Event ;
+            schema:areaServed ?district .
+
+  OPTIONAL { ?district rdfs:label ?label . }
+}
+GROUP BY ?district ?label
+ORDER BY DESC(?numAccidents)
