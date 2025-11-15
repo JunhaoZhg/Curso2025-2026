@@ -1,65 +1,5 @@
 [
   {
-    "op": "core/mass-edit",
-    "engineConfig": {
-      "facets": [],
-      "mode": "row-based"
-    },
-    "columnName": "DESTI_SERVEI",
-    "expression": "value",
-    "edits": [
-      {
-        "from": [
-          "Can Cui脿s"
-        ],
-        "fromBlank": false,
-        "fromError": false,
-        "to": "Can Cuiàs"
-      }
-    ],
-    "description": "Editar celdas en masa en columna DESTI_SERVEI"
-  },
-  {
-    "op": "core/mass-edit",
-    "engineConfig": {
-      "facets": [],
-      "mode": "row-based"
-    },
-    "columnName": "DESTI_SERVEI",
-    "expression": "value",
-    "edits": [
-      {
-        "from": [
-          "Zona Universit脿ria"
-        ],
-        "fromBlank": false,
-        "fromError": false,
-        "to": "Zona Universitaria"
-      }
-    ],
-    "description": "Editar celdas en masa en columna DESTI_SERVEI"
-  },
-  {
-    "op": "core/mass-edit",
-    "engineConfig": {
-      "facets": [],
-      "mode": "row-based"
-    },
-    "columnName": "DESTI_SERVEI",
-    "expression": "value",
-    "edits": [
-      {
-        "from": [
-          "Parc de Montju茂c"
-        ],
-        "fromBlank": false,
-        "fromError": false,
-        "to": "Parc de Montjuïc"
-      }
-    ],
-    "description": "Editar celdas en masa en columna DESTI_SERVEI"
-  },
-  {
     "op": "core/recon",
     "engineConfig": {
       "facets": [],
@@ -653,16 +593,101 @@
     "description": "Emparejar el elemento Zona Franca station (Q5395656) para las celdas que contienen \"Zona Franca station\" en la columna NOM_ESTACIO"
   },
   {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "NOM_ESTACIO",
+    "similarValue": "Av. Carrilet",
+    "judgment": "matched",
+    "match": {
+      "id": "Q2607435",
+      "name": "Avinguda Carrilet",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Avinguda Carrilet (Q2607435) para las celdas que contienen \"Av. Carrilet\" en la columna NOM_ESTACIO"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "NOM_ESTACIO",
+    "similarValue": "Diagonal",
+    "judgment": "matched",
+    "match": {
+      "id": "Q2472213",
+      "name": "Provença-Diagonal station",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Provença-Diagonal station (Q2472213) para las celdas que contienen \"Diagonal\" en la columna NOM_ESTACIO"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "NOM_ESTACIO",
+    "similarValue": "Ciutat de la Justícia",
+    "judgment": "matched",
+    "match": {
+      "id": "Q76747272",
+      "name": "Ciutat de la Justícia",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Ciutat de la Justícia (Q76747272) para las celdas que contienen \"Ciutat de la Justícia\" en la columna NOM_ESTACIO"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "NOM_ESTACIO",
+    "similarValue": "Parc de Montjuïc",
+    "judgment": "matched",
+    "match": {
+      "id": "Q2436833",
+      "name": "Parc de Montjuïc (Barcelona Metro)",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Parc de Montjuïc (Barcelona Metro) (Q2436833) para las celdas que contienen \"Parc de Montjuïc\" en la columna NOM_ESTACIO"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "same_as_wikidata_NOM_ESTACIO",
+    "description": "Eliminar columna same_as_wikidata_NOM_ESTACIO"
+  },
+  {
     "op": "core/column-addition",
     "engineConfig": {
       "facets": [],
       "mode": "row-based"
     },
-    "baseColumnName": "DESC_SERVEI",
-    "expression": "grel:value.toLowercase()\n.replace('à','a').replace('è','e').replace('é','e').replace('í','i').replace('ï','i').replace('ò','o').replace('ó','o').replace('ú','u').replace('ü','u').replace('ç','c')\n.replace('À','A').replace('È','E').replace('É','E').replace('Í','I').replace('Ï','I').replace('Ò','O').replace('Ó','O').replace('Ú','U').replace('Ü','U').replace('Ç','C')\n.replace(' ','-')\n.replace('|','-')\n.replace('·','-')\n.replace('/','-')\n.replace(/\\-+/,'-')",
+    "baseColumnName": "NOM_ESTACIO",
+    "expression": "grel:\"https://wikidata.org/entity/\"+cell.recon.match.id",
     "onError": "set-to-blank",
-    "newColumnName": "SLUG_SERVEI",
-    "columnInsertIndex": 17,
-    "description": "Crear la columna SLUG_SERVEI en el índice 17 basada en la columna DESC_SERVEI usando la expresión grel:value.toLowercase()\n.replace('à','a').replace('è','e').replace('é','e').replace('í','i').replace('ï','i').replace('ò','o').replace('ó','o').replace('ú','u').replace('ü','u').replace('ç','c')\n.replace('À','A').replace('È','E').replace('É','E').replace('Í','I').replace('Ï','I').replace('Ò','O').replace('Ó','O').replace('Ú','U').replace('Ü','U').replace('Ç','C')\n.replace(' ','-')\n.replace('|','-')\n.replace('·','-')\n.replace('/','-')\n.replace(/\\-+/,'-')"
+    "newColumnName": "same_as_NOM_ESTACIO",
+    "columnInsertIndex": 8,
+    "description": "Crear la columna same_as_NOM_ESTACIO en el índice 8 basada en la columna NOM_ESTACIO usando la expresión grel:\"https://wikidata.org/entity/\"+cell.recon.match.id"
   }
 ]
