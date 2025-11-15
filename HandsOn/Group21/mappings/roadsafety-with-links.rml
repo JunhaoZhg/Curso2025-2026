@@ -305,7 +305,7 @@
   a rr:TriplesMap ;
   rml:logicalSource <#SrcRad> ;
   rr:subjectMap [
-    # OJO: el placeholder debe coincidir EXACTO con la cabecera "nº radar"
+
     rr:template "https://www.roadsafetydata.com/resource/Radar/{nº radar}" ;
     rr:class ex:SpeedCamera
   ] ;
