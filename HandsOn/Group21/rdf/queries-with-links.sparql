@@ -1,92 +1,110 @@
-PREFIX schema: <https://schema.org/>
-PREFIX ns:     <https://www.roadsafetydata.com/ontology#>
-PREFIX owl:    <http://www.w3.org/2002/07/owl#>
-PREFIX rdfs:   <http://www.w3.org/2000/01/rdf-schema#>
+############################################################
+# Roadsafety 
+# L1–L7: linking (owl:sameAs)
+############################################################
 
-SELECT DISTINCT ?event ?district ?districtLink
+############################################################
+# L1 – Nº total de enlaces owl:sameAs
+############################################################
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+SELECT (COUNT(*) AS ?numLinks)
 WHERE {
-  ?event a schema:Event ;
-         schema:areaServed ?district .
-  OPTIONAL { ?district owl:sameAs ?districtLink . }
+  ?s owl:sameAs ?o .
 }
-LIMIT 100
 
----
 
-PREFIX schema: <https://schema.org/>
-PREFIX ns:     <https://www.roadsafetydata.com/ontology#>
-PREFIX owl:    <http://www.w3.org/2002/07/owl#>
-PREFIX rdfs:   <http://www.w3.org/2000/01/rdf-schema#>
+############################################################
+# L2 – 
+############################################################
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
 
-SELECT DISTINCT ?event ?vehRes ?vehLink
+SELECT ?s ?o
 WHERE {
-  ?event a schema:Event ;
-         ns:involvesPerson ?p .
-  ?p ns:usesVehicleType ?vehRes .
-  OPTIONAL { ?vehRes owl:sameAs ?vehLink . }
+  ?s owl:sameAs ?o .
 }
-LIMIT 100
+LIMIT 20
 
----
 
-PREFIX schema: <https://schema.org/>
-PREFIX ns:     <https://www.roadsafetydata.com/ontology#>
-PREFIX owl:    <http://www.w3.org/2002/07/owl#>
+############################################################
+# L3 – Distritos 
+############################################################
+PREFIX rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs:   <http://www.w3.org/2000/01/rdf-schema#>
-
-SELECT DISTINCT ?event ?p ?personLink
-WHERE {
-  ?event a schema:Event ;
-         ns:involvesPerson ?p .
-  OPTIONAL { ?p owl:sameAs ?personLink . }
-}
-LIMIT 100
-
----
-
-PREFIX schema: <https://schema.org/>
-PREFIX ns:     <https://www.roadsafetydata.com/ontology#>
 PREFIX owl:    <http://www.w3.org/2002/07/owl#>
-PREFIX rdfs:   <http://www.w3.org/2000/01/rdf-schema#>
-
-SELECT DISTINCT ?radar ?roadRes ?roadLink
-WHERE {
-  ?radar a ns:SpeedCamera ;
-         ns:road ?roadRes .
-  OPTIONAL { ?roadRes owl:sameAs ?roadLink . }
-}
-LIMIT 200
-
----
-
 PREFIX schema: <https://schema.org/>
-PREFIX ns:     <https://www.roadsafetydata.com/ontology#>
-PREFIX owl:    <http://www.w3.org/2002/07/owl#>
-PREFIX rdfs:   <http://www.w3.org/2000/01/rdf-schema#>
 
-SELECT DISTINCT ?radar ?orgRes ?orgLink
+SELECT ?district ?label ?sameAs
 WHERE {
-  ?radar a ns:SpeedCamera ;
-         ns:responsible ?orgRes .
-  OPTIONAL { ?orgRes owl:sameAs ?orgLink . }
+  ?district rdf:type schema:AdministrativeArea ;
+            owl:sameAs ?sameAs .
+  OPTIONAL { ?district rdfs:label ?label . }
 }
-LIMIT 200
+ORDER BY ?district
 
----
 
+############################################################
+# L4 – Tipos de vehículo 
+############################################################
+PREFIX rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:   <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:    <http://www.w3.org/2002/07/owl#>
 PREFIX schema: <https://schema.org/>
-PREFIX ns:     <https://www.roadsafetydata.com/ontology#>
-PREFIX owl:    <http://www.w3.org/2002/07/owl#>
-PREFIX rdfs:   <http://www.w3.org/2000/01/rdf-schema#>
 
-SELECT DISTINCT ?event ?district ?districtLink ?p ?personLink ?vehRes ?vehLink
+SELECT ?vehType ?label ?sameAs
 WHERE {
-  ?event a schema:Event ;
-         schema:areaServed ?district ;
-         ns:involvesPerson ?p .
-  OPTIONAL { ?district owl:sameAs ?districtLink . }
-  OPTIONAL { ?p owl:sameAs ?personLink . }
-  OPTIONAL { ?p ns:usesVehicleType ?vehRes .
-             OPTIONAL { ?vehRes owl:sameAs ?vehLink . } }
+  ?vehType rdf:type schema:Vehicle ;
+           owl:sameAs ?sameAs .
+  OPTIONAL { ?vehType rdfs:label ?label . }
 }
-LIMIT 200
+ORDER BY ?vehType
+
+
+############################################################
+# L5 – Género / sexo 
+############################################################
+PREFIX rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:   <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:    <http://www.w3.org/2002/07/owl#>
+PREFIX schema: <https://schema.org/>
+
+SELECT ?genderEnum ?label ?sameAs
+WHERE {
+  ?genderEnum rdf:type schema:Enumeration ;
+              owl:sameAs ?sameAs .
+  OPTIONAL { ?genderEnum rdfs:label ?label . }
+}
+ORDER BY ?genderEnum
+
+
+############################################################
+# L6 – Carreteras 
+############################################################
+PREFIX rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:   <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:    <http://www.w3.org/2002/07/owl#>
+PREFIX schema: <https://schema.org/>
+
+SELECT ?road ?label ?sameAs
+WHERE {
+  ?road rdf:type schema:Road ;
+        owl:sameAs ?sameAs .
+  OPTIONAL { ?road rdfs:label ?label . }
+}
+ORDER BY ?road
+
+
+############################################################
+# L7 – Autoridades
+############################################################
+PREFIX rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl:    <http://www.w3.org/2002/07/owl#>
+PREFIX schema: <https://schema.org/>
+
+SELECT ?auth ?name ?sameAs
+WHERE {
+  ?auth rdf:type schema:Organization ;
+        owl:sameAs ?sameAs ;
+        schema:name ?name .
+}
+ORDER BY ?auth
