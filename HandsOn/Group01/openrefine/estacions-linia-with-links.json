@@ -504,5 +504,165 @@
     "newColumnName": "same_as_wikidata_DESTI_SERVEI",
     "columnInsertIndex": 20,
     "description": "Crear la columna same_as_wikidata_DESTI_SERVEI en el índice 20 basada en la columna DESTI_SERVEI usando la expresión grel:\"https://wikidata.org/entity/\"+cell.recon.match.id"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "NOM_ESTACIO",
+    "similarValue": "Florida",
+    "judgment": "matched",
+    "match": {
+      "id": "Q2548194",
+      "name": "Florida",
+      "types": [
+        "Q928830",
+        "Q22808403"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Florida (Q2548194) para las celdas que contienen \"Florida\" en la columna NOM_ESTACIO"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "NOM_ESTACIO",
+    "similarValue": "Tetuan",
+    "judgment": "matched",
+    "match": {
+      "id": "Q2692167",
+      "name": "Tetuan",
+      "types": [
+        "Q928830",
+        "Q22808403"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Tetuan (Q2692167) para las celdas que contienen \"Tetuan\" en la columna NOM_ESTACIO"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "NOM_ESTACIO",
+    "similarValue": "Monumental",
+    "judgment": "matched",
+    "match": {
+      "id": "Q1877541",
+      "name": "Monumental",
+      "types": [
+        "Q928830",
+        "Q22808403"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Monumental (Q1877541) para las celdas que contienen \"Monumental\" en la columna NOM_ESTACIO"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "NOM_ESTACIO",
+    "similarValue": "Fontana",
+    "judgment": "matched",
+    "match": {
+      "id": "Q535545",
+      "name": "Fontana",
+      "types": [
+        "Q928830",
+        "Q22808403"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Fontana (Q535545) para las celdas que contienen \"Fontana\" en la columna NOM_ESTACIO"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "NOM_ESTACIO",
+    "similarValue": "Congrés",
+    "judgment": "matched",
+    "match": {
+      "id": "Q2106590",
+      "name": "Congrés",
+      "types": [
+        "Q928830",
+        "Q22808403"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Congrés (Q2106590) para las celdas que contienen \"Congrés\" en la columna NOM_ESTACIO"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "NOM_ESTACIO",
+    "similarValue": "Santa Rosa",
+    "judgment": "matched",
+    "match": {
+      "id": "Q4889669",
+      "name": "Santa Rosa",
+      "types": [
+        "Q928830",
+        "Q22808403"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Santa Rosa (Q4889669) para las celdas que contienen \"Santa Rosa\" en la columna NOM_ESTACIO"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "NOM_ESTACIO",
+    "similarValue": "Zona Franca station",
+    "judgment": "matched",
+    "match": {
+      "id": "Q5395656",
+      "name": "Zona Franca station",
+      "types": [
+        "Q928830",
+        "Q11670533"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Zona Franca station (Q5395656) para las celdas que contienen \"Zona Franca station\" en la columna NOM_ESTACIO"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "DESC_SERVEI",
+    "expression": "grel:value.toLowercase()\n.replace('à','a').replace('è','e').replace('é','e').replace('í','i').replace('ï','i').replace('ò','o').replace('ó','o').replace('ú','u').replace('ü','u').replace('ç','c')\n.replace('À','A').replace('È','E').replace('É','E').replace('Í','I').replace('Ï','I').replace('Ò','O').replace('Ó','O').replace('Ú','U').replace('Ü','U').replace('Ç','C')\n.replace(' ','-')\n.replace('|','-')\n.replace('·','-')\n.replace('/','-')\n.replace(/\\-+/,'-')",
+    "onError": "set-to-blank",
+    "newColumnName": "SLUG_SERVEI",
+    "columnInsertIndex": 17,
+    "description": "Crear la columna SLUG_SERVEI en el índice 17 basada en la columna DESC_SERVEI usando la expresión grel:value.toLowercase()\n.replace('à','a').replace('è','e').replace('é','e').replace('í','i').replace('ï','i').replace('ò','o').replace('ó','o').replace('ú','u').replace('ü','u').replace('ç','c')\n.replace('À','A').replace('È','E').replace('É','E').replace('Í','I').replace('Ï','I').replace('Ò','O').replace('Ó','O').replace('Ú','U').replace('Ü','U').replace('Ç','C')\n.replace(' ','-')\n.replace('|','-')\n.replace('·','-')\n.replace('/','-')\n.replace(/\\-+/,'-')"
   }
 ]
