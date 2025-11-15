@@ -689,5 +689,164 @@
     "newColumnName": "same_as_NOM_ESTACIO",
     "columnInsertIndex": 8,
     "description": "Crear la columna same_as_NOM_ESTACIO en el índice 8 basada en la columna NOM_ESTACIO usando la expresión grel:\"https://wikidata.org/entity/\"+cell.recon.match.id"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "NOM_LINIA",
+    "expression": "grel:value",
+    "onError": "set-to-blank",
+    "newColumnName": "ETI_LINIA",
+    "columnInsertIndex": 13,
+    "description": "Crear la columna ETI_LINIA en el índice 13 basada en la columna NOM_LINIA usando la expresión grel:value"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "ETI_LINIA",
+    "index": 12,
+    "description": "Mueve la columna ETI_LINIA a la posición 12"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "ETI_LINIA",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Barcelona Metro line 1"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "L1"
+      }
+    ],
+    "description": "Editar celdas en masa en columna ETI_LINIA"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "ETI_LINIA",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Barcelona Metro line 2"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "L2"
+      }
+    ],
+    "description": "Editar celdas en masa en columna ETI_LINIA"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "ETI_LINIA",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Barcelona Metro line 3"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "L3"
+      }
+    ],
+    "description": "Editar celdas en masa en columna ETI_LINIA"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "ETI_LINIA",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Barcelona Metro line 4"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "L4"
+      }
+    ],
+    "description": "Editar celdas en masa en columna ETI_LINIA"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "ETI_LINIA",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Barcelona Metro line 5"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "L5"
+      }
+    ],
+    "description": "Editar celdas en masa en columna ETI_LINIA"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "ETI_LINIA",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Barcelona Metro line 9"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "L9S"
+      }
+    ],
+    "description": "Editar celdas en masa en columna ETI_LINIA"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "ETI_LINIA",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Barcelona Metro line 10"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "L10S"
+      }
+    ],
+    "description": "Editar celdas en masa en columna ETI_LINIA"
   }
 ]
