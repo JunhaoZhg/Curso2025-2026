@@ -274,5 +274,24 @@
     "newColumnName": "same_as_wikidata_NOM_OPERADOR",
     "columnInsertIndex": 13,
     "description": "Crear la columna same_as_wikidata_NOM_OPERADOR en el índice 13 basada en la columna NOM_OPERADOR usando la expresión grel:\"https://wikidata.org/entity/\"+cell.recon.match.id"
+  },
+    {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "NOM_LINIA",
+    "expression": "grel:value",
+    "onError": "set-to-blank",
+    "newColumnName": "ETI_LINIA",
+    "columnInsertIndex": 4,
+    "description": "Crear la columna ETI_LINIA en el índice 4 basada en la columna NOM_LINIA usando la expresión grel:value"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "ETI_LINIA",
+    "index": 3,
+    "description": "Mueve la columna ETI_LINIA a la posición 3"
   }
 ]
