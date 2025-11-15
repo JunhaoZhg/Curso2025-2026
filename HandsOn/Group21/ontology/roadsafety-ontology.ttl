@@ -108,13 +108,13 @@ ns:positiveAlcohol a owl:DatatypeProperty ;
   rdfs:domain schema:Person ;
   rdfs:range  xsd:boolean ;
   rdfs:label  "positive alcohol"@en ;
-  rdfs:comment "Alcohol test result (true/false or Y/N)."@en .
+  rdfs:comment "Alcohol test result (true/false)."@en .
 
 ns:positiveDrug a owl:DatatypeProperty ;
   rdfs:domain schema:Person ;
   rdfs:range  xsd:boolean ;
   rdfs:label  "positive drug"@en ;
-  rdfs:comment "Drug test result (true/false or Y/N)."@en .
+  rdfs:comment "Drug test result (true/false)."@en .
 
 ########## Accident place (Place) and SpeedCamera coordinates / attributes
 ns:streetNumber a owl:DatatypeProperty ;
@@ -123,16 +123,16 @@ ns:streetNumber a owl:DatatypeProperty ;
   rdfs:label  "street number"@en ;
   rdfs:comment "Street number or position for the accident place."@en .
 
-# UTM coords (sin unionOf, sin dominio)
+# UTM coords
 ns:utmX a owl:DatatypeProperty ;
   rdfs:range  xsd:double ;
   rdfs:label  "UTM X"@en ;
-  rdfs:comment "Easting (ETRS89 / UTM Zone 30) in meters."@en .
+  rdfs:comment "Easting in meters."@en .
 
 ns:utmY a owl:DatatypeProperty ;
   rdfs:range  xsd:double ;
   rdfs:label  "UTM Y"@en ;
-  rdfs:comment "Northing (ETRS89 / UTM Zone 30) in meters."@en .
+  rdfs:comment "Northing in meters."@en .
 
 
 ########## Speed camera attributes
@@ -158,7 +158,7 @@ ns:cameraType a owl:DatatypeProperty ;
   rdfs:domain ns:SpeedCamera ;
   rdfs:range  xsd:string ;
   rdfs:label  "camera type"@en ;
-  rdfs:comment "Speed camera type (Fixed, Section, Traffic-light)."@en .
+  rdfs:comment "Speed camera type (Fixed, Section)."@en .
 
 ns:lane a owl:DatatypeProperty ;
   rdfs:domain ns:SpeedCamera ;
@@ -177,7 +177,6 @@ ns:startLatitude a owl:DatatypeProperty ;
   rdfs:range  xsd:double ;
   rdfs:label  "start latitude"@en ;
   rdfs:comment "Section-control start latitude (WGS84 decimal degrees)."@en .
-
 
 ########## Population observation numbers
 ns:peopleTotal a owl:DatatypeProperty ;
@@ -216,4 +215,6 @@ schema:AdministrativeArea a owl:Class .
 schema:Organization       a owl:Class .
 schema:Road               a owl:Class .
 schema:Vehicle            a owl:Class .
+schema:Enumeration        a owl:Class .
+
 
