@@ -15,7 +15,7 @@
 <https://www.roadsafetydata.com/resource/District/D05> a schema:AdministrativeArea ;
   rdfs:label "Madrid – Distrito 05 (Chamartín)"@es .
 
-# Municipio / Distrito / Barrio (si te hacen falta en el example)
+# Municipio / Distrito / Barrio
 <https://www.roadsafetydata.com/resource/Municipality/Madrid> a schema:AdministrativeArea ;
   rdfs:label "Madrid"@es .
 
@@ -46,7 +46,7 @@
   ns:road          <https://www.roadsafetydata.com/resource/Road/m-30> .
 
 # ---------- ACCIDENTE ----------
-# Lugar (usar la misma ruta que RML)
+# Lugar 
 <https://www.roadsafetydata.com/resource/Accident/2025S000056/place> a schema:Place ;
   rdfs:label      "Call. Lopez De Hoyos / Call. Ros De Olano"@es ;
   ns:streetNumber "140" ;
