@@ -11,7 +11,7 @@
 <https://www.roadsafetydata.com/resource/Road/m-30> a schema:Road ;
   rdfs:label "m-30"@es .
 
-# Distrito 05 (Chamartín) — coherente con RML
+# Distrito 05 (Chamartín)
 <https://www.roadsafetydata.com/resource/District/D05> a schema:AdministrativeArea ;
   rdfs:label "Madrid – Distrito 05 (Chamartín)"@es .
 
@@ -25,7 +25,7 @@
 <https://www.roadsafetydata.com/resource/Neighbourhood/N0101> a schema:AdministrativeArea ;
   rdfs:label "Madrid – Barrio 0101 (Centro)"@es .
 
-# Catálogo sencillo de vehículo
+# Catalogo sencillo de vehículo
 <https://www.roadsafetydata.com/resource/vehicle-type/Ciclomotor> a schema:Vehicle ;
   rdfs:label "Ciclomotor"@es .
 
