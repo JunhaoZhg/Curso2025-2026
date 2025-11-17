@@ -207,7 +207,7 @@ ns:inProvince a rdf:Property ;
     schema:name "MADRID" .
 
 #Museums
-<http://data.example.org/madridMuseos/Casa_Museo_Fuente_del_Rey> a schema:Museum ;
+<http://data.example.org/madridMuseos/museum/Casa_Museo_Fuente_del_Rey> a schema:Museum ;
     ns:hasDistrict <http://data.example.org/madridMuseos/district/MONCLOA-ARAVACA> ;
     ns:hasLocation <http://data.example.org/madridMuseos/location/MADRID> ;
     ns:hasNeighbourhood <http://data.example.org/madridMuseos/neighbourhood/ARAVACA> ;
@@ -223,7 +223,7 @@ ns:inProvince a rdf:Property ;
     schema:url <http://www.madrid.es/sites/v/index.jsp?vgnextchannel=bfa48ab43d6bb410VgnVCM100000171f5a0aRCRD&vgnextoid=5c1260101310f210VgnVCM1000000b205a0aRCRD> ;
     owl:sameAs <https://www.wikidata.org/wiki/Q28808141> .
 
-<http://data.example.org/madridMuseos/Casa_Museo_Lope_de_Vega> a schema:Museum ;
+<http://data.example.org/madridMuseos/museum/Casa_Museo_Lope_de_Vega> a schema:Museum ;
     ns:hasDistrict <http://data.example.org/madridMuseos/district/CENTRO> ;
     ns:hasLocation <http://data.example.org/madridMuseos/location/MADRID> ;
     ns:hasNeighbourhood <http://data.example.org/madridMuseos/neighbourhood/CORTES> ;
@@ -239,7 +239,7 @@ ns:inProvince a rdf:Property ;
     schema:url <http://www.madrid.es/sites/v/index.jsp?vgnextchannel=bfa48ab43d6bb410VgnVCM100000171f5a0aRCRD&vgnextoid=4eff8c46145e8110VgnVCM2000000c205a0aRCRD> ;
     owl:sameAs <https://www.wikidata.org/wiki/Q948580> .
 
-<http://data.example.org/madridMuseos/Casita_Museo_de_Ratón_Pérez> a schema:Museum ;
+<http://data.example.org/madridMuseos/museum/Casita_Museo_de_Ratón_Pérez> a schema:Museum ;
     ns:hasDistrict <http://data.example.org/madridMuseos/district/CENTRO> ;
     ns:hasLocation <http://data.example.org/madridMuseos/location/MADRID> ;
     ns:hasNeighbourhood <http://data.example.org/madridMuseos/neighbourhood/SOL> ;
@@ -254,7 +254,7 @@ ns:inProvince a rdf:Property ;
     schema:telephone "915 226 968" ;
     schema:url <http://www.madrid.es/sites/v/index.jsp?vgnextchannel=bfa48ab43d6bb410VgnVCM100000171f5a0aRCRD&vgnextoid=990950e86d4ca110VgnVCM2000000c205a0aRCRD> .
 
-<http://data.example.org/madridMuseos/Castillo_de_la_Alameda> a schema:Museum ;
+<http://data.example.org/madridMuseos/museum/Castillo_de_la_Alameda> a schema:Museum ;
     ns:hasDistrict <http://data.example.org/madridMuseos/district/BARAJAS> ;
     ns:hasLocation <http://data.example.org/madridMuseos/location/MADRID> ;
     ns:hasNeighbourhood <http://data.example.org/madridMuseos/neighbourhood/ALAMEDA_DE_OSUNA> ;
@@ -270,7 +270,7 @@ ns:inProvince a rdf:Property ;
     schema:url <http://www.madrid.es/sites/v/index.jsp?vgnextchannel=bfa48ab43d6bb410VgnVCM100000171f5a0aRCRD&vgnextoid=fe43c4be8e688210VgnVCM1000000b205a0aRCRD> ;
     owl:sameAs <https://www.wikidata.org/wiki/Q8342365> .
 
-<http://data.example.org/madridMuseos/Casón_del_Buen_Retiro> a schema:Museum ;
+<http://data.example.org/madridMuseos/museum/Casón_del_Buen_Retiro> a schema:Museum ;
     ns:hasDistrict <http://data.example.org/madridMuseos/district/RETIRO> ;
     ns:hasLocation <http://data.example.org/madridMuseos/location/MADRID> ;
     ns:hasNeighbourhood <http://data.example.org/madridMuseos/neighbourhood/LOS_JERONIMOS> ;
@@ -285,7 +285,7 @@ ns:inProvince a rdf:Property ;
     schema:url <http://www.madrid.es/sites/v/index.jsp?vgnextchannel=bfa48ab43d6bb410VgnVCM100000171f5a0aRCRD&vgnextoid=f0443d0b5e71c010VgnVCM1000000b205a0aRCRD> ;
     owl:sameAs <https://www.wikidata.org/wiki/Q3321174> .
 
-<http://data.example.org/madridMuseos/Centro_Cultural_La_Corrala._Museo_de_Artes_y_Tradiciones_Populares> a schema:Museum ;
+<http://data.example.org/madridMuseos/museum/Centro_Cultural_La_Corrala._Museo_de_Artes_y_Tradiciones_Populares> a schema:Museum ;
     ns:hasDistrict <http://data.example.org/madridMuseos/district/CENTRO> ;
     ns:hasLocation <http://data.example.org/madridMuseos/location/MADRID> ;
     ns:hasNeighbourhood <http://data.example.org/madridMuseos/neighbourhood/EMBAJADORES> ;
@@ -300,7 +300,7 @@ ns:inProvince a rdf:Property ;
     schema:url <http://www.madrid.es/sites/v/index.jsp?vgnextchannel=bfa48ab43d6bb410VgnVCM100000171f5a0aRCRD&vgnextoid=5c39ef4d7f71c010VgnVCM1000000b205a0aRCRD> ;
     owl:sameAs <https://www.wikidata.org/wiki/Q52247359> .
 
-<http://data.example.org/madridMuseos/Ermita_de_San_Antonio_de_la_Florida_(Museo)> a schema:Museum ;
+<http://data.example.org/madridMuseos/museum/Ermita_de_San_Antonio_de_la_Florida_(Museo)> a schema:Museum ;
     ns:hasDistrict <http://data.example.org/madridMuseos/district/MONCLOA-ARAVACA> ;
     ns:hasLocation <http://data.example.org/madridMuseos/location/MADRID> ;
     ns:hasNeighbourhood <http://data.example.org/madridMuseos/neighbourhood/CASA_DE_CAMPO> ;
@@ -315,7 +315,7 @@ ns:inProvince a rdf:Property ;
     schema:telephone "915 420 722 o 683 429 760" ;
     schema:url <http://www.madrid.es/sites/v/index.jsp?vgnextchannel=bfa48ab43d6bb410VgnVCM100000171f5a0aRCRD&vgnextoid=75950204770e7310VgnVCM2000000c205a0aRCRD> .
 
-<http://data.example.org/madridMuseos/Espacio_Fundación_Telefónica> a schema:Museum ;
+<http://data.example.org/madridMuseos/museum/Espacio_Fundación_Telefónica> a schema:Museum ;
     ns:hasDistrict <http://data.example.org/madridMuseos/district/CENTRO> ;
     ns:hasLocation <http://data.example.org/madridMuseos/location/MADRID> ;
     ns:hasNeighbourhood <http://data.example.org/madridMuseos/neighbourhood/UNIVERSIDAD> ;
@@ -330,7 +330,7 @@ ns:inProvince a rdf:Property ;
     schema:url <http://www.madrid.es/sites/v/index.jsp?vgnextchannel=bfa48ab43d6bb410VgnVCM100000171f5a0aRCRD&vgnextoid=87748ed67151c010VgnVCM2000000c205a0aRCRD> ;
     owl:sameAs <https://www.wikidata.org/wiki/Q134406425> .
 
-<http://data.example.org/madridMuseos/Frontón_Beti_Jai> a schema:Museum ;
+<http://data.example.org/madridMuseos/museum/Frontón_Beti_Jai> a schema:Museum ;
     ns:hasDistrict <http://data.example.org/madridMuseos/district/CHAMBERI> ;
     ns:hasLocation <http://data.example.org/madridMuseos/location/MADRID> ;
     ns:hasNeighbourhood <http://data.example.org/madridMuseos/neighbourhood/ALMAGRO> ;
@@ -343,7 +343,7 @@ ns:inProvince a rdf:Property ;
     schema:openingHours "De martes a domingo, de 10 a 14 horas.    Cerrado los días 25 de  diciembre y 1 de enero," ;
     schema:url <http://www.madrid.es/sites/v/index.jsp?vgnextchannel=bfa48ab43d6bb410VgnVCM100000171f5a0aRCRD&vgnextoid=f4e1273c8ff5e810VgnVCM1000001d4a900aRCRD> .
 
-<http://data.example.org/madridMuseos/Galería_de_la_Colecciones_Reales> a schema:Museum ;
+<http://data.example.org/madridMuseos/museum/Galería_de_la_Colecciones_Reales> a schema:Museum ;
     ns:hasDistrict <http://data.example.org/madridMuseos/district/CENTRO> ;
     ns:hasLocation <http://data.example.org/madridMuseos/location/MADRID> ;
     ns:hasNeighbourhood <http://data.example.org/madridMuseos/neighbourhood/PALACIO> ;
@@ -357,7 +357,7 @@ ns:inProvince a rdf:Property ;
     schema:telephone "918 403 883" ;
     schema:url <http://www.madrid.es/sites/v/index.jsp?vgnextchannel=bfa48ab43d6bb410VgnVCM100000171f5a0aRCRD&vgnextoid=a46206f392a7e810VgnVCM2000001f4a900aRCRD> .
 
-<http://data.example.org/madridMuseos/Imprenta_Municipal_-_Artes_del_libro> a schema:Museum ;
+<http://data.example.org/madridMuseos/museum/Imprenta_Municipal_-_Artes_del_libro> a schema:Museum ;
     ns:hasDistrict <http://data.example.org/madridMuseos/district/CENTRO> ;
     ns:hasLocation <http://data.example.org/madridMuseos/location/MADRID> ;
     ns:hasNeighbourhood <http://data.example.org/madridMuseos/neighbourhood/EMBAJADORES> ;
@@ -375,7 +375,7 @@ Fin de semana de 10 a 20 h: 914 777 549""" ;
     schema:url <http://www.madrid.es/sites/v/index.jsp?vgnextchannel=bfa48ab43d6bb410VgnVCM100000171f5a0aRCRD&vgnextoid=26a38ed67151c010VgnVCM2000000c205a0aRCRD> ;
     owl:sameAs <https://www.wikidata.org/wiki/Q19453318> .
 
-<http://data.example.org/madridMuseos/La_Casa_Encendida_de_la_Fundación_Montemadrid> a schema:Museum ;
+<http://data.example.org/madridMuseos/museum/La_Casa_Encendida_de_la_Fundación_Montemadrid> a schema:Museum ;
     ns:hasDistrict <http://data.example.org/madridMuseos/district/CENTRO> ;
     ns:hasLocation <http://data.example.org/madridMuseos/location/MADRID> ;
     ns:hasNeighbourhood <http://data.example.org/madridMuseos/neighbourhood/EMBAJADORES> ;
@@ -389,7 +389,7 @@ Fin de semana de 10 a 20 h: 914 777 549""" ;
     schema:telephone "915 062 180" ;
     schema:url <http://www.madrid.es/sites/v/index.jsp?vgnextchannel=bfa48ab43d6bb410VgnVCM100000171f5a0aRCRD&vgnextoid=c27f8899fc81c010VgnVCM1000000b205a0aRCRD> .
 
-<http://data.example.org/madridMuseos/Monasterio_de_las_Descalzas_Reales> a schema:Museum ;
+<http://data.example.org/madridMuseos/museum/Monasterio_de_las_Descalzas_Reales> a schema:Museum ;
     ns:hasDistrict <http://data.example.org/madridMuseos/district/CENTRO> ;
     ns:hasLocation <http://data.example.org/madridMuseos/location/MADRID> ;
     ns:hasNeighbourhood <http://data.example.org/madridMuseos/neighbourhood/SOL> ;
@@ -403,7 +403,7 @@ Fin de semana de 10 a 20 h: 914 777 549""" ;
     schema:url <http://www.madrid.es/sites/v/index.jsp?vgnextchannel=bfa48ab43d6bb410VgnVCM100000171f5a0aRCRD&vgnextoid=12e113db5b71c010VgnVCM1000000b205a0aRCRD> ;
     owl:sameAs <https://www.wikidata.org/wiki/Q2268271> .
 
-<http://data.example.org/madridMuseos/Museo_ABC> a schema:Museum ;
+<http://data.example.org/madridMuseos/museum/Museo_ABC> a schema:Museum ;
     ns:hasDistrict <http://data.example.org/madridMuseos/district/CENTRO> ;
     ns:hasLocation <http://data.example.org/madridMuseos/location/MADRID> ;
     ns:hasNeighbourhood <http://data.example.org/madridMuseos/neighbourhood/UNIVERSIDAD> ;
@@ -419,7 +419,7 @@ Fin de semana de 10 a 20 h: 914 777 549""" ;
     schema:url <http://www.madrid.es/sites/v/index.jsp?vgnextchannel=bfa48ab43d6bb410VgnVCM100000171f5a0aRCRD&vgnextoid=f0103fee6537c210VgnVCM1000000b205a0aRCRD> ;
     owl:sameAs <https://www.wikidata.org/wiki/Q21564330> .
 
-<http://data.example.org/madridMuseos/Museo_Africano_Misioneros_Combonianos> a schema:Museum ;
+<http://data.example.org/madridMuseos/museum/Museo_Africano_Misioneros_Combonianos> a schema:Museum ;
     ns:hasDistrict <http://data.example.org/madridMuseos/district/CIUDAD_LINEAL> ;
     ns:hasLocation <http://data.example.org/madridMuseos/location/MADRID> ;
     ns:hasNeighbourhood <http://data.example.org/madridMuseos/neighbourhood/SAN_JUAN_BAUTISTA> ;
@@ -432,7 +432,7 @@ Fin de semana de 10 a 20 h: 914 777 549""" ;
     schema:telephone "914 152 412" ;
     schema:url <http://www.madrid.es/sites/v/index.jsp?vgnextchannel=bfa48ab43d6bb410VgnVCM100000171f5a0aRCRD&vgnextoid=6ab8ef4d7f71c010VgnVCM1000000b205a0aRCRD> .
 
-<http://data.example.org/madridMuseos/Museo_Arqueológico_Nacional> a schema:Museum ;
+<http://data.example.org/madridMuseos/museum/Museo_Arqueológico_Nacional> a schema:Museum ;
     ns:hasDistrict <http://data.example.org/madridMuseos/district/SALAMANCA> ;
     ns:hasLocation <http://data.example.org/madridMuseos/location/MADRID> ;
     ns:hasNeighbourhood <http://data.example.org/madridMuseos/neighbourhood/RECOLETOS> ;
@@ -447,7 +447,7 @@ Fin de semana de 10 a 20 h: 914 777 549""" ;
     schema:url <http://www.madrid.es/sites/v/index.jsp?vgnextchannel=bfa48ab43d6bb410VgnVCM100000171f5a0aRCRD&vgnextoid=8fd8ef4d7f71c010VgnVCM1000000b205a0aRCRD> ;
     owl:sameAs <https://www.wikidata.org/wiki/Q1352282> .
 
-<http://data.example.org/madridMuseos/Museo_Banksy_Madrid> a schema:Museum ;
+<http://data.example.org/madridMuseos/museum/Museo_Banksy_Madrid> a schema:Museum ;
     ns:hasDistrict <http://data.example.org/madridMuseos/district/ARGANZUELA> ;
     ns:hasLocation <http://data.example.org/madridMuseos/location/MADRID> ;
     ns:hasNeighbourhood <http://data.example.org/madridMuseos/neighbourhood/ACACIAS> ;
@@ -462,7 +462,7 @@ Fin de semana de 10 a 20 h: 914 777 549""" ;
     schema:telephone "603 607 564" ;
     schema:url <http://www.madrid.es/sites/v/index.jsp?vgnextchannel=bfa48ab43d6bb410VgnVCM100000171f5a0aRCRD&vgnextoid=4556e2a774089910VgnVCM100000891ecb1aRCRD> .
 
-<http://data.example.org/madridMuseos/Museo_Casa_de_la_Moneda> a schema:Museum ;
+<http://data.example.org/madridMuseos/museum/Museo_Casa_de_la_Moneda> a schema:Museum ;
     ns:hasDistrict <http://data.example.org/madridMuseos/district/SALAMANCA> ;
     ns:hasLocation <http://data.example.org/madridMuseos/location/MADRID> ;
     ns:hasNeighbourhood <http://data.example.org/madridMuseos/neighbourhood/GOYA> ;
@@ -477,7 +477,7 @@ Fin de semana de 10 a 20 h: 914 777 549""" ;
     schema:url <http://www.madrid.es/sites/v/index.jsp?vgnextchannel=bfa48ab43d6bb410VgnVCM100000171f5a0aRCRD&vgnextoid=12f8ef4d7f71c010VgnVCM1000000b205a0aRCRD> ;
     owl:sameAs <https://www.wikidata.org/wiki/Q39072661> .
 
-<http://data.example.org/madridMuseos/Museo_Cerralbo> a schema:Museum ;
+<http://data.example.org/madridMuseos/museum/Museo_Cerralbo> a schema:Museum ;
     ns:hasDistrict <http://data.example.org/madridMuseos/district/MONCLOA-ARAVACA> ;
     ns:hasLocation <http://data.example.org/madridMuseos/location/MADRID> ;
     ns:hasNeighbourhood <http://data.example.org/madridMuseos/neighbourhood/ARGUELLES> ;
@@ -493,7 +493,7 @@ Fin de semana de 10 a 20 h: 914 777 549""" ;
     schema:url <http://www.madrid.es/sites/v/index.jsp?vgnextchannel=bfa48ab43d6bb410VgnVCM100000171f5a0aRCRD&vgnextoid=a4efb0c40971c010VgnVCM1000000b205a0aRCRD> ;
     owl:sameAs <https://www.wikidata.org/wiki/Q976019> .
 
-<http://data.example.org/madridMuseos/Museo_EMT> a schema:Museum ;
+<http://data.example.org/madridMuseos/museum/Museo_EMT> a schema:Museum ;
     ns:hasDistrict <http://data.example.org/madridMuseos/district/CHAMARTIN> ;
     ns:hasLocation <http://data.example.org/madridMuseos/location/MADRID> ;
     ns:hasNeighbourhood <http://data.example.org/madridMuseos/neighbourhood/CASTILLA> ;
@@ -508,7 +508,7 @@ Fin de semana de 10 a 20 h: 914 777 549""" ;
     schema:url <http://www.madrid.es/sites/v/index.jsp?vgnextchannel=bfa48ab43d6bb410VgnVCM100000171f5a0aRCRD&vgnextoid=d56ad05b2a255510VgnVCM2000001f4a900aRCRD> ;
     owl:sameAs <https://www.wikidata.org/wiki/Q117459440> .
 
-<http://data.example.org/madridMuseos/Museo_Félix_Cañada> a schema:Museum ;
+<http://data.example.org/madridMuseos/museum/Museo_Félix_Cañada> a schema:Museum ;
     ns:hasDistrict <http://data.example.org/madridMuseos/district/CHAMBERI> ;
     ns:hasLocation <http://data.example.org/madridMuseos/location/MADRID> ;
     ns:hasNeighbourhood <http://data.example.org/madridMuseos/neighbourhood/RIOS_ROSAS> ;
@@ -523,7 +523,7 @@ Fin de semana de 10 a 20 h: 914 777 549""" ;
     schema:telephone "914 417 921" ;
     schema:url <http://www.madrid.es/sites/v/index.jsp?vgnextchannel=bfa48ab43d6bb410VgnVCM100000171f5a0aRCRD&vgnextoid=cb22820a52799510VgnVCM1000001d4a900aRCRD> .
 
-<http://data.example.org/madridMuseos/Museo_Geominero> a schema:Museum ;
+<http://data.example.org/madridMuseos/museum/Museo_Geominero> a schema:Museum ;
     ns:hasDistrict <http://data.example.org/madridMuseos/district/CHAMBERI> ;
     ns:hasLocation <http://data.example.org/madridMuseos/location/MADRID> ;
     ns:hasNeighbourhood <http://data.example.org/madridMuseos/neighbourhood/RIOS_ROSAS> ;
@@ -539,7 +539,7 @@ Fin de semana de 10 a 20 h: 914 777 549""" ;
     schema:url <http://www.madrid.es/sites/v/index.jsp?vgnextchannel=bfa48ab43d6bb410VgnVCM100000171f5a0aRCRD&vgnextoid=ff0bef4d7f71c010VgnVCM1000000b205a0aRCRD> ;
     owl:sameAs <https://www.wikidata.org/wiki/Q13532751> .
 
-<http://data.example.org/madridMuseos/Museo_Histórico_Minero_Don_Felipe_de_Borbón_y_Grecia> a schema:Museum ;
+<http://data.example.org/madridMuseos/museum/Museo_Histórico_Minero_Don_Felipe_de_Borbón_y_Grecia> a schema:Museum ;
     ns:hasDistrict <http://data.example.org/madridMuseos/district/CHAMBERI> ;
     ns:hasLocation <http://data.example.org/madridMuseos/location/MADRID> ;
     ns:hasNeighbourhood <http://data.example.org/madridMuseos/neighbourhood/RIOS_ROSAS> ;
@@ -555,7 +555,7 @@ Fin de semana de 10 a 20 h: 914 777 549""" ;
     schema:url <http://www.madrid.es/sites/v/index.jsp?vgnextchannel=bfa48ab43d6bb410VgnVCM100000171f5a0aRCRD&vgnextoid=822bef4d7f71c010VgnVCM1000000b205a0aRCRD> ;
     owl:sameAs <https://www.wikidata.org/wiki/Q53997723> .
 
-<http://data.example.org/madridMuseos/Museo_ICO> a schema:Museum ;
+<http://data.example.org/madridMuseos/museum/Museo_ICO> a schema:Museum ;
     ns:hasDistrict <http://data.example.org/madridMuseos/district/CENTRO> ;
     ns:hasLocation <http://data.example.org/madridMuseos/location/MADRID> ;
     ns:hasNeighbourhood <http://data.example.org/madridMuseos/neighbourhood/CORTES> ;
@@ -570,7 +570,7 @@ Fin de semana de 10 a 20 h: 914 777 549""" ;
     schema:url <http://www.madrid.es/sites/v/index.jsp?vgnextchannel=bfa48ab43d6bb410VgnVCM100000171f5a0aRCRD&vgnextoid=2886444a2951c010VgnVCM2000000c205a0aRCRD> ;
     owl:sameAs <https://www.wikidata.org/wiki/Q60829823> .
 
-<http://data.example.org/madridMuseos/Museo_Los_Caños_del_Peral._Estación_de_Metro_Ópera> a schema:Museum ;
+<http://data.example.org/madridMuseos/museum/Museo_Los_Caños_del_Peral._Estación_de_Metro_Ópera> a schema:Museum ;
     ns:hasDistrict <http://data.example.org/madridMuseos/district/CENTRO> ;
     ns:hasLocation <http://data.example.org/madridMuseos/location/MADRID> ;
     ns:hasNeighbourhood <http://data.example.org/madridMuseos/neighbourhood/PALACIO> ;
@@ -586,7 +586,7 @@ Fin de semana de 10 a 20 h: 914 777 549""" ;
     schema:url <http://www.madrid.es/sites/v/index.jsp?vgnextchannel=bfa48ab43d6bb410VgnVCM100000171f5a0aRCRD&vgnextoid=435950262d50f210VgnVCM2000000c205a0aRCRD> ;
     owl:sameAs <https://www.wikidata.org/wiki/Q134406427> .
 
-<http://data.example.org/madridMuseos/Museo_Lázaro_Galdiano> a schema:Museum ;
+<http://data.example.org/madridMuseos/museum/Museo_Lázaro_Galdiano> a schema:Museum ;
     ns:hasDistrict <http://data.example.org/madridMuseos/district/SALAMANCA> ;
     ns:hasLocation <http://data.example.org/madridMuseos/location/MADRID> ;
     ns:hasNeighbourhood <http://data.example.org/madridMuseos/neighbourhood/CASTELLANA> ;
@@ -601,7 +601,7 @@ Fin de semana de 10 a 20 h: 914 777 549""" ;
     schema:url <http://www.madrid.es/sites/v/index.jsp?vgnextchannel=bfa48ab43d6bb410VgnVCM100000171f5a0aRCRD&vgnextoid=7d1aef4d7f71c010VgnVCM1000000b205a0aRCRD> ;
     owl:sameAs <https://www.wikidata.org/wiki/Q386570> .
 
-<http://data.example.org/madridMuseos/Museo_Nacional_Centro_de_Arte_Reina_Sofía_(MNCARS)> a schema:Museum ;
+<http://data.example.org/madridMuseos/museum/Museo_Nacional_Centro_de_Arte_Reina_Sofía_(MNCARS)> a schema:Museum ;
     ns:hasDistrict <http://data.example.org/madridMuseos/district/CENTRO> ;
     ns:hasLocation <http://data.example.org/madridMuseos/location/MADRID> ;
     ns:hasNeighbourhood <http://data.example.org/madridMuseos/neighbourhood/EMBAJADORES> ;
@@ -617,7 +617,7 @@ Fin de semana de 10 a 20 h: 914 777 549""" ;
     schema:url <http://www.madrid.es/sites/v/index.jsp?vgnextchannel=bfa48ab43d6bb410VgnVCM100000171f5a0aRCRD&vgnextoid=69d8275bad5a1210VgnVCM2000000c205a0aRCRD> ;
     owl:sameAs <https://www.wikidata.org/wiki/Q460889> .
 
-<http://data.example.org/madridMuseos/Museo_Nacional_Thyssen-Bornemisza> a schema:Museum ;
+<http://data.example.org/madridMuseos/museum/Museo_Nacional_Thyssen-Bornemisza> a schema:Museum ;
     ns:hasDistrict <http://data.example.org/madridMuseos/district/CENTRO> ;
     ns:hasLocation <http://data.example.org/madridMuseos/location/MADRID> ;
     ns:hasNeighbourhood <http://data.example.org/madridMuseos/neighbourhood/CORTES> ;
@@ -633,7 +633,7 @@ Fin de semana de 10 a 20 h: 914 777 549""" ;
     schema:url <http://www.madrid.es/sites/v/index.jsp?vgnextchannel=bfa48ab43d6bb410VgnVCM100000171f5a0aRCRD&vgnextoid=0b8079262ef5d010VgnVCM1000000b205a0aRCRD> ;
     owl:sameAs <https://www.wikidata.org/wiki/Q176251> .
 
-<http://data.example.org/madridMuseos/Museo_Nacional_de_Antropología> a schema:Museum ;
+<http://data.example.org/madridMuseos/museum/Museo_Nacional_de_Antropología> a schema:Museum ;
     ns:hasDistrict <http://data.example.org/madridMuseos/district/RETIRO> ;
     ns:hasLocation <http://data.example.org/madridMuseos/location/MADRID> ;
     ns:hasNeighbourhood <http://data.example.org/madridMuseos/neighbourhood/LOS_JERONIMOS> ;
@@ -649,7 +649,7 @@ Fin de semana de 10 a 20 h: 914 777 549""" ;
     schema:url <http://www.madrid.es/sites/v/index.jsp?vgnextchannel=bfa48ab43d6bb410VgnVCM100000171f5a0aRCRD&vgnextoid=456079262ef5d010VgnVCM1000000b205a0aRCRD> ;
     owl:sameAs <https://www.wikidata.org/wiki/Q2917041> .
 
-<http://data.example.org/madridMuseos/Museo_Nacional_de_Artes_Decorativas> a schema:Museum ;
+<http://data.example.org/madridMuseos/museum/Museo_Nacional_de_Artes_Decorativas> a schema:Museum ;
     ns:hasDistrict <http://data.example.org/madridMuseos/district/RETIRO> ;
     ns:hasLocation <http://data.example.org/madridMuseos/location/MADRID> ;
     ns:hasNeighbourhood <http://data.example.org/madridMuseos/neighbourhood/LOS_JERONIMOS> ;
@@ -665,7 +665,7 @@ Fin de semana de 10 a 20 h: 914 777 549""" ;
     schema:url <http://www.madrid.es/sites/v/index.jsp?vgnextchannel=bfa48ab43d6bb410VgnVCM100000171f5a0aRCRD&vgnextoid=287079262ef5d010VgnVCM1000000b205a0aRCRD> ;
     owl:sameAs <https://www.wikidata.org/wiki/Q5361303> .
 
-<http://data.example.org/madridMuseos/Museo_Nacional_de_Ciencias_Naturales> a schema:Museum ;
+<http://data.example.org/madridMuseos/museum/Museo_Nacional_de_Ciencias_Naturales> a schema:Museum ;
     ns:hasDistrict <http://data.example.org/madridMuseos/district/CHAMARTIN> ;
     ns:hasLocation <http://data.example.org/madridMuseos/location/MADRID> ;
     ns:hasNeighbourhood <http://data.example.org/madridMuseos/neighbourhood/EL_VISO> ;
@@ -678,7 +678,7 @@ Fin de semana de 10 a 20 h: 914 777 549""" ;
     schema:url <http://www.madrid.es/sites/v/index.jsp?vgnextchannel=bfa48ab43d6bb410VgnVCM100000171f5a0aRCRD&vgnextoid=8edbef4d7f71c010VgnVCM1000000b205a0aRCRD> ;
     owl:sameAs <https://www.wikidata.org/wiki/Q1966699> .
 
-<http://data.example.org/madridMuseos/Museo_Naval> a schema:Museum ;
+<http://data.example.org/madridMuseos/museum/Museo_Naval> a schema:Museum ;
     ns:hasDistrict <http://data.example.org/madridMuseos/district/RETIRO> ;
     ns:hasLocation <http://data.example.org/madridMuseos/location/MADRID> ;
     ns:hasNeighbourhood <http://data.example.org/madridMuseos/neighbourhood/LOS_JERONIMOS> ;
@@ -692,7 +692,7 @@ Fin de semana de 10 a 20 h: 914 777 549""" ;
     schema:telephone "915 238 516" ;
     schema:url <http://www.madrid.es/sites/v/index.jsp?vgnextchannel=bfa48ab43d6bb410VgnVCM100000171f5a0aRCRD&vgnextoid=a30cef4d7f71c010VgnVCM1000000b205a0aRCRD> .
 
-<http://data.example.org/madridMuseos/Museo_Sorolla> a schema:Museum ;
+<http://data.example.org/madridMuseos/museum/Museo_Sorolla> a schema:Museum ;
     ns:hasDistrict <http://data.example.org/madridMuseos/district/CHAMBERI> ;
     ns:hasLocation <http://data.example.org/madridMuseos/location/MADRID> ;
     ns:hasNeighbourhood <http://data.example.org/madridMuseos/neighbourhood/ALMAGRO> ;
@@ -707,7 +707,7 @@ Fin de semana de 10 a 20 h: 914 777 549""" ;
     schema:url <http://www.madrid.es/sites/v/index.jsp?vgnextchannel=bfa48ab43d6bb410VgnVCM100000171f5a0aRCRD&vgnextoid=6dd05e93aad9c110VgnVCM1000000b205a0aRCRD> ;
     owl:sameAs <https://www.wikidata.org/wiki/Q1592523> .
 
-<http://data.example.org/madridMuseos/Museo_Taurino_de_la_Comunidad_de_Madrid> a schema:Museum ;
+<http://data.example.org/madridMuseos/museum/Museo_Taurino_de_la_Comunidad_de_Madrid> a schema:Museum ;
     ns:hasDistrict <http://data.example.org/madridMuseos/district/SALAMANCA> ;
     ns:hasLocation <http://data.example.org/madridMuseos/location/MADRID> ;
     ns:hasNeighbourhood <http://data.example.org/madridMuseos/neighbourhood/GUINDALERA> ;
@@ -722,7 +722,7 @@ Fin de semana de 10 a 20 h: 914 777 549""" ;
     schema:telephone "912 761 287" ;
     schema:url <http://www.madrid.es/sites/v/index.jsp?vgnextchannel=bfa48ab43d6bb410VgnVCM100000171f5a0aRCRD&vgnextoid=958cef4d7f71c010VgnVCM1000000b205a0aRCRD> .
 
-<http://data.example.org/madridMuseos/Museo_Tiflológico> a schema:Museum ;
+<http://data.example.org/madridMuseos/museum/Museo_Tiflológico> a schema:Museum ;
     ns:hasDistrict <http://data.example.org/madridMuseos/district/TETUAN> ;
     ns:hasLocation <http://data.example.org/madridMuseos/location/MADRID> ;
     ns:hasNeighbourhood <http://data.example.org/madridMuseos/neighbourhood/CUATRO_CAMINOS> ;
@@ -738,7 +738,7 @@ Fin de semana de 10 a 20 h: 914 777 549""" ;
     schema:url <http://www.madrid.es/sites/v/index.jsp?vgnextchannel=bfa48ab43d6bb410VgnVCM100000171f5a0aRCRD&vgnextoid=baacef4d7f71c010VgnVCM1000000b205a0aRCRD> ;
     owl:sameAs <https://www.wikidata.org/wiki/Q109568487> .
 
-<http://data.example.org/madridMuseos/Museo_de_Aeronáutica_y_Astronáutica> a schema:Museum ;
+<http://data.example.org/madridMuseos/museum/Museo_de_Aeronáutica_y_Astronáutica> a schema:Museum ;
     ns:hasDistrict <http://data.example.org/madridMuseos/district/LATINA> ;
     ns:hasLocation <http://data.example.org/madridMuseos/location/MADRID> ;
     ns:hasNeighbourhood <http://data.example.org/madridMuseos/neighbourhood/CUATRO_VIENTOS> ;
@@ -754,7 +754,7 @@ Fin de semana de 10 a 20 h: 914 777 549""" ;
     schema:url <http://www.madrid.es/sites/v/index.jsp?vgnextchannel=bfa48ab43d6bb410VgnVCM100000171f5a0aRCRD&vgnextoid=90aaef4d7f71c010VgnVCM1000000b205a0aRCRD> ;
     owl:sameAs <https://www.wikidata.org/wiki/Q11057120> .
 
-<http://data.example.org/madridMuseos/Museo_de_América> a schema:Museum ;
+<http://data.example.org/madridMuseos/museum/Museo_de_América> a schema:Museum ;
     ns:hasDistrict <http://data.example.org/madridMuseos/district/MONCLOA-ARAVACA> ;
     ns:hasLocation <http://data.example.org/madridMuseos/location/MADRID> ;
     ns:hasNeighbourhood <http://data.example.org/madridMuseos/neighbourhood/CIUDAD_UNIVERSITARIA> ;
@@ -769,7 +769,7 @@ Fin de semana de 10 a 20 h: 914 777 549""" ;
     schema:url <http://www.madrid.es/sites/v/index.jsp?vgnextchannel=bfa48ab43d6bb410VgnVCM100000171f5a0aRCRD&vgnextoid=c929ef4d7f71c010VgnVCM1000000b205a0aRCRD> ;
     owl:sameAs <https://www.wikidata.org/wiki/Q2568412> .
 
-<http://data.example.org/madridMuseos/Museo_de_Arte_Contemporáneo_de_Madrid> a schema:Museum ;
+<http://data.example.org/madridMuseos/museum/Museo_de_Arte_Contemporáneo_de_Madrid> a schema:Museum ;
     ns:hasDistrict <http://data.example.org/madridMuseos/district/CENTRO> ;
     ns:hasLocation <http://data.example.org/madridMuseos/location/MADRID> ;
     ns:hasNeighbourhood <http://data.example.org/madridMuseos/neighbourhood/UNIVERSIDAD> ;
@@ -785,7 +785,7 @@ Fin de semana de 10 a 20 h: 914 777 549""" ;
     schema:url <http://www.madrid.es/sites/v/index.jsp?vgnextchannel=bfa48ab43d6bb410VgnVCM100000171f5a0aRCRD&vgnextoid=84a55c2cdc41c010VgnVCM2000000c205a0aRCRD> ;
     owl:sameAs <https://www.wikidata.org/wiki/Q6940528> .
 
-<http://data.example.org/madridMuseos/Museo_de_Astronomía_y_Geodesia> a schema:Museum ;
+<http://data.example.org/madridMuseos/museum/Museo_de_Astronomía_y_Geodesia> a schema:Museum ;
     ns:hasDistrict <http://data.example.org/madridMuseos/district/MONCLOA-ARAVACA> ;
     ns:hasLocation <http://data.example.org/madridMuseos/location/MADRID> ;
     ns:hasNeighbourhood <http://data.example.org/madridMuseos/neighbourhood/CIUDAD_UNIVERSITARIA> ;
@@ -801,7 +801,7 @@ Fin de semana de 10 a 20 h: 914 777 549""" ;
     schema:url <http://www.madrid.es/sites/v/index.jsp?vgnextchannel=bfa48ab43d6bb410VgnVCM100000171f5a0aRCRD&vgnextoid=ee49ef4d7f71c010VgnVCM1000000b205a0aRCRD> ;
     owl:sameAs <https://www.wikidata.org/wiki/Q134406428> .
 
-<http://data.example.org/madridMuseos/Museo_de_Bomberos_de_Madrid> a schema:Museum ;
+<http://data.example.org/madridMuseos/museum/Museo_de_Bomberos_de_Madrid> a schema:Museum ;
     ns:hasDistrict <http://data.example.org/madridMuseos/district/PUENTE_DE_VALLECAS> ;
     ns:hasLocation <http://data.example.org/madridMuseos/location/MADRID> ;
     ns:hasNeighbourhood <http://data.example.org/madridMuseos/neighbourhood/NUMANCIA> ;
@@ -816,7 +816,7 @@ Fin de semana de 10 a 20 h: 914 777 549""" ;
     schema:url <http://www.madrid.es/sites/v/index.jsp?vgnextchannel=bfa48ab43d6bb410VgnVCM100000171f5a0aRCRD&vgnextoid=9f0966a8bba49210VgnVCM2000000c205a0aRCRD> ;
     owl:sameAs <https://www.wikidata.org/wiki/Q113329713> .
 
-<http://data.example.org/madridMuseos/Museo_de_Calcografía_Nacional> a schema:Museum ;
+<http://data.example.org/madridMuseos/museum/Museo_de_Calcografía_Nacional> a schema:Museum ;
     ns:hasDistrict <http://data.example.org/madridMuseos/district/CENTRO> ;
     ns:hasLocation <http://data.example.org/madridMuseos/location/MADRID> ;
     ns:hasNeighbourhood <http://data.example.org/madridMuseos/neighbourhood/SOL> ;
@@ -831,7 +831,7 @@ Fin de semana de 10 a 20 h: 914 777 549""" ;
     schema:url <http://www.madrid.es/sites/v/index.jsp?vgnextchannel=bfa48ab43d6bb410VgnVCM100000171f5a0aRCRD&vgnextoid=7169ef4d7f71c010VgnVCM1000000b205a0aRCRD> ;
     owl:sameAs <https://www.wikidata.org/wiki/Q111818807> .
 
-<http://data.example.org/madridMuseos/Museo_de_Cera> a schema:Museum ;
+<http://data.example.org/madridMuseos/museum/Museo_de_Cera> a schema:Museum ;
     ns:hasDistrict <http://data.example.org/madridMuseos/district/CENTRO> ;
     ns:hasLocation <http://data.example.org/madridMuseos/location/MADRID> ;
     ns:hasNeighbourhood <http://data.example.org/madridMuseos/neighbourhood/JUSTICIA> ;
@@ -846,7 +846,7 @@ Fin de semana de 10 a 20 h: 914 777 549""" ;
     schema:url <http://www.madrid.es/sites/v/index.jsp?vgnextchannel=bfa48ab43d6bb410VgnVCM100000171f5a0aRCRD&vgnextoid=9689ef4d7f71c010VgnVCM1000000b205a0aRCRD> ;
     owl:sameAs <https://www.wikidata.org/wiki/Q15121263> .
 
-<http://data.example.org/madridMuseos/Museo_de_Escultura_al_Aire_Libre_de_la_Castellana> a schema:Museum ;
+<http://data.example.org/madridMuseos/museum/Museo_de_Escultura_al_Aire_Libre_de_la_Castellana> a schema:Museum ;
     ns:hasDistrict <http://data.example.org/madridMuseos/district/SALAMANCA> ;
     ns:hasLocation <http://data.example.org/madridMuseos/location/MADRID> ;
     ns:hasNeighbourhood <http://data.example.org/madridMuseos/neighbourhood/CASTELLANA> ;
@@ -862,7 +862,7 @@ Fin de semana de 10 a 20 h: 914 777 549""" ;
     schema:url <http://www.madrid.es/sites/v/index.jsp?vgnextchannel=bfa48ab43d6bb410VgnVCM100000171f5a0aRCRD&vgnextoid=eca9ef4d7f71c010VgnVCM1000000b205a0aRCRD> ;
     owl:sameAs <https://www.wikidata.org/wiki/Q2283575> .
 
-<http://data.example.org/madridMuseos/Museo_de_Historia_de_Madrid> a schema:Museum ;
+<http://data.example.org/madridMuseos/museum/Museo_de_Historia_de_Madrid> a schema:Museum ;
     ns:hasDistrict <http://data.example.org/madridMuseos/district/CENTRO> ;
     ns:hasLocation <http://data.example.org/madridMuseos/location/MADRID> ;
     ns:hasNeighbourhood <http://data.example.org/madridMuseos/neighbourhood/JUSTICIA> ;
@@ -878,7 +878,7 @@ Fin de semana de 10 a 20 h: 914 777 549""" ;
     schema:url <http://www.madrid.es/sites/v/index.jsp?vgnextchannel=bfa48ab43d6bb410VgnVCM100000171f5a0aRCRD&vgnextoid=8f3079262ef5d010VgnVCM1000000b205a0aRCRD> ;
     owl:sameAs <https://www.wikidata.org/wiki/Q876383> .
 
-<http://data.example.org/madridMuseos/Museo_de_Historia_de_la_Comunidad_Judía_de_Madrid> a schema:Museum ;
+<http://data.example.org/madridMuseos/museum/Museo_de_Historia_de_la_Comunidad_Judía_de_Madrid> a schema:Museum ;
     ns:hasDistrict <http://data.example.org/madridMuseos/district/CHAMBERI> ;
     ns:hasLocation <http://data.example.org/madridMuseos/location/MADRID> ;
     ns:hasNeighbourhood <http://data.example.org/madridMuseos/neighbourhood/TRAFALGAR> ;
@@ -892,7 +892,7 @@ Fin de semana de 10 a 20 h: 914 777 549""" ;
     schema:url <http://www.madrid.es/sites/v/index.jsp?vgnextchannel=bfa48ab43d6bb410VgnVCM100000171f5a0aRCRD&vgnextoid=8f2a4a659ee71110VgnVCM1000000b205a0aRCRD> ;
     owl:sameAs <https://www.wikidata.org/wiki/Q134406429> .
 
-<http://data.example.org/madridMuseos/Museo_de_Mineralogía> a schema:Museum ;
+<http://data.example.org/madridMuseos/museum/Museo_de_Mineralogía> a schema:Museum ;
     ns:hasDistrict <http://data.example.org/madridMuseos/district/FUENCARRAL-EL_PARDO> ;
     ns:hasLocation <http://data.example.org/madridMuseos/location/MADRID> ;
     ns:hasNeighbourhood <http://data.example.org/madridMuseos/neighbourhood/EL_GOLOSO> ;
@@ -906,7 +906,7 @@ Fin de semana de 10 a 20 h: 914 777 549""" ;
     schema:telephone "914 975 407 / 914 972 564 / 914 974 800" ;
     schema:url <http://www.madrid.es/sites/v/index.jsp?vgnextchannel=bfa48ab43d6bb410VgnVCM100000171f5a0aRCRD&vgnextoid=255aef4d7f71c010VgnVCM1000000b205a0aRCRD> .
 
-<http://data.example.org/madridMuseos/Museo_de_San_Isidro._Los_Orígenes_de_Madrid> a schema:Museum ;
+<http://data.example.org/madridMuseos/museum/Museo_de_San_Isidro._Los_Orígenes_de_Madrid> a schema:Museum ;
     ns:hasDistrict <http://data.example.org/madridMuseos/district/CENTRO> ;
     ns:hasLocation <http://data.example.org/madridMuseos/location/MADRID> ;
     ns:hasNeighbourhood <http://data.example.org/madridMuseos/neighbourhood/PALACIO> ;
@@ -922,7 +922,7 @@ Fin de semana de 10 a 20 h: 914 777 549""" ;
     schema:url <http://www.madrid.es/sites/v/index.jsp?vgnextchannel=bfa48ab43d6bb410VgnVCM100000171f5a0aRCRD&vgnextoid=7b7aef4d7f71c010VgnVCM1000000b205a0aRCRD> ;
     owl:sameAs <https://www.wikidata.org/wiki/Q5556798> .
 
-<http://data.example.org/madridMuseos/Museo_de_Sanidad_e_Higiene_Pública> a schema:Museum ;
+<http://data.example.org/madridMuseos/museum/Museo_de_Sanidad_e_Higiene_Pública> a schema:Museum ;
     ns:hasDistrict <http://data.example.org/madridMuseos/district/FUENCARRAL-EL_PARDO> ;
     ns:hasLocation <http://data.example.org/madridMuseos/location/MADRID> ;
     ns:hasNeighbourhood <http://data.example.org/madridMuseos/neighbourhood/LA_PAZ> ;
@@ -938,7 +938,7 @@ Fin de semana de 10 a 20 h: 914 777 549""" ;
     schema:url <http://www.madrid.es/sites/v/index.jsp?vgnextchannel=bfa48ab43d6bb410VgnVCM100000171f5a0aRCRD&vgnextoid=3e755c2cdc41c010VgnVCM2000000c205a0aRCRD> ;
     owl:sameAs <https://www.wikidata.org/wiki/Q134406432> .
 
-<http://data.example.org/madridMuseos/Museo_de_la_Catedral_de_la_Almudena> a schema:Museum ;
+<http://data.example.org/madridMuseos/museum/Museo_de_la_Catedral_de_la_Almudena> a schema:Museum ;
     ns:hasDistrict <http://data.example.org/madridMuseos/district/CENTRO> ;
     ns:hasLocation <http://data.example.org/madridMuseos/location/MADRID> ;
     ns:hasNeighbourhood <http://data.example.org/madridMuseos/neighbourhood/PALACIO> ;
@@ -953,7 +953,7 @@ Fin de semana de 10 a 20 h: 914 777 549""" ;
     schema:url <http://www.madrid.es/sites/v/index.jsp?vgnextchannel=bfa48ab43d6bb410VgnVCM100000171f5a0aRCRD&vgnextoid=82cb8d0e78d22110VgnVCM1000000b205a0aRCRD> ;
     owl:sameAs <https://www.wikidata.org/wiki/Q107611898> .
 
-<http://data.example.org/madridMuseos/Museo_de_la_Farmacia_Hispana> a schema:Museum ;
+<http://data.example.org/madridMuseos/museum/Museo_de_la_Farmacia_Hispana> a schema:Museum ;
     ns:hasDistrict <http://data.example.org/madridMuseos/district/MONCLOA-ARAVACA> ;
     ns:hasLocation <http://data.example.org/madridMuseos/location/MADRID> ;
     ns:hasNeighbourhood <http://data.example.org/madridMuseos/neighbourhood/CIUDAD_UNIVERSITARIA> ;
@@ -968,7 +968,7 @@ Fin de semana de 10 a 20 h: 914 777 549""" ;
     schema:url <http://www.madrid.es/sites/v/index.jsp?vgnextchannel=bfa48ab43d6bb410VgnVCM100000171f5a0aRCRD&vgnextoid=58f9ef4d7f71c010VgnVCM1000000b205a0aRCRD> ;
     owl:sameAs <https://www.wikidata.org/wiki/Q105942790> .
 
-<http://data.example.org/madridMuseos/Museo_de_la_Guardia_Civil> a schema:Museum ;
+<http://data.example.org/madridMuseos/museum/Museo_de_la_Guardia_Civil> a schema:Museum ;
     ns:hasDistrict <http://data.example.org/madridMuseos/district/CHAMBERI> ;
     ns:hasLocation <http://data.example.org/madridMuseos/location/MADRID> ;
     ns:hasNeighbourhood <http://data.example.org/madridMuseos/neighbourhood/VALLEHERMOSO> ;
@@ -983,7 +983,7 @@ Fin de semana de 10 a 20 h: 914 777 549""" ;
     schema:url <http://www.madrid.es/sites/v/index.jsp?vgnextchannel=bfa48ab43d6bb410VgnVCM100000171f5a0aRCRD&vgnextoid=003aef4d7f71c010VgnVCM1000000b205a0aRCRD> ;
     owl:sameAs <https://www.wikidata.org/wiki/Q110560070> .
 
-<http://data.example.org/madridMuseos/Museo_de_la_Real_Academia_de_Bellas_Artes_de_San_Fernando> a schema:Museum ;
+<http://data.example.org/madridMuseos/museum/Museo_de_la_Real_Academia_de_Bellas_Artes_de_San_Fernando> a schema:Museum ;
     ns:hasDistrict <http://data.example.org/madridMuseos/district/CENTRO> ;
     ns:hasLocation <http://data.example.org/madridMuseos/location/MADRID> ;
     ns:hasNeighbourhood <http://data.example.org/madridMuseos/neighbourhood/SOL> ;
@@ -999,7 +999,7 @@ Fin de semana de 10 a 20 h: 914 777 549""" ;
     schema:url <http://www.madrid.es/sites/v/index.jsp?vgnextchannel=bfa48ab43d6bb410VgnVCM100000171f5a0aRCRD&vgnextoid=924aef4d7f71c010VgnVCM1000000b205a0aRCRD> ;
     owl:sameAs <https://www.wikidata.org/wiki/Q96658155> .
 
-<http://data.example.org/madridMuseos/Museo_del_Ferrocarril_de_Madrid> a schema:Museum ;
+<http://data.example.org/madridMuseos/museum/Museo_del_Ferrocarril_de_Madrid> a schema:Museum ;
     ns:hasDistrict <http://data.example.org/madridMuseos/district/ARGANZUELA> ;
     ns:hasLocation <http://data.example.org/madridMuseos/location/MADRID> ;
     ns:hasNeighbourhood <http://data.example.org/madridMuseos/neighbourhood/DELICIAS> ;
@@ -1015,7 +1015,7 @@ Fin de semana de 10 a 20 h: 914 777 549""" ;
     schema:url <http://www.madrid.es/sites/v/index.jsp?vgnextchannel=bfa48ab43d6bb410VgnVCM100000171f5a0aRCRD&vgnextoid=091c4291ae91f010VgnVCM2000000c205a0aRCRD> ;
     owl:sameAs <https://www.wikidata.org/wiki/Q6034436> .
 
-<http://data.example.org/madridMuseos/Museo_del_Prado> a schema:Museum ;
+<http://data.example.org/madridMuseos/museum/Museo_del_Prado> a schema:Museum ;
     ns:hasDistrict <http://data.example.org/madridMuseos/district/RETIRO> ;
     ns:hasLocation <http://data.example.org/madridMuseos/location/MADRID> ;
     ns:hasNeighbourhood <http://data.example.org/madridMuseos/neighbourhood/LOS_JERONIMOS> ;
@@ -1031,7 +1031,7 @@ Fin de semana de 10 a 20 h: 914 777 549""" ;
     schema:url <http://www.madrid.es/sites/v/index.jsp?vgnextchannel=bfa48ab43d6bb410VgnVCM100000171f5a0aRCRD&vgnextoid=060079262ef5d010VgnVCM1000000b205a0aRCRD> ;
     owl:sameAs <https://www.wikidata.org/wiki/Q160112> .
 
-<http://data.example.org/madridMuseos/Museo_del_Reloj_Grassy> a schema:Museum ;
+<http://data.example.org/madridMuseos/museum/Museo_del_Reloj_Grassy> a schema:Museum ;
     ns:hasDistrict <http://data.example.org/madridMuseos/district/CENTRO> ;
     ns:hasLocation <http://data.example.org/madridMuseos/location/MADRID> ;
     ns:hasNeighbourhood <http://data.example.org/madridMuseos/neighbourhood/CORTES> ;
@@ -1047,7 +1047,7 @@ Fin de semana de 10 a 20 h: 914 777 549""" ;
     schema:url <http://www.madrid.es/sites/v/index.jsp?vgnextchannel=bfa48ab43d6bb410VgnVCM100000171f5a0aRCRD&vgnextoid=daeaef4d7f71c010VgnVCM1000000b205a0aRCRD> ;
     owl:sameAs <https://www.wikidata.org/wiki/Q134406434> .
 
-<http://data.example.org/madridMuseos/Museo_del_Romanticismo> a schema:Museum ;
+<http://data.example.org/madridMuseos/museum/Museo_del_Romanticismo> a schema:Museum ;
     ns:hasDistrict <http://data.example.org/madridMuseos/district/CENTRO> ;
     ns:hasLocation <http://data.example.org/madridMuseos/location/MADRID> ;
     ns:hasNeighbourhood <http://data.example.org/madridMuseos/neighbourhood/JUSTICIA> ;
@@ -1062,7 +1062,7 @@ Fin de semana de 10 a 20 h: 914 777 549""" ;
     schema:url <http://www.madrid.es/sites/v/index.jsp?vgnextchannel=bfa48ab43d6bb410VgnVCM100000171f5a0aRCRD&vgnextoid=706cef4d7f71c010VgnVCM1000000b205a0aRCRD> ;
     owl:sameAs <https://www.wikidata.org/wiki/Q6974501> .
 
-<http://data.example.org/madridMuseos/Museo_del_Seguro._Fundación_Mapfre> a schema:Museum ;
+<http://data.example.org/madridMuseos/museum/Museo_del_Seguro._Fundación_Mapfre> a schema:Museum ;
     ns:hasDistrict <http://data.example.org/madridMuseos/district/CENTRO> ;
     ns:hasLocation <http://data.example.org/madridMuseos/location/MADRID> ;
     ns:hasNeighbourhood <http://data.example.org/madridMuseos/neighbourhood/JUSTICIA> ;
@@ -1075,7 +1075,7 @@ Fin de semana de 10 a 20 h: 914 777 549""" ;
     schema:url <http://www.madrid.es/sites/v/index.jsp?vgnextchannel=bfa48ab43d6bb410VgnVCM100000171f5a0aRCRD&vgnextoid=479b95f8c72d5310VgnVCM2000000c205a0aRCRD> ;
     owl:sameAs <https://www.wikidata.org/wiki/Q134406435> .
 
-<http://data.example.org/madridMuseos/Museo_del_Traje._Centro_de_Investigación_del_Patrimonio_Etnológico_(CIPE)> a schema:Museum ;
+<http://data.example.org/madridMuseos/museum/Museo_del_Traje._Centro_de_Investigación_del_Patrimonio_Etnológico_(CIPE)> a schema:Museum ;
     ns:hasDistrict <http://data.example.org/madridMuseos/district/MONCLOA-ARAVACA> ;
     ns:hasLocation <http://data.example.org/madridMuseos/location/MADRID> ;
     ns:hasNeighbourhood <http://data.example.org/madridMuseos/neighbourhood/CIUDAD_UNIVERSITARIA> ;
@@ -1089,7 +1089,7 @@ Fin de semana de 10 a 20 h: 914 777 549""" ;
     schema:telephone "915 504 700" ;
     schema:url <http://www.madrid.es/sites/v/index.jsp?vgnextchannel=bfa48ab43d6bb410VgnVCM100000171f5a0aRCRD&vgnextoid=053c4291ae91f010VgnVCM2000000c205a0aRCRD> .
 
-<http://data.example.org/madridMuseos/Palacio_Real_de_El_Pardo> a schema:Museum ;
+<http://data.example.org/madridMuseos/museum/Palacio_Real_de_El_Pardo> a schema:Museum ;
     ns:hasDistrict <http://data.example.org/madridMuseos/district/FUENCARRAL-EL_PARDO> ;
     ns:hasLocation <http://data.example.org/madridMuseos/location/MADRID> ;
     ns:hasNeighbourhood <http://data.example.org/madridMuseos/neighbourhood/EL_PARDO> ;
@@ -1104,7 +1104,7 @@ Fin de semana de 10 a 20 h: 914 777 549""" ;
     schema:url <http://www.madrid.es/sites/v/index.jsp?vgnextchannel=bfa48ab43d6bb410VgnVCM100000171f5a0aRCRD&vgnextoid=9f9def4d7f71c010VgnVCM1000000b205a0aRCRD> ;
     owl:sameAs <https://www.wikidata.org/wiki/Q1368571> .
 
-<http://data.example.org/madridMuseos/Palacio_Real_de_Madrid> a schema:Museum ;
+<http://data.example.org/madridMuseos/museum/Palacio_Real_de_Madrid> a schema:Museum ;
     ns:hasDistrict <http://data.example.org/madridMuseos/district/CENTRO> ;
     ns:hasLocation <http://data.example.org/madridMuseos/location/MADRID> ;
     ns:hasNeighbourhood <http://data.example.org/madridMuseos/neighbourhood/PALACIO> ;
@@ -1118,7 +1118,7 @@ Fin de semana de 10 a 20 h: 914 777 549""" ;
     schema:url <http://www.madrid.es/sites/v/index.jsp?vgnextchannel=bfa48ab43d6bb410VgnVCM100000171f5a0aRCRD&vgnextoid=47ddef4d7f71c010VgnVCM1000000b205a0aRCRD> ;
     owl:sameAs <https://www.wikidata.org/wiki/Q171517> .
 
-<http://data.example.org/madridMuseos/Panteón_de_España> a schema:Museum ;
+<http://data.example.org/madridMuseos/museum/Panteón_de_España> a schema:Museum ;
     ns:hasDistrict <http://data.example.org/madridMuseos/district/RETIRO> ;
     ns:hasLocation <http://data.example.org/madridMuseos/location/MADRID> ;
     ns:hasNeighbourhood <http://data.example.org/madridMuseos/neighbourhood/PACIFICO> ;
@@ -1132,7 +1132,7 @@ Fin de semana de 10 a 20 h: 914 777 549""" ;
     schema:url <http://www.madrid.es/sites/v/index.jsp?vgnextchannel=bfa48ab43d6bb410VgnVCM100000171f5a0aRCRD&vgnextoid=361cef4d7f71c010VgnVCM1000000b205a0aRCRD> ;
     owl:sameAs <https://www.wikidata.org/wiki/Q7131757> .
 
-<http://data.example.org/madridMuseos/Parroquia_Santa_Cruz> a schema:Museum ;
+<http://data.example.org/madridMuseos/museum/Parroquia_Santa_Cruz> a schema:Museum ;
     ns:hasDistrict <http://data.example.org/madridMuseos/district/CENTRO> ;
     ns:hasLocation <http://data.example.org/madridMuseos/location/MADRID> ;
     ns:hasNeighbourhood <http://data.example.org/madridMuseos/neighbourhood/SOL> ;
@@ -1146,7 +1146,7 @@ Fin de semana de 10 a 20 h: 914 777 549""" ;
     schema:url <http://www.madrid.es/sites/v/index.jsp?vgnextchannel=bfa48ab43d6bb410VgnVCM100000171f5a0aRCRD&vgnextoid=40e0b069a541f010VgnVCM1000000b205a0aRCRD> ;
     owl:sameAs <https://www.wikidata.org/wiki/Q134406436> .
 
-<http://data.example.org/madridMuseos/Planetario_de_Madrid> a schema:Museum ;
+<http://data.example.org/madridMuseos/museum/Planetario_de_Madrid> a schema:Museum ;
     ns:hasDistrict <http://data.example.org/madridMuseos/district/ARGANZUELA> ;
     ns:hasLocation <http://data.example.org/madridMuseos/location/MADRID> ;
     ns:hasNeighbourhood <http://data.example.org/madridMuseos/neighbourhood/LEGAZPI> ;
@@ -1163,7 +1163,7 @@ Fin de semana de 10 a 20 h: 914 777 549""" ;
     schema:url <http://www.madrid.es/sites/v/index.jsp?vgnextchannel=bfa48ab43d6bb410VgnVCM100000171f5a0aRCRD&vgnextoid=c9c5b069a541f010VgnVCM1000000b205a0aRCRD> ;
     owl:sameAs <https://www.wikidata.org/wiki/Q9060456> .
 
-<http://data.example.org/madridMuseos/Real_Basílica_San_Francisco_el_Grande> a schema:Museum ;
+<http://data.example.org/madridMuseos/museum/Real_Basílica_San_Francisco_el_Grande> a schema:Museum ;
     ns:hasDistrict <http://data.example.org/madridMuseos/district/CENTRO> ;
     ns:hasLocation <http://data.example.org/madridMuseos/location/MADRID> ;
     ns:hasNeighbourhood <http://data.example.org/madridMuseos/neighbourhood/PALACIO> ;
@@ -1179,7 +1179,7 @@ Fin de semana de 10 a 20 h: 914 777 549""" ;
     schema:url <http://www.madrid.es/sites/v/index.jsp?vgnextchannel=bfa48ab43d6bb410VgnVCM100000171f5a0aRCRD&vgnextoid=ef8d0713fb71c010VgnVCM1000000b205a0aRCRD> ;
     owl:sameAs <https://www.wikidata.org/wiki/Q2473884> .
 
-<http://data.example.org/madridMuseos/Real_Fábrica_de_Tapices> a schema:Museum ;
+<http://data.example.org/madridMuseos/museum/Real_Fábrica_de_Tapices> a schema:Museum ;
     ns:hasDistrict <http://data.example.org/madridMuseos/district/RETIRO> ;
     ns:hasLocation <http://data.example.org/madridMuseos/location/MADRID> ;
     ns:hasNeighbourhood <http://data.example.org/madridMuseos/neighbourhood/PACIFICO> ;
@@ -1194,7 +1194,7 @@ Fin de semana de 10 a 20 h: 914 777 549""" ;
     schema:url <http://www.madrid.es/sites/v/index.jsp?vgnextchannel=bfa48ab43d6bb410VgnVCM100000171f5a0aRCRD&vgnextoid=53cbff632081c010VgnVCM1000000b205a0aRCRD> ;
     owl:sameAs <https://www.wikidata.org/wiki/Q570665> .
 
-<http://data.example.org/madridMuseos/Real_Monasterio_de_Santa_Isabel> a schema:Museum ;
+<http://data.example.org/madridMuseos/museum/Real_Monasterio_de_Santa_Isabel> a schema:Museum ;
     ns:hasDistrict <http://data.example.org/madridMuseos/district/CENTRO> ;
     ns:hasLocation <http://data.example.org/madridMuseos/location/MADRID> ;
     ns:hasNeighbourhood <http://data.example.org/madridMuseos/neighbourhood/EMBAJADORES> ;
@@ -1208,7 +1208,7 @@ Fin de semana de 10 a 20 h: 914 777 549""" ;
     schema:url <http://www.madrid.es/sites/v/index.jsp?vgnextchannel=bfa48ab43d6bb410VgnVCM100000171f5a0aRCRD&vgnextoid=545b544a249c6110VgnVCM1000000b205a0aRCRD> ;
     owl:sameAs <https://www.wikidata.org/wiki/Q9067089> .
 
-<http://data.example.org/madridMuseos/Real_Monasterio_de_la_Encarnación> a schema:Museum ;
+<http://data.example.org/madridMuseos/museum/Real_Monasterio_de_la_Encarnación> a schema:Museum ;
     ns:hasDistrict <http://data.example.org/madridMuseos/district/CENTRO> ;
     ns:hasLocation <http://data.example.org/madridMuseos/location/MADRID> ;
     ns:hasNeighbourhood <http://data.example.org/madridMuseos/neighbourhood/PALACIO> ;
@@ -1222,7 +1222,7 @@ Fin de semana de 10 a 20 h: 914 777 549""" ;
     schema:url <http://www.madrid.es/sites/v/index.jsp?vgnextchannel=bfa48ab43d6bb410VgnVCM100000171f5a0aRCRD&vgnextoid=72ad0713fb71c010VgnVCM1000000b205a0aRCRD> ;
     owl:sameAs <https://www.wikidata.org/wiki/Q205524> .
 
-<http://data.example.org/madridMuseos/Templo_de_Debod> a schema:Museum ;
+<http://data.example.org/madridMuseos/museum/Templo_de_Debod> a schema:Museum ;
     ns:hasDistrict <http://data.example.org/madridMuseos/district/MONCLOA-ARAVACA> ;
     ns:hasLocation <http://data.example.org/madridMuseos/location/MADRID> ;
     ns:hasNeighbourhood <http://data.example.org/madridMuseos/neighbourhood/CASA_DE_CAMPO> ;
@@ -1238,7 +1238,7 @@ Fin de semana de 10 a 20 h: 914 777 549""" ;
     schema:url <http://www.madrid.es/sites/v/index.jsp?vgnextchannel=bfa48ab43d6bb410VgnVCM100000171f5a0aRCRD&vgnextoid=13b432df1d51c010VgnVCM2000000c205a0aRCRD> ;
     owl:sameAs <https://www.wikidata.org/wiki/Q1140249> .
 
-<http://data.example.org/madridMuseos/Yacimiento_paleontológico._Estación_de_Metro_Carpetana> a schema:Museum ;
+<http://data.example.org/madridMuseos/museum/Yacimiento_paleontológico._Estación_de_Metro_Carpetana> a schema:Museum ;
     ns:hasDistrict <http://data.example.org/madridMuseos/district/CARABANCHEL> ;
     ns:hasLocation <http://data.example.org/madridMuseos/location/MADRID> ;
     ns:hasNeighbourhood <http://data.example.org/madridMuseos/neighbourhood/VISTA_ALEGRE> ;
