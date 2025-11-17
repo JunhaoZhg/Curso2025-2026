@@ -30,6 +30,18 @@
     },
     "columnName": "NOM_LINIA",
     "similarValue": "L4",
+    "judgment": "new",
+    "shareNewTopics": true,
+    "description": "Marcar para crear un único elemento nuevo para todas las celdas que contienen \"L4\" en la columna NOM_LINIA"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "NOM_LINIA",
+    "similarValue": "L4",
     "judgment": "matched",
     "match": {
       "id": "Q961384",
@@ -168,8 +180,8 @@
     "expression": "grel:\"https://wikidata.org/entity/\"+cell.recon.match.id",
     "onError": "set-to-blank",
     "newColumnName": "same_as_wikidata_ORIGEN_LINIA",
-    "columnInsertIndex": 8,
-    "description": "Crear la columna same_as_wikidata_ORIGEN_LINIA en el índice 8 basada en la columna ORIGEN_LINIA usando la expresión grel:\"https://wikidata.org/entity/\"+cell.recon.match.id"
+    "columnInsertIndex": 7,
+    "description": "Crear la columna same_as_wikidata_ORIGEN_LINIA en el índice 7 basada en la columna ORIGEN_LINIA usando la expresión grel:\"https://wikidata.org/entity/\"+cell.recon.match.id"
   },
   {
     "op": "core/recon",
@@ -204,7 +216,82 @@
     "expression": "grel:\"https://wikidata.org/entity/\"+cell.recon.match.id",
     "onError": "set-to-blank",
     "newColumnName": "same_as_wikidata_DESTI_LINIA",
-    "columnInsertIndex": 10,
-    "description": "Crear la columna same_as_wikidata_DESTI_LINIA en el índice 10 basada en la columna DESTI_LINIA usando la expresión grel:\"https://wikidata.org/entity/\"+cell.recon.match.id"
+    "columnInsertIndex": 9,
+    "description": "Crear la columna same_as_wikidata_DESTI_LINIA en el índice 9 basada en la columna DESTI_LINIA usando la expresión grel:\"https://wikidata.org/entity/\"+cell.recon.match.id"
+  },
+  {
+    "op": "core/recon",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "NOM_OPERADOR",
+    "config": {
+      "mode": "standard-service",
+      "service": "https://wikidata.reconci.link/en/api",
+      "identifierSpace": "http://www.wikidata.org/entity/",
+      "schemaSpace": "http://www.wikidata.org/prop/direct/",
+      "type": {
+        "id": "Q16858238",
+        "name": "train and rail category"
+      },
+      "autoMatch": true,
+      "batchSize": 10,
+      "columnDetails": [],
+      "limit": 0
+    },
+    "description": "Reconcile cells in column NOM_OPERADOR to type Q16858238"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "NOM_OPERADOR",
+    "similarValue": "Metro",
+    "judgment": "matched",
+    "match": {
+      "id": "Q237189",
+      "name": "Barcelona Metro",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Barcelona Metro (Q237189) para las celdas que contienen \"Metro\" en la columna NOM_OPERADOR"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "NOM_OPERADOR",
+    "expression": "grel:\"https://wikidata.org/entity/\"+cell.recon.match.id",
+    "onError": "set-to-blank",
+    "newColumnName": "same_as_wikidata_NOM_OPERADOR",
+    "columnInsertIndex": 13,
+    "description": "Crear la columna same_as_wikidata_NOM_OPERADOR en el índice 13 basada en la columna NOM_OPERADOR usando la expresión grel:\"https://wikidata.org/entity/\"+cell.recon.match.id"
+  },
+    {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "NOM_LINIA",
+    "expression": "grel:value",
+    "onError": "set-to-blank",
+    "newColumnName": "ETI_LINIA",
+    "columnInsertIndex": 4,
+    "description": "Crear la columna ETI_LINIA en el índice 4 basada en la columna NOM_LINIA usando la expresión grel:value"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "ETI_LINIA",
+    "index": 3,
+    "description": "Mueve la columna ETI_LINIA a la posición 3"
   }
 ]
